@@ -1,11 +1,8 @@
-V3 6
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/08/29.14:43:20 P.20131013
-AR work/moduloPrincipal/Behavioral 0 \
-      FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
-      EN work/moduloPrincipal 0
-EN work/Ula 1535553805 \
+V3 3
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/08/29.20:27:45 P.20131013
+EN work/Somador1Bit 1535574469 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Ula/UlaArch 1535553806 \
+AR work/Somador1Bit/Somador1BitArch 1535574470 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
-      EN work/Ula 1535553805
+      EN work/Somador1Bit 1535574469

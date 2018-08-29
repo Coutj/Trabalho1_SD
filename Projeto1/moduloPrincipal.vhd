@@ -29,53 +29,24 @@ use ieee.std_logic_1164.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Ula is
-	port(
-	
-		numA	:	in		std_logic_vector (3 downto 0);
-		numB	:	in		std_logic_vector (3 downto 0);
-		controle	:	in		std_logic_vector (2 downto 0);
-		saida		: 	out	std_logic_vector (7 downto 0);
-		overflow	:	out	std_logic;
-		carryOut	:	out	std_logic;
-		zero		:	out	std_logic	
+entity Somador1Bit is
+	port (
+		numA			:	in 	std_logic;
+		numB			:	in 	std_logic;
+		carryIn		:	in 	std_logic;
+		carryOut		:	out 	std_logic;
+		resultado	:	out 	std_logic
 	);
-end ULA;
 
-architecture UlaArch of Ula is
+end Somador1Bit;
 
+architecture Somador1BitArch of Somador1Bit is
 begin
 
-
-end UlaArch;
-
-
+	resultado <= numA xor numB xor carryIn;
+	carryOut <= (numA and numB) or ((numA xor numB) and carryIn); 
 
 
---entity Somador is
---	port(
-	
---		numero1  : in  std_logic_vector (3 downto 0);
---		numero2  : in  std_logic_vector (3 downto 0);
---		carryIn  : in  std_logic;
---		carryOut : out std_logic;
---		saida    : out std_logic_vector (3 downto 0)
---	);
-
---end entity Somador;
-
---architecture SomadorArch of Somador is
-
---begin
-
---	saida <= numero1 xor numero2 xor carryIn;
---	carryOut <= (numero1 and numero2) or ((numero1 xor numero2) and carryIn);
-
---end SomadorArch;
-
-
-
-
-
+end Somador1BitArch;
 
 
