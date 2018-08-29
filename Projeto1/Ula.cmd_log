@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Ula.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Ula.syr" 
