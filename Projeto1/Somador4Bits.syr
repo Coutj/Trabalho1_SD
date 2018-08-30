@@ -5,17 +5,17 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
-Reading design: Somador1Bit.prj
+Reading design: Somador4Bits.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -38,17 +38,17 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "Somador1Bit.prj"
+Input File Name                    : "Somador4Bits.prj"
 Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "Somador1Bit"
+Output File Name                   : "Somador4Bits"
 Output Format                      : NGC
 Target Device                      : xc3s700an-4-fgg484
 
 ---- Source Options
-Top Module Name                    : Somador1Bit
+Top Module Name                    : Somador4Bits
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -136,7 +136,7 @@ ERROR:HDLParsers:3313 - "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloP
 --> 
 
 
-Total memory usage is 480756 kilobytes
+Total memory usage is 480852 kilobytes
 
 Number of errors   :   24 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

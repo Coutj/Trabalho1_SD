@@ -1,8 +1,13 @@
-V3 3
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/08/29.20:27:45 P.20131013
-EN work/Somador1Bit 1535574469 \
+V3 7
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/08/30.13:27:01 P.20131013
+EN work/Somador1Bit 1535635625 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Somador1Bit/Somador1BitArch 1535574470 \
+AR work/Somador1Bit/Somador1BitArch 1535635626 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
-      EN work/Somador1Bit 1535574469
+      EN work/Somador1Bit 1535635625
+EN work/Somador4Bits 0 \
+      FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd
+AR work/Somador4Bits/Somador4BitsArch 0 \
+      FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
+      EN work/Somador4Bits 0 CP std_logic CP Somador1Bit

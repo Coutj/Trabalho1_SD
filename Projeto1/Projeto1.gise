@@ -45,7 +45,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Somador1Bit.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="Somador1Bit.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Somador1Bit.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Somador1Bit_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Somador1Bit_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Somador1Bit_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="Somador1Bit_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Somador1Bit_isim_beh.exe"/>
@@ -64,6 +64,15 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Somador1Bit_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Somador1Bit_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Somador1Bit_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Somador4Bits.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Somador4Bits.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Somador4Bits.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Somador4Bits.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Somador4Bits.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Somador4Bits_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Somador4Bits_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Somador4Bits_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Somador4Bits_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Ula.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Ula.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Ula.cmd_log"/>
@@ -130,6 +139,10 @@
     <transform xil_pn:end_ts="1535574584" xil_pn:in_ck="-230235657682285950" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1535574584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="moduloPrincipal.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1535574584" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7815283824301094984" xil_pn:start_ts="1535574584">
@@ -143,16 +156,25 @@
     <transform xil_pn:end_ts="1535574584" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4391517325767077242" xil_pn:start_ts="1535574584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1535574584" xil_pn:in_ck="-230235657682285950" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1535574584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="moduloPrincipal.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1535574588" xil_pn:in_ck="-230235657682285950" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-847423694456557039" xil_pn:start_ts="1535574584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Somador1Bit_beh.prj"/>
       <outfile xil_pn:name="Somador1Bit_isim_beh.exe"/>
@@ -163,115 +185,109 @@
     <transform xil_pn:end_ts="1535574624" xil_pn:in_ck="-4767757292752472012" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1606183790781444908" xil_pn:start_ts="1535574624">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Somador1Bit_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-882618896558910496" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3970751238244959572" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4391517325767077242" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="2129314506867478150" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7815283824301094984" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8924531402277256060" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="9102341965431189672" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="9102341965431189672" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574465" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2202795052585575492" xil_pn:start_ts="1535574465">
+    <transform xil_pn:end_ts="1535640076" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1759255479255769136" xil_pn:start_ts="1535640076">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535574473" xil_pn:in_ck="-230235657682285950" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5453379692605444745" xil_pn:start_ts="1535574465">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1535640080" xil_pn:in_ck="-230235657682285950" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3183798173546185341" xil_pn:start_ts="1535640076">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Somador1Bit.lso"/>
-      <outfile xil_pn:name="Somador1Bit.ngc"/>
-      <outfile xil_pn:name="Somador1Bit.ngr"/>
-      <outfile xil_pn:name="Somador1Bit.prj"/>
-      <outfile xil_pn:name="Somador1Bit.stx"/>
-      <outfile xil_pn:name="Somador1Bit.syr"/>
-      <outfile xil_pn:name="Somador1Bit.xst"/>
-      <outfile xil_pn:name="Somador1Bit_xst.xrpt"/>
+      <outfile xil_pn:name="Somador4Bits.lso"/>
+      <outfile xil_pn:name="Somador4Bits.prj"/>
+      <outfile xil_pn:name="Somador4Bits.syr"/>
+      <outfile xil_pn:name="Somador4Bits.xst"/>
+      <outfile xil_pn:name="Somador4Bits_vhdl.prj"/>
+      <outfile xil_pn:name="Somador4Bits_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1535574473" xil_pn:in_ck="6578114222110546020" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4324669163550303331" xil_pn:start_ts="1535574473">
+    <transform xil_pn:end_ts="1535640080" xil_pn:in_ck="6578114222110546020" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7161305618277889839" xil_pn:start_ts="1535640080">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1535574478" xil_pn:in_ck="-3698279413135636713" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5154415953008315207" xil_pn:start_ts="1535574473">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Somador1Bit.bld"/>
-      <outfile xil_pn:name="Somador1Bit.ngd"/>
-      <outfile xil_pn:name="Somador1Bit_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1535574484" xil_pn:in_ck="-5452635703012504647" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="570889668722473129" xil_pn:start_ts="1535574478">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Somador1Bit.pcf"/>
-      <outfile xil_pn:name="Somador1Bit_map.map"/>
-      <outfile xil_pn:name="Somador1Bit_map.mrp"/>
-      <outfile xil_pn:name="Somador1Bit_map.ncd"/>
-      <outfile xil_pn:name="Somador1Bit_map.ngm"/>
-      <outfile xil_pn:name="Somador1Bit_map.xrpt"/>
-      <outfile xil_pn:name="Somador1Bit_summary.xml"/>
-      <outfile xil_pn:name="Somador1Bit_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1535574496" xil_pn:in_ck="-1781599347994178933" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-8699727321066641134" xil_pn:start_ts="1535574484">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Somador1Bit.ncd"/>
-      <outfile xil_pn:name="Somador1Bit.pad"/>
-      <outfile xil_pn:name="Somador1Bit.par"/>
-      <outfile xil_pn:name="Somador1Bit.ptwx"/>
-      <outfile xil_pn:name="Somador1Bit.unroutes"/>
-      <outfile xil_pn:name="Somador1Bit.xpi"/>
-      <outfile xil_pn:name="Somador1Bit_pad.csv"/>
-      <outfile xil_pn:name="Somador1Bit_pad.txt"/>
-      <outfile xil_pn:name="Somador1Bit_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1535574503" xil_pn:in_ck="-1434348879168073875" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="8242823369169169445" xil_pn:start_ts="1535574496">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Somador1Bit.bgn"/>
-      <outfile xil_pn:name="Somador1Bit.bit"/>
-      <outfile xil_pn:name="Somador1Bit.drc"/>
-      <outfile xil_pn:name="Somador1Bit.ut"/>
-      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
-      <outfile xil_pn:name="webtalk.log"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1535574496" xil_pn:in_ck="4761465676219443249" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1535574493">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Somador1Bit.twr"/>
-      <outfile xil_pn:name="Somador1Bit.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

@@ -5,3 +5,14 @@ map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o Somad
 par -w -intstyle ise -ol high -t 1 Somador1Bit_map.ncd Somador1Bit.ncd Somador1Bit.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Somador1Bit.twx Somador1Bit.ncd -o Somador1Bit.twr Somador1Bit.pcf -ucf constraints.ucf 
 bitgen -intstyle ise -f Somador1Bit.ut Somador1Bit.ncd 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 

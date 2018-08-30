@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Aug 30 14:21:34 2018">
+  <application stringID="Xst" timeStamp="Thu Aug 30 14:41:19 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -33,17 +33,17 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz"/>
-          <item stringID="speed" value="2148.054 MHz"/>
+          <item stringID="speed" value="2150.883 MHz"/>
         </row>
       </table>
     </section>
     <section stringID="XST_OPTION_SUMMARY">
-      <item DEFAULT="" label="-ifn" stringID="XST_IFN" value="Somador1Bit.prj"/>
+      <item DEFAULT="" label="-ifn" stringID="XST_IFN" value="Somador4Bits.prj"/>
       <item DEFAULT="MIXED" label="-ifmt" stringID="XST_IFMT" value="mixed"/>
-      <item DEFAULT="" label="-ofn" stringID="XST_OFN" value="Somador1Bit"/>
+      <item DEFAULT="" label="-ofn" stringID="XST_OFN" value="Somador4Bits"/>
       <item DEFAULT="NGC" label="-ofmt" stringID="XST_OFMT" value="NGC"/>
       <item DEFAULT="" label="-p" stringID="XST_P" value="xc3s700an-4-fgg484"/>
-      <item DEFAULT="" label="-top" stringID="XST_TOP" value="Somador1Bit"/>
+      <item DEFAULT="" label="-top" stringID="XST_TOP" value="Somador4Bits"/>
       <item DEFAULT="SPEED" label="-opt_mode" stringID="XST_OPTMODE" value="Speed"/>
       <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="1"/>
       <item DEFAULT="NO" label="-iuc" stringID="XST_IUC" value="NO"/>
