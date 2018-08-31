@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 portOu.ngc portOu.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o portOu_map.ncd portOu.ngd portOu.pcf 
+par -w -intstyle ise -ol high -t 1 portOu_map.ncd portOu.ncd portOu.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml portOu.twx portOu.ncd -o portOu.twr portOu.pcf 
+bitgen -intstyle ise -f portOu.ut portOu.ncd 

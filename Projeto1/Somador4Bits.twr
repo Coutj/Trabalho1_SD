@@ -1,0 +1,88 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Somador4Bits.twx Somador4Bits.ncd -o Somador4Bits.twr
+Somador4Bits.pcf -ucf constraints.ucf
+
+Design file:              Somador4Bits.ncd
+Physical constraint file: Somador4Bits.pcf
+Device,package,speed:     xc3s700an,fgg484,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+-----------------+---------+
+Source Pad     |Destination Pad  |  Delay  |
+---------------+-----------------+---------+
+numA4Bits<0>   |cOut             |    8.466|
+numA4Bits<0>   |resultado4Bits<0>|    6.412|
+numA4Bits<0>   |resultado4Bits<1>|    6.474|
+numA4Bits<0>   |resultado4Bits<2>|    7.201|
+numA4Bits<0>   |resultado4Bits<3>|    8.596|
+numA4Bits<1>   |cOut             |    8.822|
+numA4Bits<1>   |resultado4Bits<1>|    6.323|
+numA4Bits<1>   |resultado4Bits<2>|    7.557|
+numA4Bits<1>   |resultado4Bits<3>|    8.952|
+numA4Bits<2>   |cOut             |    7.964|
+numA4Bits<2>   |resultado4Bits<2>|    6.653|
+numA4Bits<2>   |resultado4Bits<3>|    8.094|
+numA4Bits<3>   |cOut             |    7.082|
+numA4Bits<3>   |resultado4Bits<3>|    6.807|
+numB4Bits<0>   |cOut             |    8.945|
+numB4Bits<0>   |resultado4Bits<0>|    6.656|
+numB4Bits<0>   |resultado4Bits<1>|    7.164|
+numB4Bits<0>   |resultado4Bits<2>|    7.680|
+numB4Bits<0>   |resultado4Bits<3>|    9.075|
+numB4Bits<1>   |cOut             |    9.065|
+numB4Bits<1>   |resultado4Bits<1>|    6.444|
+numB4Bits<1>   |resultado4Bits<2>|    7.800|
+numB4Bits<1>   |resultado4Bits<3>|    9.195|
+numB4Bits<2>   |cOut             |    7.776|
+numB4Bits<2>   |resultado4Bits<2>|    6.466|
+numB4Bits<2>   |resultado4Bits<3>|    7.906|
+numB4Bits<3>   |cOut             |    6.924|
+numB4Bits<3>   |resultado4Bits<3>|    6.612|
+---------------+-----------------+---------+
+
+
+Analysis completed Fri Aug 31 15:26:53 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 367 MB
+
+
+

@@ -1,0 +1,127 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Fri Aug 31 16:31:11 2018
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+Project: '/home/juan/Documents/Sistemas_digitais/aula1//auto_project.ipf'already exists.
+Original project has been renamed to'/home/juan/Documents/Sistemas_digitais/aula1//auto_project_1.ipf'.
+Project: /home/juan/Documents/Sistemas_digitais/aula1//auto_project.ipf created.
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
+File version of /etc/hotplug/usb/xusbdfwu.fw/xusbdfwu.hex = 1030.
+ Using libusb.
+ Kernel release = 4.18.5-arch1-1-ARCH.
+Cable connection failed.
+Connecting to cable (Parallel Port - parport0).
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module windrvr6 is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module parport_pc is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+Cable connection failed.
+Connecting to cable (Parallel Port - parport1).
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module windrvr6 is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module parport_pc is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+Cable connection failed.
+Connecting to cable (Parallel Port - parport2).
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module windrvr6 is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module parport_pc is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+Cable connection failed.
+Connecting to cable (Parallel Port - parport3).
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module windrvr6 is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+ Linux release = 4.18.5-arch1-1-ARCH.
+WARNING:iMPACT -  Module parport_pc is not loaded. Please reinstall the cable   drivers. See Answer Record 22648.
+Cable connection failed.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Cable autodetection failed.
+WARNING:iMPACT:923 - Can not find cable, check cable setup !// *** BATCH CMD : addDevice -p 1 -file"/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.bit"
+'1': Loading file '/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.bit'...
+done.
+INFO:iMPACT:1777 - 
+   Reading /opt/Xilinx/14.7/ISE_DS/ISE/spartan3a/data/xc3s700an.bsd...
+Found sync word in bitstream.
+UserID read from the bitstream file = 0xFFFFFFFF.
+INFO:iMPACT:501 - '1': Added Device xc3s700an successfully.
+----------------------------------------------------------------------
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
+File version of /etc/hotplug/usb/xusbdfwu.fw/xusbdfwu.hex = 1030.
+ Using libusb.
+ Kernel release = 4.18.5-arch1-1-ARCH.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1303.
+File version of /opt/Xilinx/14.7/ISE_DS/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Type = 0x0004.
+ ESN device is not available for this cable.
+INFO:iMPACT - Current time: 31/08/18 16:31
+// *** BATCH CMD : Program -p 1 -onlyFpga 
+INFO:iMPACT:583 - '0': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '0':  Device IDCODE :        00000100110001010000000100100110
+INFO:iMPACT:1579 - '0': Expected IDCODE:    00000010011000101000000010010011
+Warning: Chain frequency (1000000) is less than the current cable speed(6000000).
+ Adjust to cable speed (1000000).
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00000100110001010000000100100110
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00000010011000101000000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Cable is not connected.
+Project: '/home/juan/Documents/Sistemas_digitais/aula1//auto_project.ipf'created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"/home/juan/Documents/Sistemas_digitais/aula1//auto_project.ipf"
+INFO:iMPACT - User_EnvOsname: 'unknown'
+INFO:iMPACT - User_EnvOsrelease: 'unknown'
+// *** BATCH CMD : setMode -bs
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   /home/juan/Documents/Sistemas_digitais/aula1/webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff

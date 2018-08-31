@@ -1,1 +1,2 @@
 vhdl work "moduloPrincipal.vhd"
+vhdl work "Somador4Bits.vhd"

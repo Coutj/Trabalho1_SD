@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.ncd
+OUTFILE=/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=/home/juan/Documents/Sistemas_digitais/Projeto1
+LICENSE=WebPack
+USER_INFO=211573669_0_0_330

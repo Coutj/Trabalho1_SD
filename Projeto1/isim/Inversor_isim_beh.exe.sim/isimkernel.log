@@ -1,0 +1,10 @@
+Command line:
+   Inversor_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  35823
+
+Fri Aug 31 16:16:32 2018
+
+
+ Elaboration Time: 0.03 sec

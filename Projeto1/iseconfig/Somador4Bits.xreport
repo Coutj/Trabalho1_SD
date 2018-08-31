@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-08-30T14:30:22</DateModified>
-  <ModuleName>Somador4Bits</ModuleName>
-  <SummaryTimeStamp>2018-08-30T14:27:41</SummaryTimeStamp>
+  <DateModified>2018-08-31T16:33:57</DateModified>
+  <ModuleName>portAnd</ModuleName>
+  <SummaryTimeStamp>2018-08-31T16:23:35</SummaryTimeStamp>
   <SavedFilePath>/home/juan/Documents/Sistemas_digitais/Projeto1/iseconfig/Somador4Bits.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/juan/Documents/Sistemas_digitais/Projeto1/</ImplementationReportsDirectory>
-  <DateInitialized>2018-08-30T13:27:02</DateInitialized>
+  <DateInitialized>2018-08-31T16:33:57</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

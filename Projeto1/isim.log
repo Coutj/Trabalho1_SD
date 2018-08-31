@@ -1,5 +1,6 @@
 ISim log file
-Running: /home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit_isim_beh.wdb 
+Running: /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,61 +12,18 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# isim force add /portand/entradaa 1100 -radix bin -cancel 16 us
+# isim force add /portand/entradab 1010 -radix bin -value 1001 -radix bin -time 1 us -repeat 2 us -cancel 16 us
+# isim force add /portand/entradab 1010 -radix bin -value 1001 -radix bin -time 1 us -repeat 2 us -cancel 16 us
 # run all
-# run all
-# run all
-# isim force add /somador1bit/numa 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /somador1bit/numa 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# run all
-# run all
-# run all
-# run all
-# isim force add /somador1bit/numa 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# run all
-# run all
-# run all
-# run all
-# isim force add /somador1bit/numb 0 -radix bin -value 0 -radix bin -time 500 fs -repeat 1 ps -cancel 1 ps
-# run all
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# run all
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# run all
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 2 us -repeat 4 us -cancel 16 us
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 2 us -repeat 4 us -cancel 16 us
-# run all
-# isim force remove /somador1bit/numb
-Signal was not forced.
-# run all
-# isim force remove /somador1bit/numb
-Signal was not forced.
-# isim force remove /somador1bit/numb
-Signal was not forced.
-# isim force remove /somador1bit/numb
-Signal was not forced.
-# isim force remove /somador1bit/numb
-Signal was not forced.
-# isim force remove /somador1bit/numb
-Signal was not forced.
-# isim force remove /somador1bit/numb
-Signal was not forced.
 # restart
-# isim force add /somador1bit/numa 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 2 us -repeat 4 us -cancel 16 us
+# isim force add /portand/entradaa 1101 -radix bin -value 1100 -radix bin -time 1 us -repeat 2 us -cancel 16 us
 # run all
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /somador1bit/carryin 0 -radix bin -value 0 -radix bin -time 8 us -repeat 16 us -cancel 16 us
-# run all
-# isim force add /somador1bit/carryin 0 -radix bin -value 0 -radix bin -time 8 us -repeat 16 us -cancel 16 us
-# run all
-# run all
 # restart
-# isim force add /somador1bit/numa 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /somador1bit/numb 0 -radix bin -value 1 -radix bin -time 2 us -repeat 4 us -cancel 16 us
-# isim force add /somador1bit/carryIn 0 -radix bin -value 0 -radix bin -time 8 us -repeat 16 us -cancel 16 us
+# isim force add /portand/entradaa 1101 -radix bin -value 0010 -radix bin -time 1 us -repeat 2 us -cancel 16 us
+# isim force add /portand/entradaB 0101 -radix bin -value 1010 -radix bin -time 1 us -repeat 2 us -cancel 16 us
 # run all
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
