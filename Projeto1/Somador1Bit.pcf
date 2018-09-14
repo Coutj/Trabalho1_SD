@@ -1,12 +1,4 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Aug 29 20:28:02 2018
+// Written by: Map P.20131013 on Tue Sep 11 15:37:54 2018
 //! **************************************************************************
-
-SCHEMATIC START;
-COMP "resultado" LOCATE = SITE "R20" LEVEL 1;
-COMP "numA" LOCATE = SITE "V8" LEVEL 1;
-COMP "numB" LOCATE = SITE "U10" LEVEL 1;
-COMP "carryOut" LOCATE = SITE "T19" LEVEL 1;
-COMP "carryIn" LOCATE = SITE "U8" LEVEL 1;
-SCHEMATIC END;
 

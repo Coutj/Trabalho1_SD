@@ -1,0 +1,37 @@
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 somador8Bits.ngc somador8Bits.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o somador8Bits_map.ncd somador8Bits.ngd somador8Bits.pcf 
+par -w -intstyle ise -ol high -t 1 somador8Bits_map.ncd somador8Bits.ncd somador8Bits.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml somador8Bits.twx somador8Bits.ncd -o somador8Bits.twr somador8Bits.pcf 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 somador8Bits.ngc somador8Bits.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o somador8Bits_map.ncd somador8Bits.ngd somador8Bits.pcf 
+par -w -intstyle ise -ol high -t 1 somador8Bits_map.ncd somador8Bits.ncd somador8Bits.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml somador8Bits.twx somador8Bits.ncd -o somador8Bits.twr somador8Bits.pcf 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 somador8Bits.ngc somador8Bits.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o somador8Bits_map.ncd somador8Bits.ngd somador8Bits.pcf 
+par -w -intstyle ise -ol high -t 1 somador8Bits_map.ncd somador8Bits.ncd somador8Bits.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml somador8Bits.twx somador8Bits.ncd -o somador8Bits.twr somador8Bits.pcf 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 somador8Bits.ngc somador8Bits.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o somador8Bits_map.ncd somador8Bits.ngd somador8Bits.pcf 
+par -w -intstyle ise -ol high -t 1 somador8Bits_map.ncd somador8Bits.ncd somador8Bits.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml somador8Bits.twx somador8Bits.ncd -o somador8Bits.twr somador8Bits.pcf 

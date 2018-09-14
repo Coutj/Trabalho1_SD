@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/juan/Documents/Sistemas_digitais/Projeto1/portAnd_isim_beh.exe" -prj "/home/juan/Documents/Sistemas_digitais/Projeto1/portAnd_beh.prj" "work.portAnd" 
+-intstyle "ise" -incremental -o "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits_isim_beh.exe" -prj "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits_beh.prj" "work.somador8Bits" 

@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: Inversor.prj
@@ -108,19 +108,18 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd" in Library work.
-Entity <Inversor> compiled.
-Entity <Inversor> (Architecture <InversorArch>) compiled.
+Architecture inversorarch of Entity inversor is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <Inversor> in library <work> (architecture <InversorArch>).
+Analyzing hierarchy for entity <Inversor> in library <work> (architecture <inversorarch>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <Inversor> in library <work> (Architecture <InversorArch>).
+Analyzing Entity <Inversor> in library <work> (Architecture <inversorarch>).
 Entity <Inversor> analyzed. Unit <Inversor> generated.
 
 
@@ -271,13 +270,13 @@ Delay:               6.857ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.77 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 3.89 secs
  
 --> 
 
 
-Total memory usage is 502180 kilobytes
+Total memory usage is 502200 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

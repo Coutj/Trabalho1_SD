@@ -112,6 +112,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Somador4Bits.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Somador4Bits_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="Somador4Bits_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Somador4Bits_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Somador4Bits_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Somador4Bits_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Somador4Bits_map.ncd" xil_pn:subbranch="Map"/>
@@ -215,17 +216,14 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="portAnd.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="portAnd.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="portAnd.ngr"/>
-    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="portAnd.pad"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="portAnd.par" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="portAnd.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="portAnd.prj"/>
-    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="portAnd.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="portAnd.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="portAnd.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="portAnd.twr" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="portAnd.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="portAnd.unroutes" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XPI" xil_pn:name="portAnd.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="portAnd.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="portAnd_beh.prj"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="portAnd_guide.ncd" xil_pn:origination="imported"/>
@@ -235,13 +233,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="portAnd_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="portAnd_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="portAnd_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="portAnd_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="portAnd_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="portAnd_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="portAnd_pad.txt" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="portAnd_par.xrpt"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="portAnd_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="portAnd_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="portAnd_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="portOu.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="portOu.bit" xil_pn:subbranch="FPGAConfiguration"/>
@@ -272,6 +265,42 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="portOu_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="portOu_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="portOu_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="somador8Bits.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="somador8Bits.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="somador8Bits.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="somador8Bits.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="somador8Bits.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="somador8Bits.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="somador8Bits.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="somador8Bits.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="somador8Bits.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="somador8Bits.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="somador8Bits.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="somador8Bits.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="somador8Bits.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="somador8Bits.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="somador8Bits.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="somador8Bits.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="somador8Bits.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="somador8Bits.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="somador8Bits.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="somador8Bits_beh.prj"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="somador8Bits_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="somador8Bits_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="somador8Bits_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="somador8Bits_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="somador8Bits_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="somador8Bits_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="somador8Bits_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="somador8Bits_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="somador8Bits_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="somador8Bits_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="somador8Bits_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="somador8Bits_par.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="somador8Bits_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="somador8Bits_usage.xml"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="somador8Bits_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="somador8Bits_xst.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -285,37 +314,41 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733463" xil_pn:in_ck="2698839086504764886" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1535733463">
+    <transform xil_pn:end_ts="1536941637" xil_pn:in_ck="49700679266863342" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1536941637">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Inversor.vhd"/>
       <outfile xil_pn:name="Somador4Bits.vhd"/>
       <outfile xil_pn:name="moduloPrincipal.vhd"/>
+      <outfile xil_pn:name="multiplicador.vhd"/>
       <outfile xil_pn:name="portAnd.vhd"/>
       <outfile xil_pn:name="portOu.vhd"/>
+      <outfile xil_pn:name="somador8Bits.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1535733463" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3201188368969493701" xil_pn:start_ts="1535733463">
+    <transform xil_pn:end_ts="1536941666" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5764849194543225676" xil_pn:start_ts="1536941666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733463" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4665663417281851117" xil_pn:start_ts="1535733463">
+    <transform xil_pn:end_ts="1536941666" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5524870777851573676" xil_pn:start_ts="1536941666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733463" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7917591348032893319" xil_pn:start_ts="1535733463">
+    <transform xil_pn:end_ts="1536939302" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-660796316080785330" xil_pn:start_ts="1536939302">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733463" xil_pn:in_ck="2698839086504764886" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1535733463">
+    <transform xil_pn:end_ts="1536941637" xil_pn:in_ck="49700679266863342" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1536941637">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Inversor.vhd"/>
       <outfile xil_pn:name="Somador4Bits.vhd"/>
       <outfile xil_pn:name="moduloPrincipal.vhd"/>
+      <outfile xil_pn:name="multiplicador.vhd"/>
       <outfile xil_pn:name="portAnd.vhd"/>
       <outfile xil_pn:name="portOu.vhd"/>
+      <outfile xil_pn:name="somador8Bits.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1535733465" xil_pn:in_ck="2698839086504764886" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7666548199144777201" xil_pn:start_ts="1535733463">
+    <transform xil_pn:end_ts="1536941668" xil_pn:in_ck="49700679266863342" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2455037698686309121" xil_pn:start_ts="1536941666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -323,108 +356,115 @@
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="portAnd_beh.prj"/>
-      <outfile xil_pn:name="portAnd_isim_beh.exe"/>
+      <outfile xil_pn:name="somador8Bits_beh.prj"/>
+      <outfile xil_pn:name="somador8Bits_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1535733465" xil_pn:in_ck="-6138594967833516218" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6323368230113984236" xil_pn:start_ts="1535733465">
+    <transform xil_pn:end_ts="1536941668" xil_pn:in_ck="5103272615456282763" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5709116691844740638" xil_pn:start_ts="1536941668">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="portAnd_isim_beh.wdb"/>
+      <outfile xil_pn:name="somador8Bits_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1535729384" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1535729384">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733243" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7778930226793163757" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536938433" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7728114715134029452" xil_pn:start_ts="1536938433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733243" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7917591348032893319" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536938433" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-660796316080785330" xil_pn:start_ts="1536938433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733243" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536938433" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1536938433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733243" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="3201188368969493701" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536938433" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5764849194543225676" xil_pn:start_ts="1536938433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733243" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="9102341965431189672" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536938433" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="9102341965431189672" xil_pn:start_ts="1536938433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733243" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5722638546782368495" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536938433" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4549366302204032616" xil_pn:start_ts="1536938433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733250" xil_pn:in_ck="2698839086504764886" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7059951363827106812" xil_pn:start_ts="1535733243">
+    <transform xil_pn:end_ts="1536941586" xil_pn:in_ck="49700679266863342" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="6930456763350071115" xil_pn:start_ts="1536941578">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="Somador4Bits.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="portAnd.lso"/>
-      <outfile xil_pn:name="portAnd.ngc"/>
-      <outfile xil_pn:name="portAnd.ngr"/>
-      <outfile xil_pn:name="portAnd.prj"/>
-      <outfile xil_pn:name="portAnd.stx"/>
-      <outfile xil_pn:name="portAnd.syr"/>
-      <outfile xil_pn:name="portAnd.xst"/>
-      <outfile xil_pn:name="portAnd_xst.xrpt"/>
+      <outfile xil_pn:name="somador8Bits.lso"/>
+      <outfile xil_pn:name="somador8Bits.ngc"/>
+      <outfile xil_pn:name="somador8Bits.ngr"/>
+      <outfile xil_pn:name="somador8Bits.prj"/>
+      <outfile xil_pn:name="somador8Bits.stx"/>
+      <outfile xil_pn:name="somador8Bits.syr"/>
+      <outfile xil_pn:name="somador8Bits.xst"/>
+      <outfile xil_pn:name="somador8Bits_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1535733250" xil_pn:in_ck="6578114222110546020" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8601358592192271344" xil_pn:start_ts="1535733250">
+    <transform xil_pn:end_ts="1536938437" xil_pn:in_ck="6578114222110546020" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4971697153953731063" xil_pn:start_ts="1536938437">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1535733255" xil_pn:in_ck="9099081427351547459" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8601619627322072052" xil_pn:start_ts="1535733250">
+    <transform xil_pn:end_ts="1536941591" xil_pn:in_ck="-3540452929395907256" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-141739091759059877" xil_pn:start_ts="1536941586">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="portAnd.bld"/>
-      <outfile xil_pn:name="portAnd.ngd"/>
-      <outfile xil_pn:name="portAnd_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="somador8Bits.bld"/>
+      <outfile xil_pn:name="somador8Bits.ngd"/>
+      <outfile xil_pn:name="somador8Bits_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1535733261" xil_pn:in_ck="-7419803636626791927" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="570889668722473129" xil_pn:start_ts="1535733255">
+    <transform xil_pn:end_ts="1536941597" xil_pn:in_ck="5871778915551284848" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="570889668722473129" xil_pn:start_ts="1536941591">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="portAnd.pcf"/>
-      <outfile xil_pn:name="portAnd_map.map"/>
-      <outfile xil_pn:name="portAnd_map.mrp"/>
-      <outfile xil_pn:name="portAnd_map.ncd"/>
-      <outfile xil_pn:name="portAnd_map.ngm"/>
-      <outfile xil_pn:name="portAnd_map.xrpt"/>
-      <outfile xil_pn:name="portAnd_summary.xml"/>
-      <outfile xil_pn:name="portAnd_usage.xml"/>
+      <outfile xil_pn:name="somador8Bits.pcf"/>
+      <outfile xil_pn:name="somador8Bits_map.map"/>
+      <outfile xil_pn:name="somador8Bits_map.mrp"/>
+      <outfile xil_pn:name="somador8Bits_map.ncd"/>
+      <outfile xil_pn:name="somador8Bits_map.ngm"/>
+      <outfile xil_pn:name="somador8Bits_map.xrpt"/>
+      <outfile xil_pn:name="somador8Bits_summary.xml"/>
+      <outfile xil_pn:name="somador8Bits_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1535733275" xil_pn:in_ck="-8682601341536371361" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-8699727321066641134" xil_pn:start_ts="1535733261">
+    <transform xil_pn:end_ts="1536941611" xil_pn:in_ck="4030538892300054872" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-8699727321066641134" xil_pn:start_ts="1536941597">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="portAnd.ncd"/>
-      <outfile xil_pn:name="portAnd.pad"/>
-      <outfile xil_pn:name="portAnd.par"/>
-      <outfile xil_pn:name="portAnd.ptwx"/>
-      <outfile xil_pn:name="portAnd.unroutes"/>
-      <outfile xil_pn:name="portAnd.xpi"/>
-      <outfile xil_pn:name="portAnd_pad.csv"/>
-      <outfile xil_pn:name="portAnd_pad.txt"/>
-      <outfile xil_pn:name="portAnd_par.xrpt"/>
+      <outfile xil_pn:name="somador8Bits.ncd"/>
+      <outfile xil_pn:name="somador8Bits.pad"/>
+      <outfile xil_pn:name="somador8Bits.par"/>
+      <outfile xil_pn:name="somador8Bits.ptwx"/>
+      <outfile xil_pn:name="somador8Bits.unroutes"/>
+      <outfile xil_pn:name="somador8Bits.xpi"/>
+      <outfile xil_pn:name="somador8Bits_pad.csv"/>
+      <outfile xil_pn:name="somador8Bits_pad.txt"/>
+      <outfile xil_pn:name="somador8Bits_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1535733275" xil_pn:in_ck="-3642775889213083663" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1535733271">
+    <transform xil_pn:end_ts="1536941611" xil_pn:in_ck="-610971678938114608" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1536941608">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="portAnd.twr"/>
-      <outfile xil_pn:name="portAnd.twx"/>
+      <outfile xil_pn:name="somador8Bits.twr"/>
+      <outfile xil_pn:name="somador8Bits.twx"/>
     </transform>
   </transforms>
 

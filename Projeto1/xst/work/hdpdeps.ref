@@ -1,18 +1,18 @@
-V3 20
+V3 23
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd 2018/08/31.16:15:40 P.20131013
-EN work/Inversor 1535732144 \
+EN work/Inversor 1536935045 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Inversor/InversorArch 1535732145 \
+AR work/Inversor/InversorArch 1536935046 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd \
-      EN work/Inversor 1535732144
+      EN work/Inversor 1536935045
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/08/31.14:58:39 P.20131013
-EN work/Somador1Bit 1535731100 \
+EN work/Somador1Bit 1536941582 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Somador1Bit/Somador1BitArch 1535731101 \
+AR work/Somador1Bit/Somador1BitArch 1536941583 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
-      EN work/Somador1Bit 1535731100
+      EN work/Somador1Bit 1536941582
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd 2018/08/31.16:34:03 P.20131013
 EN work/portAnd 1535733247 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd \
@@ -27,13 +27,20 @@ EN work/portOu 1535732579 \
 AR work/portOu/portOuArch 1535732580 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/portOu.vhd \
       EN work/portOu 1535732579
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd 2018/08/31.15:01:36 P.20131013
-EN work/Somador4Bits 1535731102 \
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd 2018/09/14.16:10:29 P.20131013
+EN work/Somador4Bits 1536941584 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Somador4Bits/Somador4BitsArch 1535731103 \
+AR work/Somador4Bits/Somador4BitsArch 1536941585 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd \
-      EN work/Somador4Bits 1535731102 CP Somador1Bit
+      EN work/Somador4Bits 1536941584 CP Somador1Bit
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd 2018/09/14.16:12:58 P.20131013
+EN work/somador8Bits 1536941586 \
+      FL /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/somador8Bits/somador8BitsArch 1536941587 \
+      FL /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd \
+      EN work/somador8Bits 1536941586 CP Somador4Bits
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/TesteSomador.vhd 2018/08/31.15:28:48 P.20131013
 EN work/TesteSomador 1535731104 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/TesteSomador.vhd \

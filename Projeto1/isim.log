@@ -1,6 +1,5 @@
 ISim log file
-Running: /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+Running: /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,19 +11,6 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /portand/entradaa 1100 -radix bin -cancel 16 us
-# isim force add /portand/entradab 1010 -radix bin -value 1001 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /portand/entradab 1010 -radix bin -value 1001 -radix bin -time 1 us -repeat 2 us -cancel 16 us
+# isim force add /somador8bits/numa8bits 10010011 -radix bin -value 00000000 -radix bin -time 1 us -repeat 2 us -cancel 16 us
+# isim force add /somador8bits/numb8bits 10010011 -radix bin -value 00000000 -radix bin -time 1 us -repeat 2 us -cancel 16 us
 # run all
-# restart
-# isim force add /portand/entradaa 1101 -radix bin -value 1100 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# run all
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# isim force add /portand/entradaa 1101 -radix bin -value 0010 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# isim force add /portand/entradaB 0101 -radix bin -value 1010 -radix bin -time 1 us -repeat 2 us -cancel 16 us
-# run all
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# exit 0

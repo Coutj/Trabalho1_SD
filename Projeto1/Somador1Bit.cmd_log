@@ -16,3 +16,8 @@ xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1
 xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
 xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
 xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador1Bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 Somador1Bit.ngc Somador1Bit.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o Somador1Bit_map.ncd Somador1Bit.ngd Somador1Bit.pcf 
+par -w -intstyle ise -ol high -t 1 Somador1Bit_map.ncd Somador1Bit.ncd Somador1Bit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Somador1Bit.twx Somador1Bit.ncd -o Somador1Bit.twr Somador1Bit.pcf 

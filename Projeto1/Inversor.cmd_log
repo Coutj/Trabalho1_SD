@@ -4,3 +4,8 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 Inversor.
 map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o Inversor_map.ncd Inversor.ngd Inversor.pcf 
 par -w -intstyle ise -ol high -t 1 Inversor_map.ncd Inversor.ncd Inversor.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Inversor.twx Inversor.ncd -o Inversor.twr Inversor.pcf 
+xst -intstyle ise -ifn "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.xst" -ofn "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 Inversor.ngc Inversor.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o Inversor_map.ncd Inversor.ngd Inversor.pcf 
+par -w -intstyle ise -ol high -t 1 Inversor_map.ncd Inversor.ncd Inversor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Inversor.twx Inversor.ncd -o Inversor.twr Inversor.pcf 

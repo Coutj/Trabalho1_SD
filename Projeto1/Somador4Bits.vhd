@@ -53,7 +53,7 @@ architecture Somador4BitsArch of Somador4Bits is
 	
 	begin
 	
-		somador1:	Somador1Bit port map (numA4Bits(0), numB4Bits(0),'0', carryOut0, resultado4Bits(0));
+		somador1:	Somador1Bit port map (numA4Bits(0), numB4Bits(0),cIn, carryOut0, resultado4Bits(0));
 		somador2:	Somador1Bit port map (numA4Bits(1), numB4Bits(1), carryOut0, carryOut1, resultado4Bits(1));
 		somador3:	Somador1Bit port map (numA4Bits(2), numB4Bits(2), carryOut1, carryOut2, resultado4Bits(2));
 		somador4:	Somador1Bit port map (numA4Bits(3), numB4Bits(3), carryOut2, carryOut3, resultado4Bits(3));

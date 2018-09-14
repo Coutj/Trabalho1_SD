@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Arch::  Wed Aug 29 20:28:06 2018
+Arch::  Tue Sep 11 15:37:59 2018
 
 par -w -intstyle ise -ol high -t 1 Somador1Bit_map.ncd Somador1Bit.ncd
 Somador1Bit.pcf 
@@ -30,14 +30,10 @@ Design Summary Report:
    Number of External Input IOBs                  3
 
       Number of External Input IBUFs              3
-        Number of LOCed External Input IBUFs      3 out of 3     100%
-
 
    Number of External Output IOBs                 2
 
       Number of External Output IOBs              2
-        Number of LOCed External Output IOBs      2 out of 2     100%
-
 
    Number of External Bidir IOBs                  0
 
@@ -52,46 +48,54 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 1 secs 
-Finished initial Timing Analysis.  REAL time: 1 secs 
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 1 secs 
+Total REAL time at the beginning of Placer: 2 secs 
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:13dbdcd4) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:14) REAL time: 3 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:13dbdcd4) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:14) REAL time: 3 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:13dbdcd4) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:14) REAL time: 3 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-Phase 4.2  Initial Clock and IO Placement (Checksum:13dbdcd4) REAL time: 2 secs 
+...........
+Phase 4.2  Initial Clock and IO Placement (Checksum:14) REAL time: 3 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:13dbdcd4) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:14) REAL time: 3 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:13dbdcd4) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:14) REAL time: 3 secs 
 
-Phase 7.8  Global Placement
-...
-Phase 7.8  Global Placement (Checksum:1a7f91cf) REAL time: 2 secs 
+Phase 7.3  Local Placement Optimization
+...........
+Phase 7.3  Local Placement Optimization (Checksum:3bfa271c) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:1a7f91cf) REAL time: 2 secs 
+Phase 8.5  Local Placement Optimization (Checksum:3bfa271c) REAL time: 3 secs 
 
-Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:1a7f91cf) REAL time: 2 secs 
+Phase 9.8  Global Placement
+..
+Phase 9.8  Global Placement (Checksum:58c05aab) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:1a7f91cf) REAL time: 2 secs 
+Phase 10.5  Local Placement Optimization (Checksum:58c05aab) REAL time: 3 secs 
 
-Total REAL time to Placer completion: 2 secs 
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:57a71f62) REAL time: 3 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:57a71f62) REAL time: 3 secs 
+
+Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 2 secs 
 Writing design to file Somador1Bit.ncd
 
@@ -100,28 +104,28 @@ Writing design to file Somador1Bit.ncd
 Starting Router
 
 
-Phase  1  : 8 unrouted;      REAL time: 6 secs 
+Phase  1  : 8 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 8 unrouted;      REAL time: 6 secs 
+Phase  2  : 8 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 4 unrouted;      REAL time: 6 secs 
+Phase  3  : 0 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 4 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
 Updating file: Somador1Bit.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
-Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 6 secs 
+Total REAL time to Router completion: 8 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -140,10 +144,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 7 secs 
+Total REAL time to PAR completion: 8 secs 
 Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  633 MB
+Peak Memory Usage:  631 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
