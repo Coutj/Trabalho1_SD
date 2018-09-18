@@ -1,15 +1,14 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Arch::  Tue Sep 18 14:48:46 2018
+Arch::  Tue Sep 18 15:02:54 2018
 
-par -w -intstyle ise -ol high -t 1 multiplicador_map.ncd multiplicador.ncd
-multiplicador.pcf 
+par -w -intstyle ise -ol high -t 1 portXor_map.ncd portXor.ncd portXor.pcf 
 
 
-Constraints file: multiplicador.pcf.
+Constraints file: portXor.pcf.
 Loading device for application Rf_Device from file '3s700a.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
-   "multiplicador" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -4
+   "portXor" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -4
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
@@ -25,20 +24,20 @@ Device speed data version:  "PRODUCTION 1.42 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          16 out of 372     4%
+ Number of External IOBs                          15 out of 372     4%
 
-   Number of External Input IOBs                  8
+   Number of External Input IOBs                 10
 
-      Number of External Input IBUFs              8
+      Number of External Input IBUFs             10
 
-   Number of External Output IOBs                 8
+   Number of External Output IOBs                 5
 
-      Number of External Output IOBs              8
+      Number of External Output IOBs              5
 
    Number of External Bidir IOBs                  0
 
 
-   Number of Slices                         16 out of 5888    1%
+   Number of Slices                          5 out of 5888    1%
       Number of SLICEMs                      0 out of 2944    0%
 
 
@@ -57,64 +56,64 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:1f5) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:c3) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:1f5) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:c3) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:1f5) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:c3) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-............
-Phase 4.2  Initial Clock and IO Placement (Checksum:1f5) REAL time: 2 secs 
+.........
+Phase 4.2  Initial Clock and IO Placement (Checksum:c3) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:1f5) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:c3) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:1f5) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:c3) REAL time: 2 secs 
 
 Phase 7.3  Local Placement Optimization
-............
-Phase 7.3  Local Placement Optimization (Checksum:4cb4c0) REAL time: 3 secs 
+.........
+Phase 7.3  Local Placement Optimization (Checksum:767fe302) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:4cb4c0) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:767fe302) REAL time: 2 secs 
 
 Phase 9.8  Global Placement
 ..
-Phase 9.8  Global Placement (Checksum:63c3658) REAL time: 3 secs 
+Phase 9.8  Global Placement (Checksum:602bc9e8) REAL time: 2 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:63c3658) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:602bc9e8) REAL time: 2 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:60c0685) REAL time: 3 secs 
+Phase 11.18  Placement Optimization (Checksum:5e2ca1b8) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:60c0685) REAL time: 3 secs 
+Phase 12.5  Local Placement Optimization (Checksum:5e2ca1b8) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
-Writing design to file multiplicador.ncd
+Writing design to file portXor.ncd
 
 
 
 Starting Router
 
 
-Phase  1  : 107 unrouted;      REAL time: 7 secs 
+Phase  1  : 15 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 107 unrouted;      REAL time: 7 secs 
+Phase  2  : 15 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 31 unrouted;      REAL time: 7 secs 
+Phase  3  : 0 unrouted;      REAL time: 6 secs 
 
-Phase  4  : 31 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Updating file: multiplicador.ncd with current fully routed design.
+Updating file: portXor.ncd with current fully routed design.
 
 Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
@@ -144,10 +143,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 8 secs 
-Total CPU time to PAR completion: 8 secs 
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  626 MB
+Peak Memory Usage:  625 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
@@ -156,7 +155,7 @@ Number of error messages: 0
 Number of warning messages: 0
 Number of info messages: 1
 
-Writing design to file multiplicador.ncd
+Writing design to file portXor.ncd
 
 
 

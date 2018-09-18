@@ -86,3 +86,4 @@ Finished circuit initialization process.
 # isim force add /multiplicador/entradaa 0110 -radix bin -cancel 16 us
 # isim force add /multiplicador/entradab 0010 -radix bin -cancel 16 us
 # run all
+# exit 0

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:19:36 08/31/2018 
+-- Create Date:    14:49:58 09/18/2018 
 -- Design Name: 
--- Module Name:    portOu - Behavioral 
+-- Module Name:    portXor - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,20 +29,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity portOR is
+entity portXor is
 
 	port (
-				entradaA : in std_logic_vector(3 downto 0);
-				entradaB : in std_logic_vector(3 downto 0);
-				saida		: out	std_logic_vector(3 downto 0));
+		entradaA		:	in 	std_logic_vector (4 downto 0);
+		entradaB		:	in 	std_logic_vector (4 downto 0);
+		saida			: 	out	std_logic_vector (4 downto 0)
+	);
 
-end portOr;
+end portXor;
 
-architecture portOrArch of portOris
+architecture portXorArch of portXor is
 
 begin
+	
+	saida <= entradaA xor entradaB;
 
-	saida <= entradaA or entradaB;
-
-end portOrArch;
+end portXorArch;
 
