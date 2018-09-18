@@ -1,0 +1,348 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: multiplicador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "multiplicador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "multiplicador"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : multiplicador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd" in Library work.
+Architecture somador1bitarch of Entity somador1bit is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd" in Library work.
+Architecture somador4bitsarch of Entity somador4bits is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd" in Library work.
+Architecture somador8bitsarch of Entity somador8bits is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd" in Library work.
+Entity <multiplicador> compiled.
+Entity <multiplicador> (Architecture <multiplicadorarch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <multiplicador> in library <work> (architecture <multiplicadorarch>).
+
+Analyzing hierarchy for entity <somador8Bits> in library <work> (architecture <somador8bitsarch>).
+
+Analyzing hierarchy for entity <somador4Bits> in library <work> (architecture <somador4bitsarch>).
+
+Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <multiplicador> in library <work> (Architecture <multiplicadorarch>).
+Entity <multiplicador> analyzed. Unit <multiplicador> generated.
+
+Analyzing Entity <somador8Bits> in library <work> (Architecture <somador8bitsarch>).
+Entity <somador8Bits> analyzed. Unit <somador8Bits> generated.
+
+Analyzing Entity <somador4Bits> in library <work> (Architecture <somador4bitsarch>).
+Entity <somador4Bits> analyzed. Unit <somador4Bits> generated.
+
+Analyzing Entity <Somador1Bit> in library <work> (Architecture <somador1bitarch>).
+Entity <Somador1Bit> analyzed. Unit <Somador1Bit> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Somador1Bit>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd".
+    Found 1-bit xor2 for signal <resultado>.
+    Found 1-bit xor2 for signal <carryOut$xor0000> created at line 45.
+Unit <Somador1Bit> synthesized.
+
+
+Synthesizing Unit <somador4Bits>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd".
+Unit <somador4Bits> synthesized.
+
+
+Synthesizing Unit <somador8Bits>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd".
+WARNING:Xst:647 - Input <cIn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <somador8Bits> synthesized.
+
+
+Synthesizing Unit <multiplicador>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd".
+WARNING:Xst:1780 - Signal <somaParcial3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <carryOut3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <multiplicador> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 48
+ 1-bit xor2                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <somador3> is unconnected in block <somador2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <somador4> is unconnected in block <somador2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <somador1> is unconnected in block <somador1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <somador2> is unconnected in block <somador1>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 48
+ 1-bit xor2                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <multiplicador> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block multiplicador, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : multiplicador.ngr
+Top Level Output File Name         : multiplicador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 30
+#      LUT2                        : 8
+#      LUT3                        : 5
+#      LUT4                        : 17
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                       17  out of   5888     0%  
+ Number of 4 input LUTs:                 30  out of  11776     0%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    372     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 14.288ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 340 / 8
+-------------------------------------------------------------------------
+Delay:               14.288ns (Levels of Logic = 9)
+  Source:            entradaB<1> (PAD)
+  Destination:       saida<7> (PAD)
+
+  Data Path: entradaB<1> to saida<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.849   0.812  entradaB_1_IBUF (entradaB_1_IBUF)
+     LUT2:I0->O            2   0.648   0.590  resultParcial2_2_mux00001 (resultParcial2<2>)
+     LUT4:I0->O            3   0.648   0.563  somador1/somador1/somador3/carryOut1 (somador1/somador1/carryOut2)
+     LUT4:I2->O            2   0.648   0.590  somador1/somador1/somador4/Mxor_resultado_Result1 (somaParcial1<3>)
+     LUT4:I0->O            2   0.648   0.479  somador3/somador1/somador4/carryOut1 (somador3/carryOut1)
+     LUT3:I2->O            2   0.648   0.479  somador3/somador2/somador1/carryOut1 (somador3/somador2/carryOut0)
+     LUT3:I2->O            2   0.648   0.450  somador3/somador2/somador2/carryOut1 (somador3/somador2/carryOut1)
+     LUT4:I3->O            1   0.648   0.420  somador3/somador2/somador4/Mxor_resultado_Result1 (saida_7_OBUF)
+     OBUF:I->O                 4.520          saida_7_OBUF (saida<7>)
+    ----------------------------------------
+    Total                     14.288ns (9.905ns logic, 4.383ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.77 secs
+ 
+--> 
+
+
+Total memory usage is 504220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

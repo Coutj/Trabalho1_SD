@@ -1,0 +1,4 @@
+vhdl work "moduloPrincipal.vhd"
+vhdl work "Somador4Bits.vhd"
+vhdl work "somador8Bits.vhd"
+vhdl work "multiplicador.vhd"

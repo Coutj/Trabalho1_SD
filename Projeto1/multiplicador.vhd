@@ -41,24 +41,54 @@ end multiplicador;
 
 architecture multiplicadorArch of multiplicador is
 
+
+	component somador8Bits is
+
+		port (	numA8Bits		:in		std_logic_vector (7 downto 0);
+					numB8Bits		:in		std_logic_vector (7 downto 0);
+					cIn				:in		std_logic;
+					cOut				:out		std_logic;
+					resultado8Bits	:out		std_logic_vector (7 downto 0));
+	end component;
+
+	signal carryOut1, carryOut2, carryOut3 : std_logic;
+	signal somaParcial1, somaParcial2, somaParcial3 : std_logic_vector (7 downto 0);
+	
+	signal resultParcial1,resultParcial2,
+	resultParcial3,resultParcial4 : std_logic_vector (7 downto 0);
+
 begin
 
+	somador1 : somador8Bits port map (resultParcial1, resultParcial2, '0', carryOut1, somaParcial1);
+	somador2 : somador8Bits port map (resultParcial3, resultParcial4, carryOut1, carryOut2, somaParcial2);
+	somador3 : somador8Bits port map (somaParcial1, somaParcial2, carryOut2, carryOut3 , saida);
 
-
-	multiProcess : process(entradaA, entradaB, saida) is 
+	multiProcess : process(entradaA, entradaB) is 
 		
-		variable resultParcial1,resultParcial2,
-		resultParcial3,resultParcial4 : std_logic_vector (7 downto 0);
+		begin	
 		
-		if entradaB(0) == '1' then
+			resultParcial1 <= "00000000";
+			resultParcial2 <= "00000000";
+			resultParcial3 <= "00000000";
+			resultParcial4 <= "00000000";
 		
-		endif 
-		
+			if entradaB(0) = '1' then				
+				resultParcial1(3 downto 0) <= entradaA;			
+			end if;
+			
+			if entradaB(1) = '1' then			
+				resultParcial2(4 downto 1) <= entradaA;
+			end if;
+			
+			if entradaB(2) = '1' then
+				resultParcial3(5 downto 2) <= entradaA;
+			end if;
+			
+			if entradaB(3) = '1' then			
+				resultParcial4(6 downto 3) <= entradaA;	
+			end if;
 	
-	end process multiProcess;
-
-
-
-
+	end process multiProcess;	
+			
 end multiplicadorArch;
 

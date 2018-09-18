@@ -36,10 +36,7 @@ entity somador8Bits is
 				cIn				:in		std_logic;
 				cOut				:out		std_logic;
 				resultado8Bits	:out		std_logic_vector (7 downto 0));
-				--resultado41Bits	:out		std_logic_vector (3 downto 0);
-				--resultado42Bits	:out		std_logic_vector (3 downto 0));
-
-	end somador8Bits;
+end somador8Bits;
 
 architecture somador8BitsArch of somador8Bits is
 

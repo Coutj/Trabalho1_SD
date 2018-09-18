@@ -1,0 +1,10 @@
+Command line:
+   multiplicador_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  46287
+
+Tue Sep 18 13:25:07 2018
+
+
+ Elaboration Time: 0.04 sec

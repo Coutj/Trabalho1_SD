@@ -9,7 +9,7 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Aug 31 16:34:18 2018
+Mapped Date    : Mon Sep 17 21:08:38 2018
 
 Design Summary
 --------------
@@ -27,7 +27,7 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                1.00
 
-Peak Memory Usage:  648 MB
+Peak Memory Usage:  640 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 
