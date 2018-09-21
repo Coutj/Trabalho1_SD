@@ -1,0 +1,7 @@
+[Inputs]
+=controle[2:0]=
+=entradaA[4:0]=
+=entradaB[4:0]=
+[Outputs]
+=saida[7:0]=
+[BiDir]

@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+ULA instance_name (
+    .controle(controle), 
+    .entradaA(entradaA), 
+    .entradaB(entradaB), 
+    .saida(saida)
+    );
+
+

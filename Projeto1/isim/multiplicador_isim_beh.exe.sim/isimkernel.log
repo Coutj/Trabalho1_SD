@@ -2,12 +2,12 @@ Command line:
    multiplicador_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  46287
+     -socket  39049
 
-Tue Sep 18 13:25:07 2018
+Fri Sep 21 15:07:39 2018
 
 
- Elaboration Time: 0.04 sec
+ Elaboration Time: 0.03 sec
 
  Current Memory Usage: 215.052 Meg
 
@@ -20,10 +20,11 @@ Tue Sep 18 13:25:07 2018
  Total Traceable Variables  : 8
  Total Scalar Nets and Variables : 469
 Total Line Count : 69
+Total Line Count : 69
 
- Total Simulation Time: 0.08 sec
+ Total Simulation Time: 0.11 sec
 
  Current Memory Usage: 290.554 Meg
 
-Tue Sep 18 15:04:08 2018
+Fri Sep 21 15:11:24 2018
 
