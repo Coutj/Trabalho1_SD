@@ -37,39 +37,18 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 
 Data Sheet report:
 -----------------
-All values displayed in nanoseconds (ns)
+No constraints were found to generate data for the Data Sheet Report section.
+Use the Advanced Analysis (-a) option or generate global constraints for each
+clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
 
-Setup/Hold to clock setA
-------------+------------+------------+------------------+--------+
-            |Max Setup to|Max Hold to |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-entrada<0>  |    2.293(F)|   -0.809(F)|setA_BUFGP        |   0.000|
-entrada<1>  |    2.304(F)|   -0.822(F)|setA_BUFGP        |   0.000|
-entrada<2>  |    2.312(F)|   -0.831(F)|setA_BUFGP        |   0.000|
-entrada<3>  |    0.124(F)|    1.234(F)|setA_BUFGP        |   0.000|
-------------+------------+------------+------------------+--------+
-
-Clock setA to Pad
-------------+------------+------------------+--------+
-            | clk (edge) |                  | Clock  |
-Destination |   to PAD   |Internal Clock(s) | Phase  |
-------------+------------+------------------+--------+
-saida<0>    |    7.671(F)|setA_BUFGP        |   0.000|
-saida<1>    |    7.933(F)|setA_BUFGP        |   0.000|
-saida<2>    |    7.409(F)|setA_BUFGP        |   0.000|
-saida<3>    |    6.064(F)|setA_BUFGP        |   0.000|
-------------+------------+------------------+--------+
-
-
-Analysis completed Fri Sep 21 16:29:58 2018 
+Analysis completed Fri Sep 28 15:40:59 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 366 MB
+Peak Memory Usage: 365 MB
 
 
 

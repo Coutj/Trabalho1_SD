@@ -4,20 +4,14 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="1">
-<DesignStatistics TimeStamp="Fri Sep 21 16:29:45 2018"><group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="1">
-<attrib name="value" value="10"/></item>
-<item name="AGG_IO" rev="1">
-<attrib name="value" value="10"/></item>
-<item name="NUM_BONDED_IBUF" rev="1">
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Fri Sep 28 15:40:45 2018"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="2">
 <attrib name="value" value="5"/></item>
-<item name="NUM_BONDED_IOB" rev="1">
+<item name="AGG_IO" rev="2">
 <attrib name="value" value="5"/></item>
-<item name="NUM_BUFGMUX" rev="1">
-<attrib name="value" value="1"/></item>
-<item name="NUM_IOB_LATCH" rev="1">
-<attrib name="value" value="4"/></item>
+<item name="NUM_BONDED_IOB" rev="2">
+<attrib name="value" value="5"/></item>
 </group>
 </DesignStatistics>
 <CmdHistory>

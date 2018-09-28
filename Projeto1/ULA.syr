@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: ULA.prj
@@ -159,16 +159,31 @@ Unit <Somador4Bits> synthesized.
 
 Synthesizing Unit <ULA>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd".
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <setB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1306 - Output <saida<7:4>> is never assigned.
 WARNING:Xst:1306 - Output <overflow> is never assigned.
-WARNING:Xst:647 - Input <setCtrl> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <numeroB> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
-WARNING:Xst:653 - Signal <controle> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
-WARNING:Xst:737 - Found 4-bit latch for signal <numeroA>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 4-bit latch for signal <entradaSomadorA>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 4-bit latch for signal <entradaSomadorB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:653 - Signal <CLK> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found finite state machine <FSM_0> for signal <estado>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | e0                                             |
+    | Power Up State     | e0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <controle>.
+    Found 4-bit register for signal <entradaSomadorA>.
+    Found 4-bit register for signal <entradaSomadorB>.
+    Found 4-bit register for signal <numeroA>.
+    Found 4-bit register for signal <numeroB>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  20 D-type flip-flop(s).
 Unit <ULA> synthesized.
 
 
@@ -176,8 +191,8 @@ Unit <ULA> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Latches                                              : 3
- 4-bit latch                                           : 3
+# Registers                                            : 5
+ 4-bit register                                        : 5
 # Xors                                                 : 8
  1-bit xor2                                            : 8
 
@@ -187,21 +202,46 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
-WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
-WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
-WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <estado/FSM> on signal <estado[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ e0    | 00
+ e1    | 01
+ e2    | 11
+ e3    | 10
+-------------------
+WARNING:Xst:1293 - FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Latches                                              : 3
- 4-bit latch                                           : 3
+# FSMs                                                 : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
 # Xors                                                 : 8
  1-bit xor2                                            : 8
 
@@ -210,12 +250,26 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <entradaSomadorB_0> in Unit <ULA> is equivalent to the following 3 FFs/Latches, which will be removed : <entradaSomadorB_1> <entradaSomadorB_2> <entradaSomadorB_3> 
-WARNING:Xst:1710 - FF/Latch <entradaSomadorB_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1294 - Latch <entradaSomadorA_0> is equivalent to a wire in block <ULA>.
-WARNING:Xst:1294 - Latch <entradaSomadorA_1> is equivalent to a wire in block <ULA>.
-WARNING:Xst:1294 - Latch <entradaSomadorA_2> is equivalent to a wire in block <ULA>.
-WARNING:Xst:1294 - Latch <entradaSomadorA_3> is equivalent to a wire in block <ULA>.
+WARNING:Xst:1710 - FF/Latch <numeroB_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroB_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <numeroA_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <controle_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorB_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_0> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_1> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_2> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <entradaSomadorA_3> (without init value) has a constant value of 0 in block <ULA>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <ULA> ...
 
@@ -258,12 +312,7 @@ Design Statistics
 Cell Usage :
 # BELS                             : 1
 #      GND                         : 1
-# FlipFlops/Latches                : 4
-#      LD                          : 4
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 9
-#      IBUF                        : 4
+# IO Buffers                       : 5
 #      OBUF                        : 5
 =========================================================================
 
@@ -274,9 +323,7 @@ Selected Device : 3s700anfgg484-4
 
  Number of Slices:                        0  out of   5888     0%  
  Number of IOs:                          18
- Number of bonded IOBs:                  10  out of    372     2%  
-    IOB Flip Flops:                       4
- Number of GCLKs:                         1  out of     24     4%  
+ Number of bonded IOBs:                   5  out of    372     1%  
 
 ---------------------------
 Partition Resource Summary:
@@ -296,11 +343,7 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-setA                               | BUFGP                  | 4     |
------------------------------------+------------------------+-------+
+No clock signals found in this design
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -311,8 +354,8 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 1.521ns
-   Maximum output required time after clock: 5.668ns
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -320,55 +363,17 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'setA'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              1.521ns (Levels of Logic = 1)
-  Source:            entrada<0> (PAD)
-  Destination:       numeroA_0 (LATCH)
-  Destination Clock: setA falling
-
-  Data Path: entrada<0> to numeroA_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   0.849   0.420  entrada_0_IBUF (entrada_0_IBUF)
-     LD:D                      0.252          numeroA_0
-    ----------------------------------------
-    Total                      1.521ns (1.101ns logic, 0.420ns route)
-                                       (72.4% logic, 27.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'setA'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              5.668ns (Levels of Logic = 1)
-  Source:            numeroA_3 (LATCH)
-  Destination:       saida<3> (PAD)
-  Source Clock:      setA falling
-
-  Data Path: numeroA_3 to saida<3>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.728   0.420  numeroA_3 (numeroA_3)
-     OBUF:I->O                 4.520          saida_3_OBUF (saida<3>)
-    ----------------------------------------
-    Total                      5.668ns (5.248ns logic, 0.420ns route)
-                                       (92.6% logic, 7.4% route)
-
-=========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.92 secs
+Total CPU time to Xst completion: 3.90 secs
  
 --> 
 
 
-Total memory usage is 503232 kilobytes
+Total memory usage is 503816 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

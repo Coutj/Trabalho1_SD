@@ -1,0 +1,4 @@
+vhdl work "moduloPrincipal.vhd"
+vhdl work "Somador4Bits.vhd"
+vhdl work "ULA.vhd"
+vhdl work "ULA_Test.vhd"

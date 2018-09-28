@@ -7,6 +7,9 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ULA - ULaArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA.vhd</ClosedNode>
+         <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd</ClosedNode>
+         <ClosedNode>/multiplicador - multiplicadorArch |home|juan|Documents|Sistemas_digitais|Projeto1|multiplicador.vhd</ClosedNode>
          <ClosedNode>/multiplicador - multiplicadorArch |home|juan|Documents|Sistemas_digitais|Projeto1|multiplicador.vhd/somador1 - somador8Bits - somador8BitsArch</ClosedNode>
          <ClosedNode>/multiplicador - multiplicadorArch |home|juan|Documents|Sistemas_digitais|Projeto1|multiplicador.vhd/somador2 - somador8Bits - somador8BitsArch</ClosedNode>
          <ClosedNode>/multiplicador - multiplicadorArch |home|juan|Documents|Sistemas_digitais|Projeto1|multiplicador.vhd/somador3 - somador8Bits - somador8BitsArch</ClosedNode>
@@ -15,18 +18,19 @@
          <ClosedNode>/somador8Bits - somador8BitsArch |home|juan|Documents|Sistemas_digitais|Projeto1|somador8Bits.vhd/somador2 - Somador4Bits - Somador4BitsArch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ULA - Behavioral (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd)</SelectedItem>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d90000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>ULA - Behavioral (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd)</CurrentItem>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
@@ -67,17 +71,18 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>View HDL Instantiation Template</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000ef000000010000000100000000000000000000000064ffffffff000000810000000000000001000000ef0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>View HDL Instantiation Template</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000e8000000be01000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -105,13 +110,13 @@
          <ClosedNode>/somador8Bits - somador8BitsArch |home|juan|Documents|Sistemas_digitais|Projeto1|somador8Bits.vhd/somador1 - Somador4Bits - Somador4BitsArch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>multiplicador - multiplicadorArch (/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd)</SelectedItem>
+         <SelectedItem>ULA - Behavioral (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>multiplicador - multiplicadorArch (/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd)</CurrentItem>
+      <CurrentItem>ULA - Behavioral (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

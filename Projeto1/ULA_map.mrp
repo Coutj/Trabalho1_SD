@@ -9,7 +9,7 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 21 16:29:42 2018
+Mapped Date    : Fri Sep 28 15:40:39 2018
 
 Design Summary
 --------------
@@ -20,15 +20,11 @@ Logic Distribution:
     Number of Slices containing only related logic:       0 out of       0   0%
     Number of Slices containing unrelated logic:          0 out of       0   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                 10 out of     372    2%
-    IOB Latches:                          4
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of bonded IOBs:                  5 out of     372    1%
 
-Average Fanout of Non-Clock Nets:                1.00
-
-Peak Memory Usage:  640 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
+Peak Memory Usage:  638 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 
@@ -72,14 +68,14 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network reset has no load.
-INFO:LIT:395 - The above info message is repeated 7 more times for the following
-   (max. 5 shown):
+INFO:LIT:243 - Logical network setA has no load.
+INFO:LIT:395 - The above info message is repeated 12 more times for the
+   following (max. 5 shown):
+   reset,
    setB,
    overflow,
    setCtrl,
-   saida<7>,
-   saida<6>
+   saida<7>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -105,15 +101,10 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | carryOut                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| entrada<0>                         | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
-| entrada<1>                         | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
-| entrada<2>                         | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
-| entrada<3>                         | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
 | saida<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | saida<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | saida<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| saida<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| setA                               | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| saida<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

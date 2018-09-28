@@ -9,7 +9,7 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 21 16:29:42 2018
+Mapped Date    : Fri Sep 28 15:40:39 2018
 
 Mapping design into LUTs...
 Running directed packing...
@@ -28,15 +28,11 @@ Logic Distribution:
     Number of Slices containing only related logic:       0 out of       0   0%
     Number of Slices containing unrelated logic:          0 out of       0   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                 10 out of     372    2%
-    IOB Latches:                          4
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of bonded IOBs:                  5 out of     372    1%
 
-Average Fanout of Non-Clock Nets:                1.00
-
-Peak Memory Usage:  640 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
+Peak Memory Usage:  638 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 

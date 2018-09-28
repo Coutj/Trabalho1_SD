@@ -1,17 +1,23 @@
 
-##Entrada somador de 1 Bit
-NET "entradaA[0]"         LOC = "V8"   | IOSTANDARD = LVCMOS33 ;
-NET "entradaA[1]"         LOC = "U10"  | IOSTANDARD = LVCMOS33 ;
-NET "entradaA[2]"         LOC = "U8"   | IOSTANDARD = LVCMOS33 ;
-NET "entradaA[3]"         LOC = "T9"   | IOSTANDARD = LVCMOS33 ;
+NET "entrada[0]"         LOC = "V8"   | IOSTANDARD = LVCMOS33 ;
+NET "entrada[1]"         LOC = "U10"  | IOSTANDARD = LVCMOS33 ;
+NET "entrada[2]"         LOC = "U8"   | IOSTANDARD = LVCMOS33 ;
+NET "entrada[3]"         LOC = "T9"   | IOSTANDARD = LVCMOS33 ;
 
-NET "resultado[0]"        LOC = "R20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-NET "resultado[1]"        LOC = "T19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-NET "resultado[2]"        LOC = "U20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-NET "resultado[3]"        LOC = "U19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-#
-#NET "Cout"					  LOC = "V19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[0]"        LOC = "R20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[1]"        LOC = "T19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[2]"        LOC = "U20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[3]"        LOC = "U19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[4]"					  LOC = "V19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[5]"        LOC = "V20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[6]"        LOC = "Y22"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[7]"        LOC = "W21"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
 
-#NET "LED<5>"        LOC = "V20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-#NET "LED<6>"        LOC = "Y22"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-#NET "LED<7>"        LOC = "W21"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+NET "setB"      LOC = "T16"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+NET "reset"     LOC = "T14"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+NET "setCtrl"     LOC = "T15"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+NET "setA"      LOC = "U15"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+
+
+NET "CLK"       LOC = "E12"  | IOSTANDARD = LVCMOS33 | PERIOD = 20.000 ;
