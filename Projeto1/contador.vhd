@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -40,28 +41,25 @@ end contador;
 
 architecture contadorArch of contador is
 
+	constant prescaler				: std_logic_vector(24 downto 0) := "1011111010111100001000000";
+   signal prescaler_counter	: std_logic_vector(24 downto 0) := (others => '0');
+
 begin
 
-	contProcess : process(CLK) is
-		variable intern_value: integer :=0;
-		variable count : integer := 0;
+	contProcess : process(CLK) is				
 		begin
 		
-		--	count := intern_value;
-			
-	--		while (true) loop
-			
+		
 				if ((CLK='1') and (CLK'event)) then
-					intern_value:=(intern_value + 1) mod 32;
-					count := intern_value;
-					if (count = 31) then
+					prescaler_counter <= std_logic_vector( unsigned (prescaler_counter) + 1);
+					if(prescaler_counter > prescaler) then
 						saida <= '1';
-					else
+						prescaler_counter <= (others => '0');
+					else				
 						saida <= '0';
 					end if;
 				end if;
---			end loop;
-		
+
 		end Process contProcess;
 
 end contadorArch;

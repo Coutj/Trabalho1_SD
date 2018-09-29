@@ -1,11 +1,11 @@
 V3 40
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd 2018/09/28.16:59:09 P.20131013
-EN work/contador 1538153953 \
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd 2018/09/29.23:28:03 P.20131013
+EN work/contador 1538263688 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/contador/contadorArch 1538153954 \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/contador/contadorArch 1538263689 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd \
-      EN work/contador 1538153953
+      EN work/contador 1538263688
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd 2018/08/31.16:15:40 P.20131013
 EN work/Inversor 1536935045 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd \

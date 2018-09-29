@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador_isim_beh.wdb 
+Running: /home/juan/Documents/Sistemas_digitais/Projeto1/contador_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juan/Documents/Sistemas_digitais/Projeto1/contador_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,13 +11,65 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /multiplicador/entradaa 1010 -radix bin -cancel 16 us
-# isim force add /multiplicador/entradab 0101 -radix bin -cancel 16 us
+# isim force add /contador/saida 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 1 ms
 # run all
 # restart
-# isim force add /multiplicador/entradaa 1010 -radix bin -cancel 16 us
-# isim force add /multiplicador/entradab 1010 -radix bin -cancel 16 us
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 1 ms
 # run all
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# restart
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 1 ms
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 1 us -repeat 2 us -cancel 1 ms
+# run all
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 100 ns -repeat 200 ns -cancel 1000 s
+# run all
+Stopped at time : 14879370800 ns : File "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" Line 51
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 10 ns -repeat 20 ns -cancel 100 s
+# run all
+Stopped at time : 2384037350 ns : File "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" Line 55
+# restart
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 10 ns -repeat 20 ns -cancel 10 s
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 2530842940 ns : File "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" Line 53
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /contador/clk 0 -radix bin -value 1 -radix bin -time 10 ns -repeat 20 ns -cancel 10 s
+# run all
+Stopped at time : 357687820 ns : File "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" Line 53
 # exit 0

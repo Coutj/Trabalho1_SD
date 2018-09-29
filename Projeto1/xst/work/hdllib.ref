@@ -17,9 +17,9 @@ EN moduloprincipal NULL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPr
 AR somador4bits somador4bitsarch /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd sub00/vhpl08 1538151485
 EN inversor NULL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd sub00/vhpl11 1536935045
 EN somador1bit NULL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd sub00/vhpl05 1538151482
-AR contador contadorarch /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd sub00/vhpl26 1538153954
+AR contador contadorarch /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd sub00/vhpl26 1538263689
 AR ula_test ula_testarch /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd sub00/vhpl24 1538151489
-EN contador NULL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd sub00/vhpl25 1538153953
+EN contador NULL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd sub00/vhpl25 1538263688
 EN portand NULL /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd sub00/vhpl15 1537218506
 AR portand behavioral /home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd sub00/vhpl16 1537218507
 EN somadorcompleto NULL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd sub00/vhpl04 1535571825

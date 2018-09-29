@@ -1,26 +1,21 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador_isim_beh.exe -prj /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador_beh.prj work.multiplicador 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/juan/Documents/Sistemas_digitais/Projeto1/contador_isim_beh.exe" -prj "/home/juan/Documents/Sistemas_digitais/Projeto1/contador_beh.prj" "work.contador" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd" into library work
-Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd" into library work
-Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd" into library work
-Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd" into library work
+Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 85472 KB
-Fuse CPU Usage: 1470 ms
+Fuse Memory Usage: 87084 KB
+Fuse CPU Usage: 1480 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture somador1bitarch of entity Somador1Bit [somador1bit_default]
-Compiling architecture somador4bitsarch of entity Somador4Bits [somador4bits_default]
-Compiling architecture somador8bitsarch of entity somador8Bits [somador8bits_default]
-Compiling architecture multiplicadorarch of entity multiplicador
+Compiling package numeric_std
+Compiling architecture contadorarch of entity contador
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 9 VHDL Units
-Built simulation executable /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador_isim_beh.exe
-Fuse Memory Usage: 651188 KB
-Fuse CPU Usage: 1500 ms
-GCC CPU Usage: 600 ms
+Compiled 4 VHDL Units
+Built simulation executable /home/juan/Documents/Sistemas_digitais/Projeto1/contador_isim_beh.exe
+Fuse Memory Usage: 659180 KB
+Fuse CPU Usage: 1580 ms
+GCC CPU Usage: 200 ms
