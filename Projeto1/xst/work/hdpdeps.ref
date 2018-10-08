@@ -1,11 +1,11 @@
-V3 40
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd 2018/09/29.23:28:03 P.20131013
-EN work/contador 1538263688 \
+V3 41
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd 2018/10/05.15:28:32 P.20131013
+EN work/contador 1539031946 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/contador/contadorArch 1538263689 \
+AR work/contador/contadorArch 1539031947 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd \
-      EN work/contador 1538263688
+      EN work/contador 1539031946
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd 2018/08/31.16:15:40 P.20131013
 EN work/Inversor 1536935045 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd \
@@ -13,13 +13,13 @@ EN work/Inversor 1536935045 \
 AR work/Inversor/InversorArch 1536935046 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd \
       EN work/Inversor 1536935045
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/08/31.14:58:39 P.20131013
-EN work/Somador1Bit 1538151482 \
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd 2018/10/08.20:20:49 P.20131013
+EN work/Somador1Bit 1539031940 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Somador1Bit/Somador1BitArch 1538151483 \
+AR work/Somador1Bit/Somador1BitArch 1539031941 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd \
-      EN work/Somador1Bit 1538151482
+      EN work/Somador1Bit 1539031940
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd 2018/09/18.13:50:16 P.20131013
 EN work/multiplicador 1537542346 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd \
@@ -48,13 +48,13 @@ EN work/portXor 1537282958 \
 AR work/portXor/portXorArch 1537282959 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/portXor.vhd \
       EN work/portXor 1537282958
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd 2018/09/14.16:10:29 P.20131013
-EN work/Somador4Bits 1538151484 \
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd 2018/10/08.20:32:53 P.20131013
+EN work/Somador4Bits 1539031942 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Somador4Bits/Somador4BitsArch 1538151485 \
+AR work/Somador4Bits/Somador4BitsArch 1539031943 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd \
-      EN work/Somador4Bits 1538151484 CP Somador1Bit
+      EN work/Somador4Bits 1539031942 CP Somador1Bit
 FL /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd 2018/09/14.16:43:32 P.20131013
 EN work/somador8Bits 1537542344 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd \
@@ -69,16 +69,16 @@ EN work/TesteSomador 1535731104 \
 AR work/TesteSomador/Behavioral 1535731105 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/TesteSomador.vhd \
       EN work/TesteSomador 1535731104 CP Somador4Bits
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd 2018/09/28.16:12:08 P.20131013
-EN work/ULA 1538151486 FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd \
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd 2018/10/08.20:40:22 P.20131013
+EN work/ULA 1539031944 FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ULA/ULaArch 1538151487 \
-      FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd EN work/ULA 1538151486 \
+AR work/ULA/ULaArch 1539031945 \
+      FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd EN work/ULA 1539031944 \
       CP Somador4Bits
-FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd 2018/09/28.16:17:58 P.20131013
-EN work/ULA_Test 1538151488 \
+FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd 2018/10/08.20:52:16 P.20131013
+EN work/ULA_Test 1539031948 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ULA_Test/ULA_TestArch 1538151489 \
+AR work/ULA_Test/ULA_TestArch 1539031949 \
       FL /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd \
-      EN work/ULA_Test 1538151488 CP ULA
+      EN work/ULA_Test 1539031948 CP ULA CP contador

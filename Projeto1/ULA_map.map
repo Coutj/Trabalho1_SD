@@ -9,30 +9,39 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 28 15:40:39 2018
+Mapped Date    : Mon Oct  8 20:40:38 2018
 
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net entradaSomadorA_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
+  Number of 4 input LUTs:                 8 out of  11,776    1%
 Logic Distribution:
-    Number of Slices containing only related logic:       0 out of       0   0%
-    Number of Slices containing unrelated logic:          0 out of       0   0%
+  Number of occupied Slices:              5 out of   5,888    1%
+    Number of Slices containing only related logic:       5 out of       5 100%
+    Number of Slices containing unrelated logic:          0 out of       5   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                  5 out of     372    1%
+  Total Number of 4 input LUTs:           8 out of  11,776    1%
+  Number of bonded IOBs:                 17 out of     372    4%
+    IOB Latches:                          8
+
+Average Fanout of Non-Clock Nets:                1.63
 
 Peak Memory Usage:  638 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   3 secs 
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 

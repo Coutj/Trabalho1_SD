@@ -39,31 +39,64 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock CLK
-------------+------------+------------+------------------+--------+
-            |Max Setup to|Max Hold to |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-entrada<0>  |    0.591(R)|    0.753(R)|CLK_BUFGP         |   0.000|
-entrada<1>  |    0.662(R)|    0.633(R)|CLK_BUFGP         |   0.000|
-entrada<2>  |    0.214(R)|    0.888(R)|CLK_BUFGP         |   0.000|
-entrada<3>  |    0.161(R)|    0.931(R)|CLK_BUFGP         |   0.000|
-reset       |    2.029(R)|    0.228(R)|CLK_BUFGP         |   0.000|
-setA        |    0.237(R)|    0.693(R)|CLK_BUFGP         |   0.000|
-setB        |    0.540(R)|    0.453(R)|CLK_BUFGP         |   0.000|
-setCtrl     |    0.579(R)|    0.420(R)|CLK_BUFGP         |   0.000|
-------------+------------+------------+------------------+--------+
+Clock entrada<0> to Pad
+------------+------------+----------------------------+--------+
+            | clk (edge) |                            | Clock  |
+Destination |   to PAD   |Internal Clock(s)           | Phase  |
+------------+------------+----------------------------+--------+
+carryOut    |   12.907(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<0>    |   10.076(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<1>    |    9.868(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<2>    |   11.069(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<3>    |   13.057(R)|ula1/entradaSomadorA_not0001|   0.000|
+------------+------------+----------------------------+--------+
 
-Clock to Setup on destination clock CLK
+Clock entrada<1> to Pad
+------------+------------+----------------------------+--------+
+            | clk (edge) |                            | Clock  |
+Destination |   to PAD   |Internal Clock(s)           | Phase  |
+------------+------------+----------------------------+--------+
+carryOut    |   12.798(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<0>    |    9.967(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<1>    |    9.759(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<2>    |   10.960(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<3>    |   12.948(R)|ula1/entradaSomadorA_not0001|   0.000|
+------------+------------+----------------------------+--------+
+
+Clock entrada<2> to Pad
+------------+------------+----------------------------+--------+
+            | clk (edge) |                            | Clock  |
+Destination |   to PAD   |Internal Clock(s)           | Phase  |
+------------+------------+----------------------------+--------+
+carryOut    |   13.337(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<0>    |   10.506(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<1>    |   10.298(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<2>    |   11.499(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<3>    |   13.487(R)|ula1/entradaSomadorA_not0001|   0.000|
+------------+------------+----------------------------+--------+
+
+Clock entrada<3> to Pad
+------------+------------+----------------------------+--------+
+            | clk (edge) |                            | Clock  |
+Destination |   to PAD   |Internal Clock(s)           | Phase  |
+------------+------------+----------------------------+--------+
+carryOut    |   12.521(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<0>    |    9.690(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<1>    |    9.482(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<2>    |   10.683(R)|ula1/entradaSomadorA_not0001|   0.000|
+saida<3>    |   12.671(R)|ula1/entradaSomadorA_not0001|   0.000|
+------------+------------+----------------------------+--------+
+
+Clock to Setup on destination clock CLKIN
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    3.307|         |         |         |
+CLKIN          |    6.173|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Sep 28 16:18:32 2018 
+Analysis completed Mon Oct  8 20:52:54 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

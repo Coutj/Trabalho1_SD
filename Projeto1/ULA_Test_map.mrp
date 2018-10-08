@@ -9,27 +9,33 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 28 16:18:12 2018
+Mapped Date    : Mon Oct  8 20:52:31 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:          22 out of  11,776    1%
-    Number used as Flip Flops:           14
+  Total Number Slice Registers:          42 out of  11,776    1%
+    Number used as Flip Flops:           34
     Number used as Latches:               8
-  Number of 4 input LUTs:                13 out of  11,776    1%
+  Number of 4 input LUTs:                20 out of  11,776    1%
 Logic Distribution:
-  Number of occupied Slices:             18 out of   5,888    1%
-    Number of Slices containing only related logic:      18 out of      18 100%
-    Number of Slices containing unrelated logic:          0 out of      18   0%
+  Number of occupied Slices:             35 out of   5,888    1%
+    Number of Slices containing only related logic:      35 out of      35 100%
+    Number of Slices containing unrelated logic:          0 out of      35   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          13 out of  11,776    1%
-  Number of bonded IOBs:                 19 out of     372    5%
+  Total Number of 4 input LUTs:          46 out of  11,776    1%
+    Number used as logic:                20
+    Number used as a route-thru:         26
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 18 out of     372    4%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.02
+Average Fanout of Non-Clock Nets:                2.08
 
 Peak Memory Usage:  639 MB
 Total REAL time to MAP completion:  2 secs 
@@ -88,7 +94,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   1 block(s) optimized away
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -96,6 +102,10 @@ Section 5 - Removed Logic
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
 
 Section 6 - IOB Properties
 --------------------------
@@ -104,7 +114,7 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CLK                                | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| CLKIN                              | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
 | carryOut                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | entrada<0>                         | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
 | entrada<1>                         | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
@@ -122,7 +132,6 @@ Section 6 - IOB Properties
 | saida<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | setA                               | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
 | setB                               | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
-| setCtrl                            | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

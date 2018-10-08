@@ -9,22 +9,28 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 28 15:40:39 2018
+Mapped Date    : Mon Oct  8 20:40:38 2018
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
+  Number of 4 input LUTs:                 8 out of  11,776    1%
 Logic Distribution:
-    Number of Slices containing only related logic:       0 out of       0   0%
-    Number of Slices containing unrelated logic:          0 out of       0   0%
+  Number of occupied Slices:              5 out of   5,888    1%
+    Number of Slices containing only related logic:       5 out of       5 100%
+    Number of Slices containing unrelated logic:          0 out of       5   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                  5 out of     372    1%
+  Total Number of 4 input LUTs:           8 out of  11,776    1%
+  Number of bonded IOBs:                 17 out of     372    4%
+    IOB Latches:                          8
+
+Average Fanout of Non-Clock Nets:                1.63
 
 Peak Memory Usage:  638 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   3 secs 
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -65,17 +71,19 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net entradaSomadorA_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network setA has no load.
-INFO:LIT:395 - The above info message is repeated 12 more times for the
-   following (max. 5 shown):
-   reset,
-   setB,
-   overflow,
-   setCtrl,
-   saida<7>
+INFO:LIT:243 - Logical network overflow has no load.
+INFO:LIT:395 - The above info message is repeated 4 more times for the following
+   (max. 5 shown):
+   saida<7>,
+   saida<6>,
+   saida<5>,
+   saida<4>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -84,14 +92,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   1 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
-
-Optimized Block(s):
-TYPE 		BLOCK
-GND 		XST_GND
 
 Section 6 - IOB Properties
 --------------------------
@@ -101,6 +104,18 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | carryOut                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| controle<0>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| controle<1>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| controle<2>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| controle<3>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| entradaA<0>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaA<1>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaA<2>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaA<3>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaB<0>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaB<1>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaB<2>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
+| entradaB<3>                        | IBUF             | INPUT     | LVCMOS25             |       |          |         | IFF1         |          | 0 / 5    |                  |
 | saida<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | saida<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | saida<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |

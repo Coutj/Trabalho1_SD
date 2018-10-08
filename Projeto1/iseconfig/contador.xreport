@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-09-29T21:05:02</DateModified>
+  <DateModified>2018-10-05T15:02:27</DateModified>
   <ModuleName>contador</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/juan/Documents/Sistemas_digitais/Projeto1/iseconfig/contador.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/juan/Documents/Sistemas_digitais/Projeto1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/juan/Documents/Sistemas_digitais/Projeto1/</ImplementationReportsDirectory>
   <DateInitialized>2018-09-29T21:05:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

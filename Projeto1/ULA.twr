@@ -37,18 +37,125 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 
 Data Sheet report:
 -----------------
-No constraints were found to generate data for the Data Sheet Report section.
-Use the Advanced Analysis (-a) option or generate global constraints for each
-clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+All values displayed in nanoseconds (ns)
 
-Analysis completed Fri Sep 28 15:40:59 2018 
+Setup/Hold to clock controle<0>
+------------+------------+------------+-----------------------+--------+
+            |Max Setup to|Max Hold to |                       | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)      | Phase  |
+------------+------------+------------+-----------------------+--------+
+entradaA<0> |    1.268(R)|    0.566(R)|entradaSomadorA_not0001|   0.000|
+entradaA<1> |    1.348(R)|    0.467(R)|entradaSomadorA_not0001|   0.000|
+entradaA<2> |    1.251(R)|    0.588(R)|entradaSomadorA_not0001|   0.000|
+entradaA<3> |    1.246(R)|    0.594(R)|entradaSomadorA_not0001|   0.000|
+entradaB<0> |    1.259(R)|    0.579(R)|entradaSomadorA_not0001|   0.000|
+entradaB<1> |    1.268(R)|    0.566(R)|entradaSomadorA_not0001|   0.000|
+entradaB<2> |    1.259(R)|    0.579(R)|entradaSomadorA_not0001|   0.000|
+entradaB<3> |    1.243(R)|    0.598(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+------------+-----------------------+--------+
+
+Setup/Hold to clock controle<1>
+------------+------------+------------+-----------------------+--------+
+            |Max Setup to|Max Hold to |                       | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)      | Phase  |
+------------+------------+------------+-----------------------+--------+
+entradaA<0> |    1.077(R)|    0.804(R)|entradaSomadorA_not0001|   0.000|
+entradaA<1> |    1.157(R)|    0.705(R)|entradaSomadorA_not0001|   0.000|
+entradaA<2> |    1.060(R)|    0.826(R)|entradaSomadorA_not0001|   0.000|
+entradaA<3> |    1.055(R)|    0.832(R)|entradaSomadorA_not0001|   0.000|
+entradaB<0> |    1.068(R)|    0.817(R)|entradaSomadorA_not0001|   0.000|
+entradaB<1> |    1.077(R)|    0.804(R)|entradaSomadorA_not0001|   0.000|
+entradaB<2> |    1.068(R)|    0.817(R)|entradaSomadorA_not0001|   0.000|
+entradaB<3> |    1.052(R)|    0.836(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+------------+-----------------------+--------+
+
+Setup/Hold to clock controle<2>
+------------+------------+------------+-----------------------+--------+
+            |Max Setup to|Max Hold to |                       | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)      | Phase  |
+------------+------------+------------+-----------------------+--------+
+entradaA<0> |    1.279(R)|    0.553(R)|entradaSomadorA_not0001|   0.000|
+entradaA<1> |    1.359(R)|    0.454(R)|entradaSomadorA_not0001|   0.000|
+entradaA<2> |    1.262(R)|    0.575(R)|entradaSomadorA_not0001|   0.000|
+entradaA<3> |    1.257(R)|    0.581(R)|entradaSomadorA_not0001|   0.000|
+entradaB<0> |    1.270(R)|    0.566(R)|entradaSomadorA_not0001|   0.000|
+entradaB<1> |    1.279(R)|    0.553(R)|entradaSomadorA_not0001|   0.000|
+entradaB<2> |    1.270(R)|    0.566(R)|entradaSomadorA_not0001|   0.000|
+entradaB<3> |    1.254(R)|    0.585(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+------------+-----------------------+--------+
+
+Setup/Hold to clock controle<3>
+------------+------------+------------+-----------------------+--------+
+            |Max Setup to|Max Hold to |                       | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)      | Phase  |
+------------+------------+------------+-----------------------+--------+
+entradaA<0> |    1.190(R)|    0.664(R)|entradaSomadorA_not0001|   0.000|
+entradaA<1> |    1.270(R)|    0.565(R)|entradaSomadorA_not0001|   0.000|
+entradaA<2> |    1.173(R)|    0.686(R)|entradaSomadorA_not0001|   0.000|
+entradaA<3> |    1.168(R)|    0.692(R)|entradaSomadorA_not0001|   0.000|
+entradaB<0> |    1.181(R)|    0.677(R)|entradaSomadorA_not0001|   0.000|
+entradaB<1> |    1.190(R)|    0.664(R)|entradaSomadorA_not0001|   0.000|
+entradaB<2> |    1.181(R)|    0.677(R)|entradaSomadorA_not0001|   0.000|
+entradaB<3> |    1.165(R)|    0.696(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+------------+-----------------------+--------+
+
+Clock controle<0> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+carryOut    |   12.603(R)|entradaSomadorA_not0001|   0.000|
+saida<0>    |   10.980(R)|entradaSomadorA_not0001|   0.000|
+saida<1>    |   10.788(R)|entradaSomadorA_not0001|   0.000|
+saida<2>    |   11.348(R)|entradaSomadorA_not0001|   0.000|
+saida<3>    |   12.432(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock controle<1> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+carryOut    |   12.841(R)|entradaSomadorA_not0001|   0.000|
+saida<0>    |   11.218(R)|entradaSomadorA_not0001|   0.000|
+saida<1>    |   11.026(R)|entradaSomadorA_not0001|   0.000|
+saida<2>    |   11.586(R)|entradaSomadorA_not0001|   0.000|
+saida<3>    |   12.670(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock controle<2> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+carryOut    |   12.590(R)|entradaSomadorA_not0001|   0.000|
+saida<0>    |   10.967(R)|entradaSomadorA_not0001|   0.000|
+saida<1>    |   10.775(R)|entradaSomadorA_not0001|   0.000|
+saida<2>    |   11.335(R)|entradaSomadorA_not0001|   0.000|
+saida<3>    |   12.419(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock controle<3> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+carryOut    |   12.701(R)|entradaSomadorA_not0001|   0.000|
+saida<0>    |   11.078(R)|entradaSomadorA_not0001|   0.000|
+saida<1>    |   10.886(R)|entradaSomadorA_not0001|   0.000|
+saida<2>    |   11.446(R)|entradaSomadorA_not0001|   0.000|
+saida<3>    |   12.530(R)|entradaSomadorA_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+
+Analysis completed Mon Oct  8 20:40:54 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 365 MB
+Peak Memory Usage: 368 MB
 
 
 

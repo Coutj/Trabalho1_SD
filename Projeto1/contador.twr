@@ -44,7 +44,7 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-saida       |    8.743(R)|CLK_BUFGP         |   0.000|
+saida       |    8.752(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -52,11 +52,11 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.533|         |         |         |
+CLK            |    5.785|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Sep 29 23:28:43 2018 
+Analysis completed Fri Oct  5 15:29:09 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

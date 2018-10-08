@@ -74,7 +74,7 @@ LAB2:    xsi_set_current_line(54, ng0);
     t13 = *((char **)t12);
     t14 = (t13 + 56U);
     t15 = *((char **)t14);
-    memcpy(t15, t10, 25U);
+    memcpy(t15, t10, 23U);
     xsi_driver_first_trans_fast(t11);
     xsi_set_current_line(55, ng0);
     t2 = (t0 + 1352U);
@@ -82,7 +82,7 @@ LAB2:    xsi_set_current_line(54, ng0);
     t2 = (t0 + 1648U);
     t8 = *((char **)t2);
     t2 = ((IEEE_P_2592010699) + 4000);
-    t1 = xsi_vhdl_greater(t2, t3, 25U, t8, 25U);
+    t1 = xsi_vhdl_greater(t2, t3, 23U, t8, 23U);
     if (t1 != 0)
         goto LAB8;
 
@@ -111,16 +111,16 @@ LAB8:    xsi_set_current_line(56, ng0);
     *((unsigned char *)t13) = (unsigned char)3;
     xsi_driver_first_trans_fast_port(t9);
     xsi_set_current_line(57, ng0);
-    t2 = xsi_get_transient_memory(25U);
-    memset(t2, 0, 25U);
+    t2 = xsi_get_transient_memory(23U);
+    memset(t2, 0, 23U);
     t3 = t2;
-    memset(t3, (unsigned char)2, 25U);
+    memset(t3, (unsigned char)2, 23U);
     t8 = (t0 + 3024);
     t9 = (t8 + 56U);
     t10 = *((char **)t9);
     t11 = (t10 + 56U);
     t12 = *((char **)t11);
-    memcpy(t12, t2, 25U);
+    memcpy(t12, t2, 23U);
     xsi_driver_first_trans_fast(t8);
     goto LAB9;
 

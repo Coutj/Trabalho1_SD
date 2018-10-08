@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/juan/Documents/Sistemas_digitais/Projeto1/contador_isim_beh.exe" -prj "/home/juan/Documents/Sistemas_digitais/Projeto1/contador_beh.prj" "work.contador" 
+-intstyle "ise" -incremental -o "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_isim_beh.exe" -prj "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_beh.prj" "work.ULA_Test" 

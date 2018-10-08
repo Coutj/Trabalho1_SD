@@ -32,11 +32,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ULA_Test is
 	
 		port (	
-		entrada							:	in		std_logic_vector (3 downto 0);
-		setA, setB, setCtrl, reset	: 	in		std_logic;
-		CLK								:	in		std_logic;
-		carryOut, overflow				:	out	std_logic;
-		saida								:	out	std_logic_vector (7 downto 0)
+			entrada							:	in		std_logic_vector (3 downto 0) := (others => '0');
+			setA, setB, reset	: 	in		std_logic := '0';
+			CLKIN								:	in		std_logic := '0';
+			carryOut, overflow				:	out	std_logic := '0';
+			saida								:	out	std_logic_vector (7 downto 0) := (others => '0')
 		
 	);
 
@@ -45,6 +45,13 @@ end ULA_Test;
 
 architecture ULA_TestArch of ULA_Test is
 
+	component contador is
+		port(
+			CLK : in std_logic;
+			saida : out std_logic
+		);
+	end component;
+	
 	
 	component ULA is
 		port (	
@@ -55,11 +62,13 @@ architecture ULA_TestArch of ULA_Test is
 	end component;
 
 
-	signal numeroA, numeroB, controle : std_logic_vector(3 downto 0);
+	signal numeroA, numeroB, controle : std_logic_vector(3 downto 0) := (others => '0');
 	
 		
 	type estado_type is (E0, E1, E2, E3);
 	signal estado: estado_type;
+	
+	signal CLKOUT : std_logic;
 
 begin
 
@@ -67,12 +76,14 @@ begin
 	ula1 : ULA port map (numeroA, numeroB, controle, carryOut, overflow, saida);
 	controle <= entrada;
 	
+	clock : contador port map (CLKIN, CLKOUT);
 	
-	Reg0: process (CLK) is
+	
+	Reg0: process (CLKOUT) is
 	
 	begin	
 	
-		if ((CLK'event) and (CLK ='1')) then -- somador
+		if ((CLKOUT'event) and (CLKOUT ='1')) then -- somador
 		
 			if (reset = '1') then
 				estado <= E0;	
@@ -98,7 +109,7 @@ begin
 					
 					when E2 =>
 					
-						
+					when E3 =>
 						
 					
 				end case;

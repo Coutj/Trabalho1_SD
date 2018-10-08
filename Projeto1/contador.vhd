@@ -41,8 +41,8 @@ end contador;
 
 architecture contadorArch of contador is
 
-	constant prescaler				: std_logic_vector(24 downto 0) := "1011111010111100001000000";
-   signal 	prescaler_counter		: std_logic_vector(24 downto 0) := (others => '0');
+	constant prescaler				: std_logic_vector(22 downto 0) := "10111110101111000010000";   --clkin/f/2 101111101011110000100000000
+   signal 	prescaler_counter		: std_logic_vector(22 downto 0) := (others => '0');
 
 begin
 

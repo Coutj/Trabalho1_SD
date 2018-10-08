@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: contador.prj
@@ -133,8 +133,8 @@ Performing bidirectional port resolution...
 Synthesizing Unit <contador>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd".
     Found 1-bit register for signal <saida>.
-    Found 25-bit up counter for signal <prescaler_counter>.
-    Found 25-bit comparator greater for signal <prescaler_counter$cmp_gt0000> created at line 55.
+    Found 23-bit up counter for signal <prescaler_counter>.
+    Found 23-bit comparator greater for signal <prescaler_counter$cmp_gt0000> created at line 55.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -147,11 +147,11 @@ HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 1
- 25-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
 # Registers                                            : 1
  1-bit register                                        : 1
 # Comparators                                          : 1
- 25-bit comparator greater                             : 1
+ 23-bit comparator greater                             : 1
 
 =========================================================================
 
@@ -165,11 +165,11 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 1
- 25-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
 # Registers                                            : 1
  Flip-Flops                                            : 1
 # Comparators                                          : 1
- 25-bit comparator greater                             : 1
+ 23-bit comparator greater                             : 1
 
 =========================================================================
 
@@ -189,8 +189,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 26
- Flip-Flops                                            : 26
+# Registers                                            : 24
+ Flip-Flops                                            : 24
 
 =========================================================================
 
@@ -219,17 +219,16 @@ Design Statistics
 # IOs                              : 2
 
 Cell Usage :
-# BELS                             : 101
+# BELS                             : 93
 #      GND                         : 1
 #      INV                         : 5
-#      LUT1                        : 28
-#      LUT2                        : 1
+#      LUT1                        : 26
 #      LUT4                        : 4
-#      MUXCY                       : 36
+#      MUXCY                       : 33
 #      VCC                         : 1
-#      XORCY                       : 25
-# FlipFlops/Latches                : 26
-#      FDR                         : 26
+#      XORCY                       : 23
+# FlipFlops/Latches                : 24
+#      FDR                         : 24
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 1
@@ -241,9 +240,9 @@ Device utilization summary:
 
 Selected Device : 3s700anfgg484-4 
 
- Number of Slices:                       21  out of   5888     0%  
- Number of Slice Flip Flops:             26  out of  11776     0%  
- Number of 4 input LUTs:                 38  out of  11776     0%  
+ Number of Slices:                       20  out of   5888     0%  
+ Number of Slice Flip Flops:             24  out of  11776     0%  
+ Number of 4 input LUTs:                 35  out of  11776     0%  
  Number of IOs:                           2
  Number of bonded IOBs:                   2  out of    372     0%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -269,7 +268,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 26    |
+CLK                                | BUFGP                  | 24    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -280,7 +279,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.476ns (Maximum Frequency: 154.416MHz)
+   Minimum period: 6.353ns (Maximum Frequency: 157.406MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: No path found
@@ -291,10 +290,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.476ns (frequency: 154.416MHz)
-  Total number of paths / destination ports: 975 / 51
+  Clock period: 6.353ns (frequency: 157.406MHz)
+  Total number of paths / destination ports: 828 / 47
 -------------------------------------------------------------------------
-Delay:               6.476ns (Levels of Logic = 14)
+Delay:               6.353ns (Levels of Logic = 13)
   Source:            prescaler_counter_0 (FF)
   Destination:       prescaler_counter_0 (FF)
   Source Clock:      CLK rising
@@ -316,13 +315,12 @@ Delay:               6.476ns (Levels of Logic = 14)
      MUXCY:CI->O           1   0.065   0.000  Mcompar_prescaler_counter_cmp_gt0000_cy<7> (Mcompar_prescaler_counter_cmp_gt0000_cy<7>)
      MUXCY:CI->O           1   0.065   0.000  Mcompar_prescaler_counter_cmp_gt0000_cy<8> (Mcompar_prescaler_counter_cmp_gt0000_cy<8>)
      MUXCY:CI->O           1   0.065   0.000  Mcompar_prescaler_counter_cmp_gt0000_cy<9> (Mcompar_prescaler_counter_cmp_gt0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_prescaler_counter_cmp_gt0000_cy<10> (Mcompar_prescaler_counter_cmp_gt0000_cy<10>)
-     MUXCY:CI->O           2   0.141   0.447  Mcompar_prescaler_counter_cmp_gt0000_cy<11> (Mcompar_prescaler_counter_cmp_gt0000_cy<11>)
-     INV:I->O             25   0.648   1.260  Mcompar_prescaler_counter_cmp_gt0000_cy<11>_inv_INV_0 (prescaler_counter_cmp_gt0000)
+     MUXCY:CI->O           2   0.141   0.447  Mcompar_prescaler_counter_cmp_gt0000_cy<10> (Mcompar_prescaler_counter_cmp_gt0000_cy<10>)
+     INV:I->O             23   0.648   1.202  Mcompar_prescaler_counter_cmp_gt0000_cy<10>_inv_INV_0 (prescaler_counter_cmp_gt0000)
      FDR:R                     0.869          prescaler_counter_0
     ----------------------------------------
-    Total                      6.476ns (4.179ns logic, 2.297ns route)
-                                       (64.5% logic, 35.5% route)
+    Total                      6.353ns (4.114ns logic, 2.239ns route)
+                                       (64.8% logic, 35.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -347,12 +345,12 @@ Offset:              5.531ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.68 secs
+Total CPU time to Xst completion: 4.13 secs
  
 --> 
 
 
-Total memory usage is 502628 kilobytes
+Total memory usage is 502608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

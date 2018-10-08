@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ULA is
 
 	port (	
-		entradaA,entradaB, controle	:	in		std_logic_vector (3 downto 0);
-		carryOut, overflow					:	out	std_logic;
-		saida									:	out	std_logic_vector (7 downto 0)
+		entradaA,entradaB, controle	:	in		std_logic_vector (3 downto 0) := (others => '0');
+		carryOut, overflow					:	out	std_logic := '0';
+		saida									:	out	std_logic_vector (7 downto 0) := (others => '0')
 	);
 
 end ULA;
@@ -43,8 +43,8 @@ architecture ULaArch of ULA is
 
 	component Somador4Bits is
 		
-		port (	numA4Bits		:in		std_logic_vector (3 downto 0);
-					numB4Bits		:in		std_logic_vector (3 downto 0);
+		port (	numA4Bits		:in		std_logic_vector (3 downto 0) ;
+					numB4Bits		:in		std_logic_vector (3 downto 0) ;
 					cIn				:in		std_logic;
 					cOut				:out		std_logic;
 					resultado4Bits	:out		std_logic_vector (3 downto 0));
@@ -96,7 +96,7 @@ architecture ULaArch of ULA is
 	
 	--Somador
 	signal entradaSomadorA, entradaSomadorB : std_logic_vector(3 downto 0);
-	signal carryInSomador : std_logic;
+	signal carryInSomador : std_logic := '0';
 
 
 

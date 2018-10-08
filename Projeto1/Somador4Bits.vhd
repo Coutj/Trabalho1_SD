@@ -31,11 +31,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Somador4Bits is
 	
-	port (	numA4Bits		:in		std_logic_vector (3 downto 0);
-				numB4Bits		:in		std_logic_vector (3 downto 0);
-				cIn				:in		std_logic;
-				cOut				:out		std_logic;
-				resultado4Bits	:out		std_logic_vector (3 downto 0));
+	port (	numA4Bits		:in		std_logic_vector (3 downto 0) := (others => '0');
+				numB4Bits		:in		std_logic_vector (3 downto 0) := (others => '0');
+				cIn				:in		std_logic := '0';
+				cOut				:out		std_logic := '0';
+				resultado4Bits	:out		std_logic_vector (3 downto 0) := (others => '0'));
 				
 end Somador4Bits;
 
