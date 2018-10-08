@@ -1,1 +1,5 @@
+work	"Somador4Bits.vhd"
 work	"ULA.vhd"
+work	"ULA_Test.vhd"
+work	"contador.vhd"
+work	"moduloPrincipal.vhd"

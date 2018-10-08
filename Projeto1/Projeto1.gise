@@ -198,11 +198,12 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="ULA_Test.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="ULA_Test.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ULA_Test.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ULA_Test_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ULA_Test_Bench_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ULA_Test_Bench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ULA_Test_Bench_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="ULA_Test_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="ULA_Test_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ULA_Test_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ULA_Test_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ULA_Test_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ULA_Test_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ULA_Test_map.ncd" xil_pn:subbranch="Map"/>
@@ -478,13 +479,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539031273" xil_pn:in_ck="1076525248736413833" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539031273">
+    <transform xil_pn:end_ts="1539034377" xil_pn:in_ck="-802539815853798951" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1539034377">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Inversor.vhd"/>
       <outfile xil_pn:name="Somador4Bits.vhd"/>
       <outfile xil_pn:name="ULA.vhd"/>
       <outfile xil_pn:name="ULA_Test.vhd"/>
+      <outfile xil_pn:name="ULA_Test_Bench.vhd"/>
       <outfile xil_pn:name="contador.vhd"/>
       <outfile xil_pn:name="moduloPrincipal.vhd"/>
       <outfile xil_pn:name="multiplicador.vhd"/>
@@ -493,11 +495,11 @@
       <outfile xil_pn:name="portXor.vhd"/>
       <outfile xil_pn:name="somador8Bits.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1539031643" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4465021967796352368" xil_pn:start_ts="1539031643">
+    <transform xil_pn:end_ts="1539032423" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1779064287597329856" xil_pn:start_ts="1539032423">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539031643" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2176273431558278632" xil_pn:start_ts="1539031643">
+    <transform xil_pn:end_ts="1539032423" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2803563346231817400" xil_pn:start_ts="1539032423">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -505,13 +507,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539031274" xil_pn:in_ck="1076525248736413833" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539031273">
+    <transform xil_pn:end_ts="1539034377" xil_pn:in_ck="-802539815853798951" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1539034377">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Inversor.vhd"/>
       <outfile xil_pn:name="Somador4Bits.vhd"/>
       <outfile xil_pn:name="ULA.vhd"/>
       <outfile xil_pn:name="ULA_Test.vhd"/>
+      <outfile xil_pn:name="ULA_Test_Bench.vhd"/>
       <outfile xil_pn:name="contador.vhd"/>
       <outfile xil_pn:name="moduloPrincipal.vhd"/>
       <outfile xil_pn:name="multiplicador.vhd"/>
@@ -520,22 +523,24 @@
       <outfile xil_pn:name="portXor.vhd"/>
       <outfile xil_pn:name="somador8Bits.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1539031645" xil_pn:in_ck="1076525248736413833" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3556948958557263611" xil_pn:start_ts="1539031643">
+    <transform xil_pn:end_ts="1539034379" xil_pn:in_ck="-802539815853798951" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6096673711827941844" xil_pn:start_ts="1539034377">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="ULA_Test_beh.prj"/>
-      <outfile xil_pn:name="ULA_Test_isim_beh.exe"/>
+      <outfile xil_pn:name="ULA_Test_Bench_beh.prj"/>
+      <outfile xil_pn:name="ULA_Test_Bench_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1539031646" xil_pn:in_ck="4974070082773639940" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5106131790354157480" xil_pn:start_ts="1539031645">
+    <transform xil_pn:end_ts="1539034379" xil_pn:in_ck="-6996905337463473133" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8007047792084935447" xil_pn:start_ts="1539034379">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ULA_Test_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ULA_Test_Bench_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -543,99 +548,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1539031538" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2219526700346861384" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031538" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="7808437185268102674" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031538" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031538" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4465021967796352368" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031538" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="9102341965431189672" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031538" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4196977893119384924" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031546" xil_pn:in_ck="1076525248736413833" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3280934920965218033" xil_pn:start_ts="1539031538">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Somador4Bits.ngr"/>
-      <outfile xil_pn:name="ULA.ngr"/>
-      <outfile xil_pn:name="ULA_Test.lso"/>
-      <outfile xil_pn:name="ULA_Test.ngc"/>
-      <outfile xil_pn:name="ULA_Test.ngr"/>
-      <outfile xil_pn:name="ULA_Test.prj"/>
-      <outfile xil_pn:name="ULA_Test.stx"/>
-      <outfile xil_pn:name="ULA_Test.syr"/>
-      <outfile xil_pn:name="ULA_Test.xst"/>
-      <outfile xil_pn:name="ULA_Test_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="contador.ngr"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
-    </transform>
     <transform xil_pn:end_ts="1539031546" xil_pn:in_ck="6578114222110546020" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8622496274195532997" xil_pn:start_ts="1539031546">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031551" xil_pn:in_ck="-948477482123645830" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2457258592173047265" xil_pn:start_ts="1539031546">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ULA_Test.bld"/>
-      <outfile xil_pn:name="ULA_Test.ngd"/>
-      <outfile xil_pn:name="ULA_Test_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031557" xil_pn:in_ck="-4713873726462834361" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="570889668722473129" xil_pn:start_ts="1539031551">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ULA_Test.pcf"/>
-      <outfile xil_pn:name="ULA_Test_map.map"/>
-      <outfile xil_pn:name="ULA_Test_map.mrp"/>
-      <outfile xil_pn:name="ULA_Test_map.ncd"/>
-      <outfile xil_pn:name="ULA_Test_map.ngm"/>
-      <outfile xil_pn:name="ULA_Test_map.xrpt"/>
-      <outfile xil_pn:name="ULA_Test_summary.xml"/>
-      <outfile xil_pn:name="ULA_Test_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031576" xil_pn:in_ck="587695301990167340" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-8699727321066641134" xil_pn:start_ts="1539031557">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ULA_Test.ncd"/>
-      <outfile xil_pn:name="ULA_Test.pad"/>
-      <outfile xil_pn:name="ULA_Test.par"/>
-      <outfile xil_pn:name="ULA_Test.ptwx"/>
-      <outfile xil_pn:name="ULA_Test.unroutes"/>
-      <outfile xil_pn:name="ULA_Test.xpi"/>
-      <outfile xil_pn:name="ULA_Test_pad.csv"/>
-      <outfile xil_pn:name="ULA_Test_pad.txt"/>
-      <outfile xil_pn:name="ULA_Test_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-    </transform>
-    <transform xil_pn:end_ts="1539031576" xil_pn:in_ck="-5743659463847841901" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1539031573">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ULA_Test.twr"/>
-      <outfile xil_pn:name="ULA_Test.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 
