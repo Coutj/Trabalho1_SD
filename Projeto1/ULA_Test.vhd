@@ -33,7 +33,7 @@ entity ULA_Test is
 	
 		port (	
 			entrada							:	in		std_logic_vector (3 downto 0) := (others => '0');
-			setA, setB, reset	: 	in		std_logic := '0';
+			setA, setB, reset				: 	in		std_logic := '0';
 			CLKIN								:	in		std_logic := '0';
 			carryOut, overflow				:	out	std_logic := '0';
 			saida								:	out	std_logic_vector (7 downto 0) := (others => '0')
@@ -47,17 +47,17 @@ architecture ULA_TestArch of ULA_Test is
 
 	component contador is
 		port(
-			CLK : in std_logic;
-			saida : out std_logic
+					CLK : in std_logic;
+					saida : out std_logic
 		);
 	end component;
 	
 	
 	component ULA is
 		port (	
-			entradaA,entradaB, controle	:	in		std_logic_vector (3 downto 0);
-			carryOut, overflow					:	out	std_logic;
-			saida									:	out	std_logic_vector (7 downto 0)
+					entradaA,entradaB, controle	:	in		std_logic_vector (3 downto 0);
+					carryOut, overflow					:	out	std_logic;
+					saidaULA									:	out	std_logic_vector (7 downto 0)
 		);
 	end component;
 
@@ -65,7 +65,7 @@ architecture ULA_TestArch of ULA_Test is
 	signal numeroA, numeroB, controle : std_logic_vector(3 downto 0) := (others => '0');
 	
 		
-	type estado_type is (E0, E1, E2, E3);
+	type estado_type is (E0, E1);
 	signal estado: estado_type;
 	
 	signal CLKOUT : std_logic;
@@ -92,25 +92,20 @@ begin
 				case estado is
 				
 					when E0 =>
-						numeroA <= entrada;
 						if (setA = '1') then
+							numeroA <= entrada;
 							estado <= E1;
 						else
 							estado <= E0;
 						end if;
 					
 					when E1 =>
-						numeroB <= entrada;
 						if (setB = '1') then
-							estado <= E2;
+							numeroB <= entrada;
+							estado <= E0;
 						else
 							estado <= E1;
-						end if;
-					
-					when E2 =>
-					
-					when E3 =>
-						
+						end if;						
 					
 				end case;
 			

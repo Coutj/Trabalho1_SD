@@ -30,9 +30,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Inversor is
-	port(
-			entradaA : in std_logic_vector(3 downto 0);
-			saida		: out	std_logic_vector(3 downto 0));
+	port(		
+				entradaA : in std_logic_vector(3 downto 0) := (others => '0');
+				saida		: out	std_logic_vector(3 downto 0)
+		);
 
 end Inversor;
 

@@ -1,30 +1,37 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench_isim_beh.exe -prj /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench_beh.prj work.ULA_Test_Bench 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench_isim_beh.exe" -prj "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench_beh.prj" "work.ULA_Test_Bench" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd" into library work
 Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd" into library work
+Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd" into library work
+Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd" into library work
+Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd" into library work
 Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" into library work
 Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" into library work
 Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd" into library work
 Parsing VHDL file "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 86972 KB
-Fuse CPU Usage: 1690 ms
+Fuse Memory Usage: 87040 KB
+Fuse CPU Usage: 1840 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling architecture somador1bitarch of entity Somador1Bit [somador1bit_default]
 Compiling architecture somador4bitsarch of entity Somador4Bits [somador4bits_default]
+Compiling architecture inversorarch of entity Inversor [inversor_default]
+Compiling architecture somador8bitsarch of entity somador8Bits [somador8bits_default]
+Compiling architecture multiplicadorarch of entity multiplicador [multiplicador_default]
 Compiling architecture ulaarch of entity ULA [ula_default]
 Compiling architecture contadorarch of entity contador [contador_default]
 Compiling architecture ula_testarch of entity ULA_Test [ula_test_default]
 Compiling architecture behavior of entity ula_test_bench
 Time Resolution for simulation is 1ps.
-Compiled 14 VHDL Units
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 20 VHDL Units
 Built simulation executable /home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench_isim_beh.exe
-Fuse Memory Usage: 658828 KB
-Fuse CPU Usage: 1800 ms
-GCC CPU Usage: 600 ms
+Fuse Memory Usage: 658980 KB
+Fuse CPU Usage: 1940 ms
+GCC CPU Usage: 170 ms

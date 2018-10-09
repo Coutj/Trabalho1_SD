@@ -8,7 +8,7 @@ NET "saida[0]"        LOC = "R20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = 
 NET "saida[1]"        LOC = "T19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
 NET "saida[2]"        LOC = "U20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
 NET "saida[3]"        LOC = "U19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
-NET "saida[4]"					  LOC = "V19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "saida[4]"			 LOC = "V19"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
 NET "saida[5]"        LOC = "V20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
 NET "saida[6]"        LOC = "Y22"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
 NET "saida[7]"        LOC = "W21"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
@@ -16,7 +16,6 @@ NET "saida[7]"        LOC = "W21"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = 
 
 NET "setB"      LOC = "T16"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
 NET "reset"     LOC = "T14"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
-NET "setCtrl"     LOC = "T15"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
 NET "setA"      LOC = "U15"  | IOSTANDARD = LVCMOS33 | PULLDOWN ;
 
 

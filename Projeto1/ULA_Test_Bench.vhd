@@ -96,19 +96,22 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 100 ms;
+		wait for 100 ms;
 		entrada <= "1010";
 		setA <= '1';
-		wait for 50 ms;
-		setB <= '0';
-		wait for 200 ms;
+		wait for 100 ms;
 		setA <= '0';
-		entrada <= "1010";
 		setB <= '1';
+		entrada <= "0010";
 		wait for 100 ms;
 		entrada <= "0000";
 		setB <= '0';
+		wait for 100 ms;
+		entrada <= "0001";
+		wait for 100 ms;
+		entrada <= "0010";
       wait for CLKIN_period*100000;
+		
 
       -- insert stimulus here 
 

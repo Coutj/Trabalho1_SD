@@ -40,70 +40,130 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Clock entrada<0> to Pad
-------------+------------+----------------------------+--------+
-            | clk (edge) |                            | Clock  |
-Destination |   to PAD   |Internal Clock(s)           | Phase  |
-------------+------------+----------------------------+--------+
-carryOut    |   12.907(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<0>    |   10.076(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<1>    |    9.868(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<2>    |   11.069(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<3>    |   13.057(R)|ula1/entradaSomadorA_not0001|   0.000|
-------------+------------+----------------------------+--------+
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+saida<0>    |    7.375(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<1>    |    7.375(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<2>    |    7.794(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<3>    |    7.794(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<4>    |    8.574(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<5>    |    8.574(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<6>    |    8.519(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<7>    |    8.519(F)|ula1/saidaULA_4_not0001|   0.000|
+------------+------------+-----------------------+--------+
 
 Clock entrada<1> to Pad
-------------+------------+----------------------------+--------+
-            | clk (edge) |                            | Clock  |
-Destination |   to PAD   |Internal Clock(s)           | Phase  |
-------------+------------+----------------------------+--------+
-carryOut    |   12.798(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<0>    |    9.967(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<1>    |    9.759(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<2>    |   10.960(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<3>    |   12.948(R)|ula1/entradaSomadorA_not0001|   0.000|
-------------+------------+----------------------------+--------+
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+carryOut    |    6.055(R)|entrada_1_IBUF         |   0.000|
+overflow    |    9.947(F)|ula1/overflow_and0000  |   0.000|
+saida<0>    |    9.532(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<1>    |    9.532(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<2>    |    9.951(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<3>    |    9.951(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<4>    |   10.210(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<5>    |   10.210(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<6>    |   10.155(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<7>    |   10.155(F)|ula1/saidaULA_4_not0001|   0.000|
+------------+------------+-----------------------+--------+
 
 Clock entrada<2> to Pad
-------------+------------+----------------------------+--------+
-            | clk (edge) |                            | Clock  |
-Destination |   to PAD   |Internal Clock(s)           | Phase  |
-------------+------------+----------------------------+--------+
-carryOut    |   13.337(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<0>    |   10.506(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<1>    |   10.298(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<2>    |   11.499(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<3>    |   13.487(R)|ula1/entradaSomadorA_not0001|   0.000|
-------------+------------+----------------------------+--------+
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+overflow    |    7.700(F)|ula1/overflow_and0000  |   0.000|
+saida<0>    |    7.411(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<1>    |    7.411(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<2>    |    7.830(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<3>    |    7.830(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<4>    |    9.065(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<5>    |    9.065(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<6>    |    9.010(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<7>    |    9.010(F)|ula1/saidaULA_4_not0001|   0.000|
+------------+------------+-----------------------+--------+
 
 Clock entrada<3> to Pad
-------------+------------+----------------------------+--------+
-            | clk (edge) |                            | Clock  |
-Destination |   to PAD   |Internal Clock(s)           | Phase  |
-------------+------------+----------------------------+--------+
-carryOut    |   12.521(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<0>    |    9.690(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<1>    |    9.482(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<2>    |   10.683(R)|ula1/entradaSomadorA_not0001|   0.000|
-saida<3>    |   12.671(R)|ula1/entradaSomadorA_not0001|   0.000|
-------------+------------+----------------------------+--------+
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+overflow    |    7.322(F)|ula1/overflow_and0000  |   0.000|
+saida<0>    |    6.926(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<1>    |    6.926(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<2>    |    7.345(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<3>    |    7.345(F)|ula1/saidaULA_0_not0001|   0.000|
+saida<4>    |    8.511(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<5>    |    8.511(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<6>    |    8.456(F)|ula1/saidaULA_4_not0001|   0.000|
+saida<7>    |    8.456(F)|ula1/saidaULA_4_not0001|   0.000|
+------------+------------+-----------------------+--------+
 
 Clock to Setup on destination clock CLKIN
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLKIN          |    6.173|         |         |         |
+CLKIN          |    6.215|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock entrada<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+entrada<0>     |         |         |    2.292|    2.292|
+entrada<1>     |         |         |    3.705|    3.705|
+entrada<2>     |         |         |    2.990|    2.990|
+entrada<3>     |         |         |    3.085|    3.085|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock entrada<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+entrada<0>     |    2.065|    2.065|    0.567|    0.567|
+entrada<1>     |    6.217|    6.217|    1.980|    1.980|
+entrada<2>     |    3.970|    3.970|    1.265|    1.265|
+entrada<3>     |    3.592|    3.592|    1.360|    1.360|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock entrada<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+entrada<0>     |         |         |    2.263|    2.263|
+entrada<1>     |         |         |    3.676|    3.676|
+entrada<2>     |         |         |    2.961|    2.961|
+entrada<3>     |         |         |    3.056|    3.056|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock entrada<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+entrada<0>     |         |         |    2.652|    2.652|
+entrada<1>     |         |         |    4.065|    4.065|
+entrada<2>     |         |         |    3.350|    3.350|
+entrada<3>     |         |         |    3.445|    3.445|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Oct  8 20:52:54 2018 
+Analysis completed Tue Oct  9 20:39:49 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 368 MB
+Peak Memory Usage: 369 MB
 
 
 

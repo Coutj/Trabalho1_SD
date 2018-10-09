@@ -1,5 +1,8 @@
 vhdl work "moduloPrincipal.vhd"
 vhdl work "Somador4Bits.vhd"
+vhdl work "somador8Bits.vhd"
+vhdl work "multiplicador.vhd"
+vhdl work "Inversor.vhd"
 vhdl work "ULA.vhd"
 vhdl work "contador.vhd"
 vhdl work "ULA_Test.vhd"
