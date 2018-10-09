@@ -117,6 +117,12 @@ Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vh
 Architecture inversorarch of Entity inversor is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd" in Library work.
 Architecture multiplicadorarch of Entity multiplicador is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd" in Library work.
+Architecture behavioral of Entity portand is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.vhd" in Library work.
+Architecture portorarch of Entity portor is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portXor.vhd" in Library work.
+Architecture portxorarch of Entity portxor is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" in Library work.
 Entity <ula> compiled.
 Entity <ula> (Architecture <ulaarch>) compiled.
@@ -140,27 +146,17 @@ Analyzing hierarchy for entity <Inversor> in library <work> (architecture <inver
 
 Analyzing hierarchy for entity <multiplicador> in library <work> (architecture <multiplicadorarch>).
 
+Analyzing hierarchy for entity <portAnd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <portOr> in library <work> (architecture <portorarch>).
+
+Analyzing hierarchy for entity <portXor> in library <work> (architecture <portxorarch>).
+
 Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
 
 Analyzing hierarchy for entity <somador8Bits> in library <work> (architecture <somador8bitsarch>).
 
 Analyzing hierarchy for entity <Somador4Bits> in library <work> (architecture <somador4bitsarch>).
-
-Analyzing hierarchy for entity <Somador4Bits> in library <work> (architecture <somador4bitsarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
-
-Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
 
 Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
 
@@ -172,8 +168,8 @@ Analyzing Entity <ULA_Test> in library <work> (Architecture <ula_testarch>).
 Entity <ULA_Test> analyzed. Unit <ULA_Test> generated.
 
 Analyzing Entity <ULA> in library <work> (Architecture <ulaarch>).
-WARNING:Xst:819 - "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" line 132: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <carryOutSomador>, <saidaSomador>, <carryOutSub>, <saidaSub>, <saidaMultiplicador>
+WARNING:Xst:819 - "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" line 157: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <carryOutSomador>, <saidaSomador>, <carryOutSub>, <saidaSub>, <saidaMultiplicador>, <saidaAnd>, <saidaOr>, <saidaXor>, <entradaInvertida>, <entradaComplementada>, <entradaA>, <entradaB>
 Entity <ULA> analyzed. Unit <ULA> generated.
 
 Analyzing Entity <Somador4Bits> in library <work> (Architecture <somador4bitsarch>).
@@ -190,6 +186,15 @@ Entity <multiplicador> analyzed. Unit <multiplicador> generated.
 
 Analyzing Entity <somador8Bits> in library <work> (Architecture <somador8bitsarch>).
 Entity <somador8Bits> analyzed. Unit <somador8Bits> generated.
+
+Analyzing Entity <portAnd> in library <work> (Architecture <behavioral>).
+Entity <portAnd> analyzed. Unit <portAnd> generated.
+
+Analyzing Entity <portOr> in library <work> (Architecture <portorarch>).
+Entity <portOr> analyzed. Unit <portOr> generated.
+
+Analyzing Entity <portXor> in library <work> (Architecture <portxorarch>).
+Entity <portXor> analyzed. Unit <portXor> generated.
 
 Analyzing Entity <contador> in library <work> (Architecture <contadorarch>).
 Entity <contador> analyzed. Unit <contador> generated.
@@ -216,6 +221,22 @@ Unit <contador> synthesized.
 Synthesizing Unit <Inversor>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd".
 Unit <Inversor> synthesized.
+
+
+Synthesizing Unit <portAnd>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd".
+Unit <portAnd> synthesized.
+
+
+Synthesizing Unit <portOr>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.vhd".
+Unit <portOr> synthesized.
+
+
+Synthesizing Unit <portXor>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/portXor.vhd".
+    Found 4-bit xor2 for signal <saida>.
+Unit <portXor> synthesized.
 
 
 Synthesizing Unit <Somador1Bit>.
@@ -245,30 +266,12 @@ Unit <multiplicador> synthesized.
 
 Synthesizing Unit <ULA>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd".
-    Register <penultimoBit> equivalent to <carryOut> has been removed
-WARNING:Xst:737 - Found 1-bit latch for signal <overflow>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:646 - Signal <carryOutCpl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:737 - Found 1-bit latch for signal <ultimoBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <penultimoBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <saidaULA_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <carryOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 1-bit xor2 for signal <overflow$xor0000> created at line 140.
+    Found 1-bit xor2 for signal <overflow$xor0000> created at line 169.
 Unit <ULA> synthesized.
 
 
@@ -291,12 +294,13 @@ Macro Statistics
 # Registers                                            : 4
  1-bit register                                        : 2
  4-bit register                                        : 2
-# Latches                                              : 11
- 1-bit latch                                           : 11
+# Latches                                              : 2
+ 1-bit latch                                           : 2
 # Comparators                                          : 1
  23-bit comparator greater                             : 1
-# Xors                                                 : 65
- 1-bit xor2                                            : 65
+# Xors                                                 : 74
+ 1-bit xor2                                            : 73
+ 4-bit xor2                                            : 1
 
 =========================================================================
 
@@ -321,12 +325,13 @@ Macro Statistics
  23-bit up counter                                     : 1
 # Registers                                            : 10
  Flip-Flops                                            : 10
-# Latches                                              : 11
- 1-bit latch                                           : 11
+# Latches                                              : 2
+ 1-bit latch                                           : 2
 # Comparators                                          : 1
  23-bit comparator greater                             : 1
-# Xors                                                 : 65
- 1-bit xor2                                            : 65
+# Xors                                                 : 74
+ 1-bit xor2                                            : 73
+ 4-bit xor2                                            : 1
 
 =========================================================================
 
@@ -336,14 +341,11 @@ Macro Statistics
 
 Optimizing unit <ULA_Test> ...
 
-Optimizing unit <multiplicador> ...
-
 Optimizing unit <ULA> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ULA_Test, actual ratio is 0.
-Latch ula1/carryOut has been replicated 1 time(s) to handle iob=true attribute.
+Found area constraint ratio of 100 (+ 5) on block ULA_Test, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -381,22 +383,21 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 155
+# BELS                             : 180
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 26
-#      LUT2                        : 8
-#      LUT3                        : 12
-#      LUT4                        : 42
+#      LUT2                        : 9
+#      LUT3                        : 16
+#      LUT4                        : 59
 #      MUXCY                       : 33
-#      MUXF5                       : 4
+#      MUXF5                       : 7
 #      VCC                         : 1
 #      XORCY                       : 23
-# FlipFlops/Latches                : 45
+# FlipFlops/Latches                : 35
 #      FDE                         : 8
 #      FDR                         : 25
-#      LD                          : 9
-#      LDE_1                       : 3
+#      LDE_1                       : 2
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -410,12 +411,11 @@ Device utilization summary:
 
 Selected Device : 3s700anfgg484-4 
 
- Number of Slices:                       52  out of   5888     0%  
+ Number of Slices:                       63  out of   5888     1%  
  Number of Slice Flip Flops:             35  out of  11776     0%  
- Number of 4 input LUTs:                 93  out of  11776     0%  
+ Number of 4 input LUTs:                115  out of  11776     0%  
  Number of IOs:                          18
  Number of bonded IOBs:                  18  out of    372     4%  
-    IOB Flip Flops:                      10
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -436,19 +436,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------+-------------------------+-------+
-Clock Signal                                       | Clock buffer(FF name)   | Load  |
----------------------------------------------------+-------------------------+-------+
-clock/saida                                        | NONE(numeroA_0)         | 9     |
-CLKIN                                              | BUFGP                   | 24    |
-ula1/overflow_and0000(ula1/overflow_and00001:O)    | NONE(*)(ula1/overflow)  | 1     |
-ula1/saidaULA_0_not0001(ula1/saidaULA_0_not00011:O)| NONE(*)(ula1/saidaULA_0)| 4     |
-entrada<1>                                         | IBUF+BUFG               | 3     |
-ula1/saidaULA_4_not0001(ula1/saidaULA_4_not00011:O)| NONE(*)(ula1/saidaULA_4)| 4     |
----------------------------------------------------+-------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock/saida                        | NONE(numeroA_0)        | 9     |
+CLKIN                              | BUFGP                  | 24    |
+entrada<1>                         | IBUF+BUFG              | 2     |
+-----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -460,9 +454,9 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 6.353ns (Maximum Frequency: 157.406MHz)
-   Minimum input arrival time before clock: 4.575ns
-   Maximum output required time after clock: 5.668ns
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: 4.597ns
+   Maximum output required time after clock: 14.535ns
+   Maximum combinational path delay: 12.405ns
 
 Timing Detail:
 --------------
@@ -470,10 +464,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock/saida'
-  Clock period: 2.744ns (frequency: 364.431MHz)
+  Clock period: 2.812ns (frequency: 355.619MHz)
   Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Delay:               2.744ns (Levels of Logic = 1)
+Delay:               2.812ns (Levels of Logic = 1)
   Source:            estado_0 (FF)
   Destination:       numeroB_0 (FF)
   Source Clock:      clock/saida rising
@@ -483,12 +477,12 @@ Delay:               2.744ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.591   0.611  estado_0 (estado_0)
-     LUT3:I1->O            4   0.643   0.587  numeroB_not00011 (numeroB_not0001)
+     FDR:C->Q              3   0.591   0.674  estado_0 (estado_0)
+     LUT3:I0->O            4   0.648   0.587  numeroB_not00011 (numeroB_not0001)
      FDE:CE                    0.312          numeroB_0
     ----------------------------------------
-    Total                      2.744ns (1.546ns logic, 1.198ns route)
-                                       (56.3% logic, 43.7% route)
+    Total                      2.812ns (1.551ns logic, 1.261ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLKIN'
@@ -528,196 +522,125 @@ Delay:               6.353ns (Levels of Logic = 13)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock/saida'
   Total number of paths / destination ports: 27 / 18
 -------------------------------------------------------------------------
-Offset:              3.070ns (Levels of Logic = 2)
+Offset:              3.002ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       numeroA_0 (FF)
+  Destination:       numeroB_0 (FF)
   Destination Clock: clock/saida rising
 
-  Data Path: reset to numeroA_0
+  Data Path: reset to numeroB_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.849   0.674  reset_IBUF (reset_IBUF)
-     LUT3:I0->O            4   0.648   0.587  numeroB_not00011 (numeroB_not0001)
+     IBUF:I->O             3   0.849   0.611  reset_IBUF (reset_IBUF)
+     LUT3:I1->O            4   0.643   0.587  numeroB_not00011 (numeroB_not0001)
      FDE:CE                    0.312          numeroB_0
     ----------------------------------------
-    Total                      3.070ns (1.809ns logic, 1.261ns route)
-                                       (58.9% logic, 41.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ula1/overflow_and0000'
-  Total number of paths / destination ports: 3 / 1
--------------------------------------------------------------------------
-Offset:              4.143ns (Levels of Logic = 3)
-  Source:            entrada<3> (PAD)
-  Destination:       ula1/overflow (LATCH)
-  Destination Clock: ula1/overflow_and0000 falling
-
-  Data Path: entrada<3> to ula1/overflow
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             7   0.849   0.851  entrada_3_IBUF (entrada_3_IBUF)
-     LUT2:I0->O            9   0.648   0.900  ula1/saidaULA_4_not000111 (ula1/carryOut_0_not0000)
-     LUT4:I1->O            1   0.643   0.000  ula1/overflow_mux00011 (ula1/overflow_mux0001)
-     LD:D                      0.252          ula1/overflow
-    ----------------------------------------
-    Total                      4.143ns (2.392ns logic, 1.751ns route)
-                                       (57.7% logic, 42.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ula1/saidaULA_0_not0001'
-  Total number of paths / destination ports: 26 / 4
--------------------------------------------------------------------------
-Offset:              4.487ns (Levels of Logic = 4)
-  Source:            entrada<3> (PAD)
-  Destination:       ula1/saidaULA_3 (LATCH)
-  Destination Clock: ula1/saidaULA_0_not0001 falling
-
-  Data Path: entrada<3> to ula1/saidaULA_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             7   0.849   0.851  entrada_3_IBUF (entrada_3_IBUF)
-     LUT2:I0->O            9   0.648   0.963  ula1/saidaULA_4_not000111 (ula1/carryOut_0_not0000)
-     LUT4:I0->O            1   0.648   0.000  ula1/saidaULA_3_mux000287_F (N19)
-     MUXF5:I0->O           1   0.276   0.000  ula1/saidaULA_3_mux000287 (ula1/saidaULA_3_mux0002)
-     LD:D                      0.252          ula1/saidaULA_3
-    ----------------------------------------
-    Total                      4.487ns (2.673ns logic, 1.814ns route)
-                                       (59.6% logic, 40.4% route)
+    Total                      3.002ns (1.804ns logic, 1.198ns route)
+                                       (60.1% logic, 39.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'entrada<1>'
-  Total number of paths / destination ports: 24 / 6
--------------------------------------------------------------------------
-Offset:              4.575ns (Levels of Logic = 4)
-  Source:            entrada<1> (PAD)
-  Destination:       ula1/carryOut (LATCH)
-  Destination Clock: entrada<1> rising
-
-  Data Path: entrada<1> to ula1/carryOut
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            13   0.849   1.126  entrada_1_IBUF (entrada_1_IBUF1)
-     LUT3:I0->O            5   0.648   0.776  ula1/overflow_and00001 (ula1/overflow_and0000)
-     LUT4:I0->O            1   0.648   0.000  ula1/carryOut_mux0001_F (N17)
-     MUXF5:I0->O           2   0.276   0.000  ula1/carryOut_mux0001 (ula1/carryOut_mux0001)
-     LDE_1:D                   0.252          ula1/carryOut
-    ----------------------------------------
-    Total                      4.575ns (2.673ns logic, 1.902ns route)
-                                       (58.4% logic, 41.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ula1/saidaULA_4_not0001'
   Total number of paths / destination ports: 16 / 4
 -------------------------------------------------------------------------
-Offset:              4.268ns (Levels of Logic = 3)
-  Source:            entrada<0> (PAD)
-  Destination:       ula1/saidaULA_4 (LATCH)
-  Destination Clock: ula1/saidaULA_4_not0001 falling
+Offset:              4.597ns (Levels of Logic = 4)
+  Source:            entrada<3> (PAD)
+  Destination:       ula1/penultimoBit (LATCH)
+  Destination Clock: entrada<1> rising
 
-  Data Path: entrada<0> to ula1/saidaULA_4
+  Data Path: entrada<3> to ula1/penultimoBit
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   0.849   1.160  entrada_0_IBUF (entrada_0_IBUF)
-     LUT4:I0->O            7   0.648   0.711  ula1/saidaULA_4_not00011 (ula1/saidaULA_4_not0001)
-     LUT4:I3->O            1   0.648   0.000  ula1/saidaULA_5_mux00021 (ula1/saidaULA_5_mux0002)
-     LD:D                      0.252          ula1/saidaULA_5
+     IBUF:I->O            17   0.849   1.194  entrada_3_IBUF (entrada_3_IBUF)
+     LUT3:I0->O            4   0.648   0.730  ula1/saidaULA_0_cmp_eq000011 (ula1/overflow_and0000)
+     LUT4:I0->O            1   0.648   0.000  ula1/carryOut_F (N22)
+     MUXF5:I0->O           2   0.276   0.000  ula1/carryOut (carryOut_OBUF)
+     LDE_1:D                   0.252          ula1/penultimoBit
     ----------------------------------------
-    Total                      4.268ns (2.397ns logic, 1.871ns route)
-                                       (56.2% logic, 43.8% route)
+    Total                      4.597ns (2.673ns logic, 1.924ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock/saida'
+  Total number of paths / destination ports: 427 / 9
+-------------------------------------------------------------------------
+Offset:              14.535ns (Levels of Logic = 8)
+  Source:            numeroA_1 (FF)
+  Destination:       saida<7> (PAD)
+  Source Clock:      clock/saida rising
+
+  Data Path: numeroA_1 to saida<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             16   0.591   1.177  numeroA_1 (numeroA_1)
+     LUT2:I0->O            2   0.648   0.590  ula1/multi/resultParcial2<2>1 (ula1/multi/resultParcial2<2>)
+     LUT4:I0->O            3   0.648   0.674  ula1/multi/somador1/somador1/somador3/carryOut1 (ula1/multi/somador1/somador1/carryOut2)
+     LUT4:I0->O            2   0.648   0.590  ula1/multi/somador1/somador1/somador4/Mxor_resultado_Result1 (ula1/multi/somaParcial1<3>)
+     LUT4:I0->O            2   0.648   0.479  ula1/multi/somador3/somador1/somador4/carryOut1 (ula1/multi/somador3/carryOut1)
+     LUT3:I2->O            2   0.648   0.479  ula1/multi/somador3/somador2/somador1/carryOut1 (ula1/multi/somador3/somador2/carryOut0)
+     LUT3:I2->O            2   0.648   0.479  ula1/multi/somador3/somador2/somador2/carryOut1 (ula1/multi/somador3/somador2/carryOut1)
+     LUT4:I2->O            1   0.648   0.420  ula1/saidaULA_7_mux00021 (saida_7_OBUF)
+     OBUF:I->O                 4.520          saida_7_OBUF (saida<7>)
+    ----------------------------------------
+    Total                     14.535ns (9.647ns logic, 4.888ns route)
+                                       (66.4% logic, 33.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'entrada<1>'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              5.668ns (Levels of Logic = 1)
-  Source:            ula1/carryOut_1 (LATCH)
-  Destination:       carryOut (PAD)
+Offset:              6.811ns (Levels of Logic = 2)
+  Source:            ula1/penultimoBit (LATCH)
+  Destination:       overflow (PAD)
   Source Clock:      entrada<1> rising
 
-  Data Path: ula1/carryOut_1 to carryOut
+  Data Path: ula1/penultimoBit to overflow
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE_1:G->Q            1   0.728   0.420  ula1/carryOut_1 (ula1/carryOut_1)
-     OBUF:I->O                 4.520          carryOut_OBUF (carryOut)
-    ----------------------------------------
-    Total                      5.668ns (5.248ns logic, 0.420ns route)
-                                       (92.6% logic, 7.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ula1/overflow_and0000'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              5.668ns (Levels of Logic = 1)
-  Source:            ula1/overflow (LATCH)
-  Destination:       overflow (PAD)
-  Source Clock:      ula1/overflow_and0000 falling
-
-  Data Path: ula1/overflow to overflow
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.728   0.420  ula1/overflow (ula1/overflow)
+     LDE_1:G->Q            1   0.728   0.500  ula1/penultimoBit (ula1/penultimoBit)
+     LUT3:I1->O            1   0.643   0.420  ula1/overflow1 (overflow_OBUF)
      OBUF:I->O                 4.520          overflow_OBUF (overflow)
     ----------------------------------------
-    Total                      5.668ns (5.248ns logic, 0.420ns route)
-                                       (92.6% logic, 7.4% route)
+    Total                      6.811ns (5.891ns logic, 0.920ns route)
+                                       (86.5% logic, 13.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ula1/saidaULA_4_not0001'
-  Total number of paths / destination ports: 4 / 4
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 145 / 10
 -------------------------------------------------------------------------
-Offset:              5.668ns (Levels of Logic = 1)
-  Source:            ula1/saidaULA_7 (LATCH)
-  Destination:       saida<7> (PAD)
-  Source Clock:      ula1/saidaULA_4_not0001 falling
+Delay:               12.405ns (Levels of Logic = 7)
+  Source:            entrada<2> (PAD)
+  Destination:       saida<1> (PAD)
 
-  Data Path: ula1/saidaULA_7 to saida<7>
+  Data Path: entrada<2> to saida<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.728   0.420  ula1/saidaULA_7 (ula1/saidaULA_7)
-     OBUF:I->O                 4.520          saida_7_OBUF (saida<7>)
+     IBUF:I->O            17   0.849   1.194  entrada_2_IBUF (entrada_2_IBUF)
+     LUT4:I0->O            6   0.648   0.749  ula1/saidaULA_0_cmp_eq00041 (ula1/saidaULA_0_cmp_eq0004)
+     LUT4:I1->O            1   0.643   0.563  ula1/saidaULA_1_mux000831 (ula1/saidaULA_1_mux000831)
+     LUT3:I0->O            1   0.648   0.423  ula1/saidaULA_1_mux000894_SW0 (N10)
+     LUT4:I3->O            1   0.648   0.452  ula1/saidaULA_1_mux000894 (ula1/saidaULA_1_mux000894)
+     LUT4:I2->O            1   0.648   0.420  ula1/saidaULA_1_mux0008174 (saida_1_OBUF)
+     OBUF:I->O                 4.520          saida_1_OBUF (saida<1>)
     ----------------------------------------
-    Total                      5.668ns (5.248ns logic, 0.420ns route)
-                                       (92.6% logic, 7.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'ula1/saidaULA_0_not0001'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              5.668ns (Levels of Logic = 1)
-  Source:            ula1/saidaULA_3 (LATCH)
-  Destination:       saida<3> (PAD)
-  Source Clock:      ula1/saidaULA_0_not0001 falling
-
-  Data Path: ula1/saidaULA_3 to saida<3>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.728   0.420  ula1/saidaULA_3 (ula1/saidaULA_3)
-     OBUF:I->O                 4.520          saida_3_OBUF (saida<3>)
-    ----------------------------------------
-    Total                      5.668ns (5.248ns logic, 0.420ns route)
-                                       (92.6% logic, 7.4% route)
+    Total                     12.405ns (8.604ns logic, 3.801ns route)
+                                       (69.4% logic, 30.6% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.45 secs
+Total CPU time to Xst completion: 5.75 secs
  
 --> 
 
 
-Total memory usage is 508636 kilobytes
+Total memory usage is 509676 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   19 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

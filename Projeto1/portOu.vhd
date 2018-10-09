@@ -29,7 +29,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity portOR is
+entity portOr is
 
 	port (
 				entradaA : in std_logic_vector(3 downto 0);
@@ -38,7 +38,7 @@ entity portOR is
 
 end portOr;
 
-architecture portOrArch of portOris
+architecture portOrArch of portOr is
 
 begin
 

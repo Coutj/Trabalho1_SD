@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test_Bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="ula_test_bench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/ula_test_bench/entrada" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">entrada[3:0]</obj_property>
+      <obj_property name="ObjectShortName">entrada[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/seta" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">seta</obj_property>
+      <obj_property name="ObjectShortName">seta</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/setb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">setb</obj_property>
+      <obj_property name="ObjectShortName">setb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/carryout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">carryout</obj_property>
+      <obj_property name="ObjectShortName">carryout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/overflow" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">overflow</obj_property>
+      <obj_property name="ObjectShortName">overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/saida" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">saida[7:0]</obj_property>
+      <obj_property name="ObjectShortName">saida[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/clkin_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clkin_period</obj_property>
+      <obj_property name="ObjectShortName">clkin_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/uut/clock/saida" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">saida</obj_property>
+      <obj_property name="ObjectShortName">saida</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ula_test_bench/uut/estado" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">estado</obj_property>
+      <obj_property name="ObjectShortName">estado</obj_property>
+   </wvobject>
+</wave_config>

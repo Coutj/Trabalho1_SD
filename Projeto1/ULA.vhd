@@ -59,7 +59,7 @@ architecture ULaArch of ULA is
 				
 	end component;
 	
-	component portOR is
+	component portOr is
 
 	port (	entradaA : in std_logic_vector(3 downto 0);
 				entradaB : in std_logic_vector(3 downto 0);
@@ -101,8 +101,6 @@ architecture ULaArch of ULA is
 	--Subtrator
 	signal carryOutSub : std_logic := '0';
 	signal saidaSub : std_logic_vector(3 downto 0) := (others => '0');
-
-	--Inversor
 	signal saidaInversor : std_logic_vector (3 downto 0) := (others => '0');
 	
 	--Multiplicador
@@ -114,8 +112,18 @@ architecture ULaArch of ULA is
 	--Or
 	signal saidaOr		:  std_logic_vector (3 downto 0) := (others => '0');
 	
+	--Xor
+	signal saidaXor	:	std_logic_vector (3 downto 0) := (others => '0');
+	
 	--Overflow
 	signal ultimoBit, penultimoBit : std_logic := '0';
+	
+	--Inversor
+	signal entradaInvertida	: std_logic_vector (3 downto 0) := (others => '0');
+	
+	--Complementador
+	signal entradaComplementada	: std_logic_vector (3 downto 0) := (others => '0');
+	signal carryOutCpl : std_logic := '0';
 
 
 begin
@@ -123,9 +131,6 @@ begin
 	
 	--Port Map somador
 	somador : Somador4Bits port map (entradaA, entradaB, '0', carryOutSomador, saidaSomador);	
-	
-	--Port Map inversor
-	
 	
 	--Port Map Subtrator
 	subtrator	:	Somador4Bits port map (entradaA, saidaInversor, '1', carryOutSub, saidaSub);
@@ -137,12 +142,24 @@ begin
 	--Port Map And
 	andPort	:	portAnd	port map (entradaA, entradaB, saidaAnd);
 	
-	--Port Map And
+	--Port Map Or
 	orPort	:	portOr	port map (entradaA, entradaB, saidaOr);
-
+	
+	--Port Map Xor
+	xorPort	:	portXor	port map (entradaA, entradaB, saidaXor);
+	
+	--Port Map inversor
+	inversorEntrada	:	inversor	port map(entradaA, entradaInvertida);
+	
+	--Port Map Complementador
+	complementador	:	Somador4Bits port map (entradaInvertida, "0001",'0',carryOutCpl, entradaComplementada);
 
 	ulaProcess : process (controle) is
 	begin
+	
+		saidaULA <= "00000000";
+		overflow <= '0';
+		carryOut	<= '0';
 	
 		if (controle = "0000") then			-- Somador
 			carryOut						<= carryOutSomador;
@@ -160,16 +177,25 @@ begin
 			overflow 						<= (penultimoBit xor ultimoBit);
 			
 		elsif (controle = "0010") then		-- multiplicacao
-			saidaULa <= saidaMultiplicador;	
-			
+			saidaULa <= saidaMultiplicador;
 			
 		elsif (controle = "0011") then		--And
-			saida (3 downto 0)<= saidaAnd;
+			saidaULA (3 downto 0)<= saidaAnd;
 			
 		elsif (controle = "0100") then		--Or
-			saida (3 downto 0) <= saidaOr;
+			saidaULA (3 downto 0) <= saidaOr;
 			
-		elsif (controle = "0101")
+		elsif (controle = "0101") then			--xor
+			saidaULA (3 downto 0) <= saidaXor;
+		
+		elsif (controle = "0110")	then			--Inversor
+			saidaUla (3 downto 0)	<= entradaInvertida;
+		
+		elsif	(controle = "0111")	then			--Complementador
+			saidaULA	(3 downto 0)	<=	entradaComplementada;
+			
+		elsif (controle = "1000") then --
+			saidaULA	(3 downto 0)	<= (entradaA nor entradaB);
 			
 		end if;
 		
