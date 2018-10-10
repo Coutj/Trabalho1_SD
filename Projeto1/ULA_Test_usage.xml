@@ -4,33 +4,33 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="34">
-<DesignStatistics TimeStamp="Wed Oct 10 19:42:44 2018"><group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="34">
+<DeviceUsageSummary rev="36">
+<DesignStatistics TimeStamp="Wed Oct 10 21:04:19 2018"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="36">
 <attrib name="value" value="18"/></item>
-<item name="AGG_IO" rev="34">
+<item name="AGG_IO" rev="36">
 <attrib name="value" value="18"/></item>
-<item name="AGG_SLICE" rev="34">
-<attrib name="value" value="114"/></item>
-<item name="NUM_4_INPUT_LUT" rev="34">
-<attrib name="value" value="199"/></item>
-<item name="NUM_BONDED_IBUF" rev="34">
+<item name="AGG_SLICE" rev="36">
+<attrib name="value" value="120"/></item>
+<item name="NUM_4_INPUT_LUT" rev="36">
+<attrib name="value" value="215"/></item>
+<item name="NUM_BONDED_IBUF" rev="36">
 <attrib name="value" value="8"/></item>
-<item name="NUM_BONDED_IOB" rev="34">
+<item name="NUM_BONDED_IOB" rev="36">
 <attrib name="value" value="10"/></item>
-<item name="NUM_BUFGMUX" rev="34">
+<item name="NUM_BUFGMUX" rev="36">
 <attrib name="value" value="3"/></item>
-<item name="NUM_CYMUX" rev="34">
+<item name="NUM_CYMUX" rev="36">
 <attrib name="value" value="73"/></item>
-<item name="NUM_LUT_RT" rev="34">
+<item name="NUM_LUT_RT" rev="36">
 <attrib name="value" value="57"/></item>
-<item name="NUM_SLICEL" rev="34">
-<attrib name="value" value="114"/></item>
-<item name="NUM_SLICE_FF" rev="34">
-<attrib name="value" value="79"/></item>
-<item name="NUM_SLICE_LATCH" rev="34">
+<item name="NUM_SLICEL" rev="36">
+<attrib name="value" value="120"/></item>
+<item name="NUM_SLICE_FF" rev="36">
+<attrib name="value" value="77"/></item>
+<item name="NUM_SLICE_LATCH" rev="36">
 <attrib name="value" value="2"/></item>
-<item name="NUM_XOR" rev="34">
+<item name="NUM_XOR" rev="36">
 <attrib name="value" value="55"/></item>
 </group>
 </DesignStatistics>

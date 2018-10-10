@@ -391,7 +391,7 @@ LAB29:    xsi_set_current_line(159, ng0);
     t5 = *((char **)t4);
     t8 = (t5 + 56U);
     t11 = *((char **)t8);
-    *((unsigned char *)t11) = (unsigned char)0;
+    *((unsigned char *)t11) = (unsigned char)2;
     xsi_driver_first_trans_fast(t2);
     goto LAB30;
 

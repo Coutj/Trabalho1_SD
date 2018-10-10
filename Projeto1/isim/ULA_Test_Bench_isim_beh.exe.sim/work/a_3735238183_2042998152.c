@@ -214,7 +214,7 @@ LAB2:    xsi_set_current_line(165, ng0);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
     memcpy(t6, t2, 4U);
-    xsi_driver_first_trans_delta(t1, 4U, 4U, 0LL);
+    xsi_driver_first_trans_delta(t1, 1U, 4U, 0LL);
     xsi_set_current_line(167, ng0);
     t1 = (t0 + 1992U);
     t2 = *((char **)t1);

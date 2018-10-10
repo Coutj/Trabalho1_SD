@@ -125,7 +125,8 @@ begin
 					
 					when E2 => 							--mostraA
 						
-						saida(3 downto 0) <= numeroA;
+						saida(7 downto 4) <= numeroA;
+						saida(0)				<= '1';
 						start <= '1';
 						
 						if (tempoLimite = '1') then
@@ -158,7 +159,7 @@ begin
 						if (tempoLimite = '1') then
 							start <= '0';
 							saida <= "00000000";
-							estado <= E0;
+							estado <= E2;
 						else
 							estado <= E4;
 						end if;

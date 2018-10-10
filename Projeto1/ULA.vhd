@@ -163,10 +163,12 @@ begin
 	
 		if (controle = "0000") then			-- Somador
 			carryOut						<= carryOutSomador;
-			saidaULA (3 downto 0) 	<= saidaSomador;
+			saidaULA (5 downto 2) 	<= saidaSomador;
 			ultimoBit					<= saidaSomador (3);
 			penultimoBit				<= carryOutSomador;
 			overflow 						<= (penultimoBit xor ultimoBit);
+			saidaUla(6)					<= carryOutSomador;
+			saidaUla(7)					<= (penultimoBit xor ultimoBit);
 			
 		
 		elsif (controle = "0001") then 		-- Subtrator
