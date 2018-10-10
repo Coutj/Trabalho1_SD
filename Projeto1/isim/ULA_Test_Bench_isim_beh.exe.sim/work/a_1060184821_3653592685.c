@@ -35,11 +35,11 @@ static void work_a_1060184821_3653592685_p_0(char *t0)
     char *t6;
     char *t7;
 
-LAB0:    xsi_set_current_line(77, ng0);
+LAB0:    xsi_set_current_line(91, ng0);
 
 LAB3:    t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 4768);
+    t1 = (t0 + 5248);
     t3 = (t1 + 56U);
     t4 = *((char **)t3);
     t5 = (t4 + 56U);
@@ -47,7 +47,7 @@ LAB3:    t1 = (t0 + 1032U);
     memcpy(t6, t2, 4U);
     xsi_driver_first_trans_fast(t1);
 
-LAB2:    t7 = (t0 + 4672);
+LAB2:    t7 = (t0 + 5152);
     *((int *)t7) = 1;
 
 LAB1:    return;
@@ -72,9 +72,9 @@ static void work_a_1060184821_3653592685_p_1(char *t0)
     char *t13;
     char *t14;
     char *t15;
-    static char *nl0[] = {&&LAB12, &&LAB13};
+    static char *nl0[] = {&&LAB12, &&LAB13, &&LAB14, &&LAB15, &&LAB16};
 
-LAB0:    xsi_set_current_line(86, ng0);
+LAB0:    xsi_set_current_line(102, ng0);
     t2 = (t0 + 2912U);
     t3 = xsi_signal_has_event(t2);
     if (t3 == 1)
@@ -86,11 +86,11 @@ LAB7:    if (t1 != 0)
         goto LAB2;
 
 LAB4:
-LAB3:    t2 = (t0 + 4688);
+LAB3:    t2 = (t0 + 5168);
     *((int *)t2) = 1;
 
 LAB1:    return;
-LAB2:    xsi_set_current_line(88, ng0);
+LAB2:    xsi_set_current_line(104, ng0);
     t4 = (t0 + 1512U);
     t8 = *((char **)t4);
     t9 = *((unsigned char *)t8);
@@ -98,7 +98,7 @@ LAB2:    xsi_set_current_line(88, ng0);
     if (t10 != 0)
         goto LAB8;
 
-LAB10:    xsi_set_current_line(92, ng0);
+LAB10:    xsi_set_current_line(108, ng0);
     t2 = (t0 + 2792U);
     t4 = *((char **)t2);
     t1 = *((unsigned char *)t4);
@@ -112,8 +112,8 @@ LAB5:    t4 = (t0 + 2952U);
     t1 = t7;
     goto LAB7;
 
-LAB8:    xsi_set_current_line(89, ng0);
-    t4 = (t0 + 4832);
+LAB8:    xsi_set_current_line(105, ng0);
+    t4 = (t0 + 5312);
     t11 = (t4 + 56U);
     t12 = *((char **)t11);
     t13 = (t12 + 56U);
@@ -125,16 +125,16 @@ LAB9:    goto LAB3;
 
 LAB11:    goto LAB9;
 
-LAB12:    xsi_set_current_line(95, ng0);
+LAB12:    xsi_set_current_line(111, ng0);
     t5 = (t0 + 1192U);
     t8 = *((char **)t5);
     t3 = *((unsigned char *)t8);
     t6 = (t3 == (unsigned char)3);
     if (t6 != 0)
-        goto LAB14;
+        goto LAB17;
 
-LAB16:    xsi_set_current_line(99, ng0);
-    t2 = (t0 + 4832);
+LAB19:    xsi_set_current_line(115, ng0);
+    t2 = (t0 + 5312);
     t4 = (t2 + 56U);
     t5 = *((char **)t4);
     t8 = (t5 + 56U);
@@ -142,18 +142,18 @@ LAB16:    xsi_set_current_line(99, ng0);
     *((unsigned char *)t11) = (unsigned char)0;
     xsi_driver_first_trans_fast(t2);
 
-LAB15:    goto LAB11;
+LAB18:    goto LAB11;
 
-LAB13:    xsi_set_current_line(103, ng0);
+LAB13:    xsi_set_current_line(119, ng0);
     t2 = (t0 + 1352U);
     t4 = *((char **)t2);
     t1 = *((unsigned char *)t4);
     t3 = (t1 == (unsigned char)3);
     if (t3 != 0)
-        goto LAB17;
+        goto LAB20;
 
-LAB19:    xsi_set_current_line(107, ng0);
-    t2 = (t0 + 4832);
+LAB22:    xsi_set_current_line(123, ng0);
+    t2 = (t0 + 5312);
     t4 = (t2 + 56U);
     t5 = *((char **)t4);
     t8 = (t5 + 56U);
@@ -161,47 +161,239 @@ LAB19:    xsi_set_current_line(107, ng0);
     *((unsigned char *)t11) = (unsigned char)1;
     xsi_driver_first_trans_fast(t2);
 
-LAB18:    goto LAB11;
+LAB21:    goto LAB11;
 
-LAB14:    xsi_set_current_line(96, ng0);
+LAB14:    xsi_set_current_line(128, ng0);
+    t2 = (t0 + 2312U);
+    t4 = *((char **)t2);
+    t2 = (t0 + 5504);
+    t5 = (t2 + 56U);
+    t8 = *((char **)t5);
+    t11 = (t8 + 56U);
+    t12 = *((char **)t11);
+    memcpy(t12, t4, 4U);
+    xsi_driver_first_trans_delta(t2, 4U, 4U, 0LL);
+    xsi_set_current_line(129, ng0);
+    t2 = (t0 + 5568);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)3;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(131, ng0);
+    t2 = (t0 + 3432U);
+    t4 = *((char **)t2);
+    t1 = *((unsigned char *)t4);
+    t3 = (t1 == (unsigned char)3);
+    if (t3 != 0)
+        goto LAB23;
+
+LAB25:    xsi_set_current_line(136, ng0);
+    t2 = (t0 + 5312);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)2;
+    xsi_driver_first_trans_fast(t2);
+
+LAB24:    goto LAB11;
+
+LAB15:    xsi_set_current_line(142, ng0);
+    t2 = (t0 + 2472U);
+    t4 = *((char **)t2);
+    t2 = (t0 + 5504);
+    t5 = (t2 + 56U);
+    t8 = *((char **)t5);
+    t11 = (t8 + 56U);
+    t12 = *((char **)t11);
+    memcpy(t12, t4, 4U);
+    xsi_driver_first_trans_delta(t2, 4U, 4U, 0LL);
+    xsi_set_current_line(143, ng0);
+    t2 = (t0 + 5568);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)3;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(145, ng0);
+    t2 = (t0 + 3432U);
+    t4 = *((char **)t2);
+    t1 = *((unsigned char *)t4);
+    t3 = (t1 == (unsigned char)3);
+    if (t3 != 0)
+        goto LAB26;
+
+LAB28:    xsi_set_current_line(150, ng0);
+    t2 = (t0 + 5312);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)3;
+    xsi_driver_first_trans_fast(t2);
+
+LAB27:    goto LAB11;
+
+LAB16:    xsi_set_current_line(155, ng0);
+    t2 = (t0 + 3112U);
+    t4 = *((char **)t2);
+    t2 = (t0 + 5504);
+    t5 = (t2 + 56U);
+    t8 = *((char **)t5);
+    t11 = (t8 + 56U);
+    t12 = *((char **)t11);
+    memcpy(t12, t4, 8U);
+    xsi_driver_first_trans_fast_port(t2);
+    xsi_set_current_line(156, ng0);
+    t2 = (t0 + 5568);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)3;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(158, ng0);
+    t2 = (t0 + 3432U);
+    t4 = *((char **)t2);
+    t1 = *((unsigned char *)t4);
+    t3 = (t1 == (unsigned char)3);
+    if (t3 != 0)
+        goto LAB29;
+
+LAB31:    xsi_set_current_line(163, ng0);
+    t2 = (t0 + 5312);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)4;
+    xsi_driver_first_trans_fast(t2);
+
+LAB30:    goto LAB11;
+
+LAB17:    xsi_set_current_line(112, ng0);
     t5 = (t0 + 1032U);
     t11 = *((char **)t5);
-    t5 = (t0 + 4896);
+    t5 = (t0 + 5376);
     t12 = (t5 + 56U);
     t13 = *((char **)t12);
     t14 = (t13 + 56U);
     t15 = *((char **)t14);
     memcpy(t15, t11, 4U);
     xsi_driver_first_trans_fast(t5);
-    xsi_set_current_line(97, ng0);
-    t2 = (t0 + 4832);
+    xsi_set_current_line(113, ng0);
+    t2 = (t0 + 5312);
     t4 = (t2 + 56U);
     t5 = *((char **)t4);
     t8 = (t5 + 56U);
     t11 = *((char **)t8);
     *((unsigned char *)t11) = (unsigned char)1;
     xsi_driver_first_trans_fast(t2);
-    goto LAB15;
+    goto LAB18;
 
-LAB17:    xsi_set_current_line(104, ng0);
+LAB20:    xsi_set_current_line(120, ng0);
     t2 = (t0 + 1032U);
     t5 = *((char **)t2);
-    t2 = (t0 + 4960);
+    t2 = (t0 + 5440);
     t8 = (t2 + 56U);
     t11 = *((char **)t8);
     t12 = (t11 + 56U);
     t13 = *((char **)t12);
     memcpy(t13, t5, 4U);
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(105, ng0);
-    t2 = (t0 + 4832);
+    xsi_set_current_line(121, ng0);
+    t2 = (t0 + 5312);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)2;
+    xsi_driver_first_trans_fast(t2);
+    goto LAB21;
+
+LAB23:    xsi_set_current_line(132, ng0);
+    t2 = (t0 + 5568);
+    t5 = (t2 + 56U);
+    t8 = *((char **)t5);
+    t11 = (t8 + 56U);
+    t12 = *((char **)t11);
+    *((unsigned char *)t12) = (unsigned char)2;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(133, ng0);
+    t2 = (t0 + 8954);
+    t5 = (t0 + 5504);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    t12 = (t11 + 56U);
+    t13 = *((char **)t12);
+    memcpy(t13, t2, 8U);
+    xsi_driver_first_trans_fast_port(t5);
+    xsi_set_current_line(134, ng0);
+    t2 = (t0 + 5312);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)3;
+    xsi_driver_first_trans_fast(t2);
+    goto LAB24;
+
+LAB26:    xsi_set_current_line(146, ng0);
+    t2 = (t0 + 5568);
+    t5 = (t2 + 56U);
+    t8 = *((char **)t5);
+    t11 = (t8 + 56U);
+    t12 = *((char **)t11);
+    *((unsigned char *)t12) = (unsigned char)2;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(147, ng0);
+    t2 = (t0 + 8962);
+    t5 = (t0 + 5504);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    t12 = (t11 + 56U);
+    t13 = *((char **)t12);
+    memcpy(t13, t2, 8U);
+    xsi_driver_first_trans_fast_port(t5);
+    xsi_set_current_line(148, ng0);
+    t2 = (t0 + 5312);
+    t4 = (t2 + 56U);
+    t5 = *((char **)t4);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    *((unsigned char *)t11) = (unsigned char)4;
+    xsi_driver_first_trans_fast(t2);
+    goto LAB27;
+
+LAB29:    xsi_set_current_line(159, ng0);
+    t2 = (t0 + 5568);
+    t5 = (t2 + 56U);
+    t8 = *((char **)t5);
+    t11 = (t8 + 56U);
+    t12 = *((char **)t11);
+    *((unsigned char *)t12) = (unsigned char)2;
+    xsi_driver_first_trans_fast(t2);
+    xsi_set_current_line(160, ng0);
+    t2 = (t0 + 8970);
+    t5 = (t0 + 5504);
+    t8 = (t5 + 56U);
+    t11 = *((char **)t8);
+    t12 = (t11 + 56U);
+    t13 = *((char **)t12);
+    memcpy(t13, t2, 8U);
+    xsi_driver_first_trans_fast_port(t5);
+    xsi_set_current_line(161, ng0);
+    t2 = (t0 + 5312);
     t4 = (t2 + 56U);
     t5 = *((char **)t4);
     t8 = (t5 + 56U);
     t11 = *((char **)t8);
     *((unsigned char *)t11) = (unsigned char)0;
     xsi_driver_first_trans_fast(t2);
-    goto LAB18;
+    goto LAB30;
 
 }
 

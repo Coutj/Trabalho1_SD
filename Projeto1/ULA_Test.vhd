@@ -45,6 +45,16 @@ end ULA_Test;
 
 architecture ULA_TestArch of ULA_Test is
 
+
+	component contador2segundos is
+		port (
+					clockIn	: in std_logic;
+					start		:	in std_logic;
+					tempoLimite	: out std_logic
+			);
+
+	end component;
+
 	component contador is
 		port(
 					CLK : in std_logic;
@@ -65,23 +75,29 @@ architecture ULA_TestArch of ULA_Test is
 	signal numeroA, numeroB, controle : std_logic_vector(3 downto 0) := (others => '0');
 	
 		
-	type estado_type is (E0, E1);
+	type estado_type is (E0, E1, E2, E3, E4);
 	signal estado: estado_type;
 	
 	signal CLKOUT : std_logic;
+	
+	signal saidaUla : std_logic_vector (7 downto 0) := (others => '0');
+	
+	--Contador 2 segundos
+	signal start, tempoLimite : std_logic := '0';
 
 begin
-
 	
-	ula1 : ULA port map (numeroA, numeroB, controle, carryOut, overflow, saida);
+	ula1 : ULA port map (numeroA, numeroB, controle, carryOut, overflow, saidaUla);
 	controle <= entrada;
 	
 	clock : contador port map (CLKIN, CLKOUT);
 	
+	contar2segundos : contador2segundos port map (CLKOUT, start, tempoLimite);
+	
 	
 	Reg0: process (CLKOUT) is
 	
-	begin	
+	begin		
 	
 		if ((CLKOUT'event) and (CLKOUT ='1')) then -- somador
 		
@@ -91,21 +107,61 @@ begin
 			
 				case estado is
 				
-					when E0 =>
-						if (setA = '1') then
+					when E0 =>							--recebeA
+						if (setA = '1') then			
 							numeroA <= entrada;
 							estado <= E1;
 						else
 							estado <= E0;
 						end if;
 					
-					when E1 =>
+					when E1 =>							--recebeB
 						if (setB = '1') then
 							numeroB <= entrada;
-							estado <= E0;
+							estado <= E2;
 						else
 							estado <= E1;
-						end if;						
+						end if;
+					
+					when E2 => 							--mostraA
+						
+						saida(3 downto 0) <= numeroA;
+						start <= '1';
+						
+						if (tempoLimite = '1') then
+							start <= '0';
+							saida <= "00000000";
+							estado <= E3;
+						else
+							estado <= E2;
+						end if;
+						
+					
+					when E3 =>							--mostraB
+					
+						saida(3 downto 0) <= numeroB;
+						start <= '1';
+						
+						if (tempoLimite = '1') then
+							start <= '0';
+							saida <= "00000000";
+							estado <= E4;
+						else
+							estado <= E3;
+						end if;
+					
+					when E4 =>						--Mostra resultado
+					
+						saida <= saidaUla;
+						start <= '1';
+					
+						if (tempoLimite = '1') then
+							start <= '0';
+							saida <= "00000000";
+							estado <= E0;
+						else
+							estado <= E4;
+						end if;
 					
 				end case;
 			

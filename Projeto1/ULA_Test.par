@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Arch::  Tue Oct 09 22:24:22 2018
+Arch::  Wed Oct 10 19:42:47 2018
 
 par -w -intstyle ise -ol high -t 1 ULA_Test_map.ncd ULA_Test.ncd ULA_Test.pcf 
 
@@ -37,8 +37,8 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        2 out of 24      8%
-   Number of Slices                         64 out of 5888    1%
+   Number of BUFGMUXs                        3 out of 24     12%
+   Number of Slices                        114 out of 5888    1%
       Number of SLICEMs                      0 out of 2944    0%
 
 
@@ -57,46 +57,49 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:da3) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:235a) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:da3) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:235a) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:da3) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:235a) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-............
-Phase 4.2  Initial Clock and IO Placement (Checksum:bfc74697) REAL time: 5 secs 
+................
+Phase 4.2  Initial Clock and IO Placement (Checksum:4ae880e8) REAL time: 5 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:bfc74697) REAL time: 5 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:4ae880e8) REAL time: 5 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:bfc74697) REAL time: 5 secs 
+Phase 6.36  Local Placement Optimization (Checksum:4ae880e8) REAL time: 5 secs 
 
 Phase 7.3  Local Placement Optimization
-.......
-Phase 7.3  Local Placement Optimization (Checksum:5d35cba) REAL time: 5 secs 
+..........
+Phase 7.3  Local Placement Optimization (Checksum:a644f5cb) REAL time: 6 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:5d35cba) REAL time: 5 secs 
+Phase 8.5  Local Placement Optimization (Checksum:a644f5cb) REAL time: 6 secs 
 
 Phase 9.8  Global Placement
-.......
-......
-Phase 9.8  Global Placement (Checksum:778c96bd) REAL time: 6 secs 
+............
+.........
+.........................
+.................................
+............................
+Phase 9.8  Global Placement (Checksum:450b51ee) REAL time: 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:778c96bd) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:450b51ee) REAL time: 6 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:bb764f19) REAL time: 6 secs 
+Phase 11.18  Placement Optimization (Checksum:542d2e3c) REAL time: 6 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:bb764f19) REAL time: 6 secs 
+Phase 12.5  Local Placement Optimization (Checksum:542d2e3c) REAL time: 6 secs 
 
-Total REAL time to Placer completion: 6 secs 
+Total REAL time to Placer completion: 7 secs 
 Total CPU  time to Placer completion: 6 secs 
 Writing design to file ULA_Test.ncd
 
@@ -105,13 +108,13 @@ Writing design to file ULA_Test.ncd
 Starting Router
 
 
-Phase  1  : 420 unrouted;      REAL time: 10 secs 
+Phase  1  : 720 unrouted;      REAL time: 10 secs 
 
-Phase  2  : 403 unrouted;      REAL time: 10 secs 
+Phase  2  : 664 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 95 unrouted;      REAL time: 10 secs 
+Phase  3  : 99 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 97 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  4  : 129 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
@@ -121,13 +124,15 @@ Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1
 
 Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
+Updating file: ULA_Test.ncd with current fully routed design.
+
 Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
-WARNING:Route:455 - CLK Net:clock/saida may have excessive skew because 
-      5 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Total REAL time to Router completion: 12 secs 
 Total CPU time to Router completion: 12 secs 
@@ -148,11 +153,11 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         CLKIN_BUFGP |  BUFGMUX_X1Y0| No   |   13 |  0.096     |  1.104      |
+|      entrada_1_IBUF | BUFGMUX_X1Y10| No   |    2 |  0.000     |  1.026      |
 +---------------------+--------------+------+------+------------+-------------+
-|      entrada_1_IBUF | BUFGMUX_X1Y10| No   |    2 |  0.007     |  0.994      |
+|         CLKIN_BUFGP |  BUFGMUX_X1Y0| No   |   13 |  0.038     |  1.061      |
 +---------------------+--------------+------+------+------------+-------------+
-|         clock/saida |         Local|      |    5 |  0.807     |  1.998      |
+|         clock/saida | BUFGMUX_X2Y11| No   |   33 |  0.155     |  1.134      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -172,11 +177,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     6.478ns|     N/A|           0
-  IN_BUFGP                                  | HOLD        |     1.626ns|            |       0|           0
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|     5.251ns|     N/A|           0
+  IN_BUFGP                                  | HOLD        |     1.645ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     2.826ns|     N/A|           0
-  ck/saida                                  | HOLD        |     1.281ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     8.640ns|     N/A|           0
+  ck/saida                                  | HOLD        |     1.345ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -201,7 +206,7 @@ Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 1
+Number of warning messages: 0
 Number of info messages: 1
 
 Writing design to file ULA_Test.ncd
