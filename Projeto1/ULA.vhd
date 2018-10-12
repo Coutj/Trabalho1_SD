@@ -47,50 +47,51 @@ architecture ULaArch of ULA is
 					cIn				:in		std_logic;
 					cOut				:out		std_logic;
 					resultado4Bits	:out		std_logic_vector (3 downto 0)
-				);				
+		);				
 	end component;
 	
 	component portAnd is
 
-	port (	entradaA : in std_logic_vector(3 downto 0);
-				entradaB : in std_logic_vector(3 downto 0);
-				saida		: out	std_logic_vector(3 downto 0)
-			);
+		port (	entradaA : in std_logic_vector(3 downto 0);
+					entradaB : in std_logic_vector(3 downto 0);
+					saida		: out	std_logic_vector(3 downto 0)
+		);
 				
 	end component;
 	
 	component portOr is
 
-	port (	entradaA : in std_logic_vector(3 downto 0);
-				entradaB : in std_logic_vector(3 downto 0);
-				saida		: out	std_logic_vector(3 downto 0)
-			);
+		port (	entradaA : in std_logic_vector(3 downto 0);
+					entradaB : in std_logic_vector(3 downto 0);
+					saida		: out	std_logic_vector(3 downto 0)
+		);
 
 	end component;
 	
 	component portXor is
 
-	port (
-				entradaA		:	in 	std_logic_vector (3 downto 0);
-				entradaB		:	in 	std_logic_vector (3 downto 0);
-				saida			: 	out	std_logic_vector (3 downto 0)
-			);
+		port (	entradaA		:	in 	std_logic_vector (3 downto 0);
+					entradaB		:	in 	std_logic_vector (3 downto 0);
+					saida			: 	out	std_logic_vector (3 downto 0)
+		);
 
 	end component;
 	
 	component Inversor is
-	port(
-			entradaA : in std_logic_vector(3 downto 0);
-			saida		: out	std_logic_vector(3 downto 0));
+	
+		port(	entradaA : in std_logic_vector(3 downto 0);
+				saida		: out	std_logic_vector(3 downto 0)
+		);
 
 	end component;
 	
 	component multiplicador is
 
-	port (
-			entradaA : in 	std_logic_vector (3 downto 0);
-			entradaB	: in 	std_logic_vector (3 downto 0);
-			saida		: out	std_logic_vector (7 downto 0));
+		port (
+				entradaA : in 	std_logic_vector (3 downto 0);
+				entradaB	: in 	std_logic_vector (3 downto 0);
+				saida		: out	std_logic_vector (7 downto 0)
+		);
 
 	end component;
 	
@@ -125,7 +126,6 @@ architecture ULaArch of ULA is
 	signal entradaComplementada	: std_logic_vector (3 downto 0) := (others => '0');
 	signal carryOutCpl : std_logic := '0';
 
-
 begin
 	
 	
@@ -154,12 +154,13 @@ begin
 	--Port Map Complementador
 	complementador	:	Somador4Bits port map (entradaInvertida, "0001",'0',carryOutCpl, entradaComplementada);
 
-	ulaProcess : process (controle) is
+	UlaProcess : process (controle) is
+		
 	begin
 	
-		saidaULA <= "00000000";
-		overflow <= '0';
-		carryOut	<= '0';
+		saidaULA 	<= "00000000";
+		overflow 		<= '0';
+		carryOut		<= '0';
 	
 		if (controle = "0000") then			-- Somador
 			carryOut						<= carryOutSomador;
@@ -173,38 +174,39 @@ begin
 		
 		elsif (controle = "0001") then 		-- Subtrator
 			carryOut						<=	carryOutSub;
-			saidaULA (3 downto 0) 	<= saidaSub;
+			saidaULA (5 downto 2) 	<= saidaSub;
 			ultimoBit					<= saidaSub(3);
 			penultimoBit				<=	carryOutSub;
 			overflow 						<= (penultimoBit xor ultimoBit);
+			saidaUla(6)					<= carryOutSub;
+			saidaUla(7)					<= (penultimoBit xor ultimoBit);
 			
+						
 		elsif (controle = "0010") then		-- multiplicacao
 			saidaULa <= saidaMultiplicador;
-			
+						
 		elsif (controle = "0011") then		--And
-			saidaULA (3 downto 0)<= saidaAnd;
-			
+			saidaULA (7 downto 4)<= saidaAnd;
+
 		elsif (controle = "0100") then		--Or
-			saidaULA (3 downto 0) <= saidaOr;
+			saidaULA (7 downto 4) <= saidaOr;
 			
 		elsif (controle = "0101") then			--xor
-			saidaULA (3 downto 0) <= saidaXor;
+			saidaULA (7 downto 4) <= saidaXor;
 		
 		elsif (controle = "0110")	then			--Inversor
-			saidaUla (3 downto 0)	<= entradaInvertida;
+			saidaUla (7 downto 4)	<= entradaInvertida;
 		
 		elsif	(controle = "0111")	then			--Complementador
-			saidaULA	(3 downto 0)	<=	entradaComplementada;
+			saidaULA	(7 downto 4)	<=	entradaComplementada;
 			
 		elsif (controle = "1000") then --
-			saidaULA	(3 downto 0)	<= (entradaA nor entradaB);
+			saidaULA	(7 downto 4)	<= (entradaA nor entradaB);
 			
 		end if;
 		
-		
-		
 	
-	end process ulaProcess ;
+	end process UlaProcess ;
 	
 	
 

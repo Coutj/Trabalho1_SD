@@ -44,9 +44,9 @@ Setup/Hold to clock entrada<1>
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-entrada<0>  |    3.103(R)|   -0.773(R)|entrada_1_IBUF    |   0.000|
-entrada<2>  |    2.886(R)|   -0.232(R)|entrada_1_IBUF    |   0.000|
-entrada<3>  |    3.020(R)|   -0.380(R)|entrada_1_IBUF    |   0.000|
+entrada<0>  |    5.430(R)|   -2.052(R)|entrada_1_IBUF    |   0.000|
+entrada<2>  |    3.412(R)|   -0.661(R)|entrada_1_IBUF    |   0.000|
+entrada<3>  |    3.861(R)|   -1.240(R)|entrada_1_IBUF    |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock entrada<1> to Pad
@@ -54,7 +54,7 @@ Clock entrada<1> to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-overflow    |    8.989(R)|entrada_1_IBUF    |   0.000|
+overflow    |    9.560(R)|entrada_1_IBUF    |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLKIN
@@ -62,7 +62,7 @@ Clock to Setup on destination clock CLKIN
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLKIN          |    5.388|         |         |         |
+CLKIN          |    5.349|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock entrada<1>
@@ -70,24 +70,24 @@ Clock to Setup on destination clock entrada<1>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-entrada<1>     |    3.532|    3.532|         |         |
+entrada<1>     |    2.830|    2.830|         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-entrada<0>     |carryOut       |    8.932|
-entrada<1>     |carryOut       |   10.464|
-entrada<1>     |overflow       |    9.463|
-entrada<2>     |carryOut       |    9.479|
-entrada<2>     |overflow       |    8.478|
-entrada<3>     |carryOut       |    9.835|
-entrada<3>     |overflow       |    8.834|
+entrada<0>     |carryOut       |   12.380|
+entrada<1>     |carryOut       |    9.780|
+entrada<1>     |overflow       |    9.779|
+entrada<2>     |carryOut       |    9.252|
+entrada<2>     |overflow       |   10.227|
+entrada<3>     |carryOut       |    9.610|
+entrada<3>     |overflow       |   10.676|
 ---------------+---------------+---------+
 
 
-Analysis completed Wed Oct 10 21:04:44 2018 
+Analysis completed Thu Oct 11 23:35:57 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:

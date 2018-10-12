@@ -31,16 +31,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity portAnd is
 
-	port (
-				entradaA : in std_logic_vector(3 downto 0);
+	port (	entradaA : in std_logic_vector(3 downto 0);
 				entradaB : in std_logic_vector(3 downto 0);
-				saida		: out	std_logic_vector(3 downto 0));
+				saida		: out	std_logic_vector(3 downto 0)
+	);
 				
 end portAnd;
 
 architecture Behavioral of portAnd is
 
 begin
+
 	saida <= entradaA and entradaB;
 
 end Behavioral;

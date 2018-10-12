@@ -30,11 +30,14 @@ use ieee.std_logic_1164.all;
 --use UNISIM.VComponents.all;
 
 entity Somador1Bit is
+
 	port (	numA			:	in 	std_logic := '0';
 				numB			:	in 	std_logic := '0';
 				carryIn		:	in 	std_logic := '0';
 				carryOut		:	out 	std_logic := '0';
-				resultado	:	out 	std_logic := '0'  );
+				resultado	:	out 	std_logic := '0'
+	);
+	
 end Somador1Bit;
 
 architecture Somador1BitArch of Somador1Bit is

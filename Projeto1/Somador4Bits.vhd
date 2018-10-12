@@ -35,18 +35,22 @@ entity Somador4Bits is
 				numB4Bits		:in		std_logic_vector (3 downto 0) := (others => '0');
 				cIn				:in		std_logic := '0';
 				cOut				:out		std_logic := '0';
-				resultado4Bits	:out		std_logic_vector (3 downto 0) := (others => '0'));
+				resultado4Bits	:out		std_logic_vector (3 downto 0) := (others => '0')
+	);
 				
 end Somador4Bits;
 
 architecture Somador4BitsArch of Somador4Bits is
 		
 	component Somador1Bit is
-	port (	numA			:	in 	std_logic;
-				numB			:	in 	std_logic;
-				carryIn		:	in 	std_logic;
-				carryOut		:	out 	std_logic;
-				resultado	:	out 	std_logic);
+	
+		port (	numA			:	in 	std_logic;
+					numB			:	in 	std_logic;
+					carryIn		:	in 	std_logic;
+					carryOut		:	out 	std_logic;
+					resultado	:	out 	std_logic
+		);
+		
 	end component;
 		
 	signal carryOut0, carryOut1, carryOut2, carryOut3	: std_logic;

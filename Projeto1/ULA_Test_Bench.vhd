@@ -104,25 +104,27 @@ BEGIN
 		setB <= '1';
 		entrada <= "0010";
 		wait for 100 ms;
-		entrada <= "0000";
+		entrada	<=	"0000";
+		wait for 1 ms;
+		entrada <= "0001";
 		setB <= '0';
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0001";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0010";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0011";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0100";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0101";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0110";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "0111";
---		wait for 100 ms;
+--		wait for 110 ms;
 --		entrada <= "1000";
-      wait for CLKIN_period*100000;
+      
 		
 
       -- insert stimulus here 

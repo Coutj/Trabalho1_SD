@@ -2,28 +2,9 @@ Command line:
    ULA_Test_Bench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  39311
+     -socket  48889
 
-Wed Oct 10 21:01:51 2018
+Fri Oct 12 00:08:05 2018
 
 
  Elaboration Time: 0.04 sec
-
- Current Memory Usage: 213.467 Meg
-
- Total Signals          : 366
- Total Nets             : 222
- Total Signal Drivers   : 111
- Total Blocks           : 61
- Total Primitive Blocks : 45
- Total Processes        : 97
- Total Traceable Variables  : 15
- Total Scalar Nets and Variables : 729
-Total Line Count : 185
-
- Total Simulation Time: 798.27 sec
-
- Current Memory Usage: 288.969 Meg
-
-Wed Oct 10 21:15:24 2018
-

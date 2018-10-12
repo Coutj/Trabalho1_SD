@@ -31,18 +31,17 @@ use ieee.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity contador is
-	port(
-		CLK : in std_logic;
-		saida : out std_logic
-	
+
+	port(		CLK : in std_logic;
+				saida : out std_logic
 	);
 
 end contador;
 
 architecture contadorArch of contador is
 
-	constant prescaler				: std_logic_vector(22 downto 0) := "10111110101111000010000";   --clkin/f/2 101111101011110000100000000
-   signal 	prescaler_counter		: std_logic_vector(22 downto 0) := (others => '0');
+	constant contagemFinal				: std_logic_vector(22 downto 0) := "10111110101111000010000";   --clkin/f/2 101111101011110000100000000
+   signal 	contagemInicial		: std_logic_vector(22 downto 0) := (others => '0');
 
 begin
 
@@ -50,14 +49,17 @@ begin
 		begin
 		
 		
-				if ((CLK='1') and (CLK'event)) then
-					prescaler_counter <= std_logic_vector( unsigned (prescaler_counter) + 1);
-					if(prescaler_counter > prescaler) then
+				if (rising_edge(CLK)) then
+				
+					contagemInicial <= std_logic_vector( unsigned (contagemInicial) + 1);
+					
+					if(contagemInicial > contagemFinal) then
 						saida <= '1';
-						prescaler_counter <= (others => '0');
+						contagemInicial <= (others => '0');
 					else				
 						saida <= '0';
 					end if;
+					
 				end if;
 
 		end Process contProcess;

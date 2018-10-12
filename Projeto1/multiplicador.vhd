@@ -31,10 +31,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity multiplicador is
 
-	port (
-			entradaA : in 	std_logic_vector (3 downto 0);
-			entradaB	: in 	std_logic_vector (3 downto 0);
-			saida		: out	std_logic_vector (7 downto 0)
+	port (	entradaA : in 	std_logic_vector (3 downto 0);
+				entradaB	: in 	std_logic_vector (3 downto 0);
+				saida		: out	std_logic_vector (7 downto 0)
 	);
 
 end multiplicador;
@@ -48,11 +47,12 @@ architecture multiplicadorArch of multiplicador is
 					numB8Bits		:in		std_logic_vector (7 downto 0);
 					cIn				:in		std_logic;
 					cOut				:out		std_logic;
-					resultado8Bits	:out		std_logic_vector (7 downto 0));
+					resultado8Bits	:out		std_logic_vector (7 downto 0)
+		);
 	end component;
 
 	signal carryOut1, carryOut2, carryOut3 : std_logic;
-	signal somaParcial1, somaParcial2, somaParcial3 : std_logic_vector (7 downto 0);
+	signal somaParcial1, somaParcial2 : std_logic_vector (7 downto 0);
 	
 	signal resultParcial1,resultParcial2,
 	resultParcial3,resultParcial4 : std_logic_vector (7 downto 0);
@@ -63,7 +63,7 @@ begin
 	somador2 : somador8Bits port map (resultParcial3, resultParcial4, carryOut1, carryOut2, somaParcial2);
 	somador3 : somador8Bits port map (somaParcial1, somaParcial2, carryOut2, carryOut3 , saida);
 
-	multiProcess : process(entradaA, entradaB) is 
+	MultiProcess : process(entradaA, entradaB) is 
 		
 		begin	
 		
@@ -88,7 +88,6 @@ begin
 				resultParcial4(6 downto 3) <= entradaA;	
 			end if;
 	
-	end process multiProcess;	
+	end process MultiProcess;	
 			
 end multiplicadorArch;
-

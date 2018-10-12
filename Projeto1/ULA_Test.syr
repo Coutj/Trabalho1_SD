@@ -12,7 +12,7 @@ Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: ULA_Test.prj
@@ -124,8 +124,7 @@ Architecture portorarch of Entity portor is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portXor.vhd" in Library work.
 Architecture portxorarch of Entity portxor is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" in Library work.
-Entity <ula> compiled.
-Entity <ula> (Architecture <ulaarch>) compiled.
+Architecture ulaarch of Entity ula is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" in Library work.
 Architecture contadorarch of Entity contador is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/contador2segundos.vhd" in Library work.
@@ -143,7 +142,8 @@ Analyzing hierarchy for entity <ULA> in library <work> (architecture <ulaarch>).
 
 Analyzing hierarchy for entity <contador> in library <work> (architecture <contadorarch>).
 
-Analyzing hierarchy for entity <contador2segundos> in library <work> (architecture <contador2segundosarch>).
+Analyzing hierarchy for entity <contador2segundos> in library <work> (architecture <contador2segundosarch>) with generics.
+	numeroInteracoes = 16
 
 Analyzing hierarchy for entity <Somador4Bits> in library <work> (architecture <somador4bitsarch>).
 
@@ -204,7 +204,8 @@ Entity <portXor> analyzed. Unit <portXor> generated.
 Analyzing Entity <contador> in library <work> (Architecture <contadorarch>).
 Entity <contador> analyzed. Unit <contador> generated.
 
-Analyzing Entity <contador2segundos> in library <work> (Architecture <contador2segundosarch>).
+Analyzing generic Entity <contador2segundos> in library <work> (Architecture <contador2segundosarch>).
+	numeroInteracoes = 16
 Entity <contador2segundos> analyzed. Unit <contador2segundos> generated.
 
 
@@ -217,8 +218,8 @@ Performing bidirectional port resolution...
 Synthesizing Unit <contador>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd".
     Found 1-bit register for signal <saida>.
-    Found 23-bit up counter for signal <prescaler_counter>.
-    Found 23-bit comparator greater for signal <prescaler_counter$cmp_gt0000> created at line 55.
+    Found 23-bit up counter for signal <contagemInicial>.
+    Found 23-bit comparator greater for signal <contagemInicial$cmp_gt0000> created at line 56.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -230,7 +231,7 @@ Synthesizing Unit <contador2segundos>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/contador2segundos.vhd".
     Found 1-bit register for signal <tempoLimite>.
     Found 32-bit register for signal <tempo>.
-    Found 32-bit adder for signal <tempo$addsub0000> created at line 58.
+    Found 32-bit adder for signal <tempo$addsub0000> created at line 60.
     Summary:
 	inferred  33 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
@@ -261,7 +262,7 @@ Unit <portXor> synthesized.
 Synthesizing Unit <Somador1Bit>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd".
     Found 1-bit xor2 for signal <resultado>.
-    Found 1-bit xor2 for signal <carryOut$xor0000> created at line 45.
+    Found 1-bit xor2 for signal <carryOut$xor0000> created at line 48.
 Unit <Somador1Bit> synthesized.
 
 
@@ -278,7 +279,6 @@ Unit <somador8Bits> synthesized.
 
 Synthesizing Unit <multiplicador>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd".
-WARNING:Xst:1780 - Signal <somaParcial3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <carryOut3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <multiplicador> synthesized.
 
@@ -290,7 +290,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <ultimoBit>. Latches may be gener
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 WARNING:Xst:737 - Found 1-bit latch for signal <penultimoBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 1-bit xor2 for signal <overflow$xor0000> created at line 169.
+    Found 1-bit xor2 for signal <overflow$xor0000> created at line 170.
 Unit <ULA> synthesized.
 
 
@@ -400,6 +400,9 @@ Optimizing unit <ULA> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block ULA_Test, actual ratio is 2.
+FlipFlop numeroA_1 has been replicated 1 time(s)
+FlipFlop numeroA_3 has been replicated 1 time(s)
+FlipFlop numeroB_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -407,8 +410,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 77
- Flip-Flops                                            : 77
+# Registers                                            : 80
+ Flip-Flops                                            : 80
 
 =========================================================================
 
@@ -437,26 +440,27 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 353
+# BELS                             : 411
 #      GND                         : 1
-#      INV                         : 8
+#      INV                         : 10
 #      LUT1                        : 57
-#      LUT2                        : 14
-#      LUT2_D                      : 6
-#      LUT2_L                      : 2
-#      LUT3                        : 18
-#      LUT3_D                      : 2
-#      LUT4                        : 93
-#      LUT4_D                      : 6
-#      LUT4_L                      : 11
+#      LUT2                        : 13
+#      LUT2_D                      : 3
+#      LUT2_L                      : 4
+#      LUT3                        : 28
+#      LUT3_D                      : 5
+#      LUT3_L                      : 3
+#      LUT4                        : 112
+#      LUT4_D                      : 11
+#      LUT4_L                      : 14
 #      MUXCY                       : 73
-#      MUXF5                       : 6
+#      MUXF5                       : 21
 #      VCC                         : 1
 #      XORCY                       : 55
-# FlipFlops/Latches                : 79
-#      FDE                         : 17
+# FlipFlops/Latches                : 82
+#      FDE                         : 12
 #      FDR                         : 58
-#      FDRS                        : 1
+#      FDRS                        : 9
 #      FDSE                        : 1
 #      LDE_1                       : 2
 # Clock Buffers                    : 3
@@ -472,9 +476,9 @@ Device utilization summary:
 
 Selected Device : 3s700anfgg484-4 
 
- Number of Slices:                      115  out of   5888     1%  
- Number of Slice Flip Flops:             79  out of  11776     0%  
- Number of 4 input LUTs:                217  out of  11776     1%  
+ Number of Slices:                      136  out of   5888     2%  
+ Number of Slice Flip Flops:             82  out of  11776     0%  
+ Number of 4 input LUTs:                260  out of  11776     2%  
  Number of IOs:                          18
  Number of bonded IOBs:                  18  out of    372     4%  
  Number of GCLKs:                         3  out of     24    12%  
@@ -500,7 +504,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock/saida1                       | BUFG                   | 53    |
+Clock/saida1                       | BUFG                   | 56    |
 CLKIN                              | BUFGP                  | 24    |
 entrada<1>                         | IBUF+BUFG              | 2     |
 -----------------------------------+------------------------+-------+
@@ -513,42 +517,42 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 8.655ns (Maximum Frequency: 115.540MHz)
-   Minimum input arrival time before clock: 10.024ns
-   Maximum output required time after clock: 9.833ns
-   Maximum combinational path delay: 9.467ns
+   Minimum period: 10.598ns (Maximum Frequency: 94.358MHz)
+   Minimum input arrival time before clock: 11.446ns
+   Maximum output required time after clock: 10.432ns
+   Maximum combinational path delay: 10.804ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clock/saida1'
-  Clock period: 8.655ns (frequency: 115.540MHz)
-  Total number of paths / destination ports: 2811 / 87
+Timing constraint: Default period analysis for Clock 'Clock/saida1'
+  Clock period: 10.598ns (frequency: 94.358MHz)
+  Total number of paths / destination ports: 8043 / 98
 -------------------------------------------------------------------------
-Delay:               8.655ns (Levels of Logic = 7)
-  Source:            numeroB_1 (FF)
-  Destination:       saida_6 (FF)
-  Source Clock:      clock/saida1 rising
-  Destination Clock: clock/saida1 rising
+Delay:               10.598ns (Levels of Logic = 7)
+  Source:            numeroA_0 (FF)
+  Destination:       saida_2 (FF)
+  Source Clock:      Clock/saida1 rising
+  Destination Clock: Clock/saida1 rising
 
-  Data Path: numeroB_1 to saida_6
+  Data Path: numeroA_0 to saida_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             13   0.591   1.126  numeroB_1 (numeroB_1)
-     LUT2:I0->O            2   0.648   0.450  ula1/multi/resultParcial2<2>1 (ula1/multi/resultParcial2<2>)
-     LUT4:I3->O            3   0.648   0.534  ula1/multi/somador1/somador1/somador3/Mxor_resultado_Result1 (ula1/multi/somaParcial1<2>)
-     LUT4_D:I3->LO         1   0.648   0.132  ula1/multi/somador3/somador1/somador4/carryOut1 (N67)
-     LUT3:I2->O            2   0.648   0.479  ula1/multi/somador3/somador2/somador1/carryOut1 (ula1/multi/somador3/somador2/carryOut0)
-     LUT3_D:I2->LO         1   0.648   0.103  ula1/multi/somador3/somador2/somador2/carryOut1 (N70)
-     LUT4:I3->O            1   0.648   0.452  saida_6_mux000078 (saida_6_mux000078)
-     LUT4:I2->O            1   0.648   0.000  saida_6_mux0000121 (saida_6_mux0000)
-     FDE:D                     0.252          saida_6
+     FDE:C->Q             28   0.591   1.293  numeroA_0 (numeroA_0)
+     LUT4:I2->O            1   0.648   0.452  Ula1/multi/somador2/somador2/somador2/Mxor_resultado_Result_SW1 (N31)
+     LUT4:I2->O            3   0.648   0.611  Ula1/multi/somador2/somador2/somador2/Mxor_resultado_Result (Ula1/multi/somaParcial2<5>)
+     LUT4:I1->O            3   0.643   0.534  Ula1/multi/somador3/somador2/somador2/carryOut21_SW1 (N74)
+     LUT4:I3->O            1   0.648   0.423  Ula1/saidaULA_6_mux0008235 (Ula1/saidaULA_6_mux0008235)
+     LUT4:I3->O            2   0.648   0.527  Ula1/saidaULA_6_mux0008257 (Ula1/saidaULA_6_mux0008257)
+     LUT4_L:I1->LO         1   0.643   0.103  Ula1/saidaULA_6_mux0008297_SW0 (N98)
+     LUT4:I3->O            6   0.648   0.669  saida_4_mux000011 (N11)
+     FDRS:S                    0.869          saida_2
     ----------------------------------------
-    Total                      8.655ns (5.379ns logic, 3.276ns route)
-                                       (62.1% logic, 37.9% route)
+    Total                     10.598ns (5.986ns logic, 4.612ns route)
+                                       (56.5% logic, 43.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLKIN'
@@ -556,159 +560,163 @@ Timing constraint: Default period analysis for Clock 'CLKIN'
   Total number of paths / destination ports: 828 / 47
 -------------------------------------------------------------------------
 Delay:               6.353ns (Levels of Logic = 13)
-  Source:            clock/prescaler_counter_0 (FF)
-  Destination:       clock/prescaler_counter_0 (FF)
+  Source:            Clock/contagemInicial_0 (FF)
+  Destination:       Clock/contagemInicial_0 (FF)
   Source Clock:      CLKIN rising
   Destination Clock: CLKIN rising
 
-  Data Path: clock/prescaler_counter_0 to clock/prescaler_counter_0
+  Data Path: Clock/contagemInicial_0 to Clock/contagemInicial_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.590  clock/prescaler_counter_0 (clock/prescaler_counter_0)
-     LUT4:I0->O            1   0.648   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_lut<0> (clock/Mcompar_prescaler_counter_cmp_gt0000_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<0> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<1> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<2> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<3> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<4> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<5> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<6> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<7> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<8> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<9> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<9>)
-     MUXCY:CI->O           2   0.141   0.447  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<10> (clock/Mcompar_prescaler_counter_cmp_gt0000_cy<10>)
-     INV:I->O             23   0.648   1.202  clock/Mcompar_prescaler_counter_cmp_gt0000_cy<10>_inv_INV_0 (clock/prescaler_counter_cmp_gt0000)
-     FDR:R                     0.869          clock/prescaler_counter_0
+     FDR:C->Q              2   0.591   0.590  Clock/contagemInicial_0 (Clock/contagemInicial_0)
+     LUT4:I0->O            1   0.648   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0> (Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           2   0.141   0.447  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10> (Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>)
+     INV:I->O             23   0.648   1.202  Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>_inv_INV_0 (Clock/contagemInicial_cmp_gt0000)
+     FDR:R                     0.869          Clock/contagemInicial_0
     ----------------------------------------
     Total                      6.353ns (4.114ns logic, 2.239ns route)
                                        (64.8% logic, 35.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clock/saida1'
-  Total number of paths / destination ports: 205 / 38
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock/saida1'
+  Total number of paths / destination ports: 1217 / 50
 -------------------------------------------------------------------------
-Offset:              10.024ns (Levels of Logic = 9)
-  Source:            entrada<1> (PAD)
-  Destination:       saida_3 (FF)
-  Destination Clock: clock/saida1 rising
+Offset:              11.446ns (Levels of Logic = 8)
+  Source:            entrada<2> (PAD)
+  Destination:       saida_2 (FF)
+  Destination Clock: Clock/saida1 rising
 
-  Data Path: entrada<1> to saida_3
+  Data Path: entrada<2> to saida_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   0.849   1.265  entrada_1_IBUF (entrada_1_IBUF1)
-     LUT4:I3->O            6   0.648   0.812  ula1/saidaULA_0_cmp_eq00041 (ula1/saidaULA_0_cmp_eq0004)
-     LUT4:I0->O            2   0.648   0.590  saida_3_mux00009 (saida_3_mux00009)
-     LUT4:I0->O            1   0.648   0.000  saida_3_mux000038_F (N55)
-     MUXF5:I0->O           1   0.276   0.423  saida_3_mux000038 (saida_3_mux000038)
-     LUT4:I3->O            1   0.648   0.423  saida_3_mux0000170_SW0 (N41)
-     LUT4_L:I3->LO         1   0.648   0.103  saida_3_mux0000170 (saida_3_mux0000170)
-     LUT4:I3->O            1   0.648   0.500  saida_3_mux0000263 (saida_3_mux0000263)
-     LUT2:I1->O            1   0.643   0.000  saida_3_mux0000273 (saida_3_mux0000)
-     FDE:D                     0.252          saida_3
+     IBUF:I->O            27   0.849   1.404  entrada_2_IBUF (entrada_2_IBUF)
+     LUT2:I0->O            2   0.648   0.527  Ula1/saidaULA_5_mux000885 (Ula1/saidaULA_5_mux000885)
+     LUT4:I1->O            2   0.643   0.447  Ula1/saidaULA_5_mux000892 (Ula1/saidaULA_5_mux000892)
+     MUXF5:S->O            1   0.756   0.500  Ula1/saidaULA_5_mux000866_SW1 (N71)
+     LUT4_D:I1->O          2   0.643   0.450  Ula1/saidaULA_5_mux0008131 (Ula1/saidaULA_5_mux0008131)
+     LUT4:I3->O            1   0.648   0.423  Ula1/saidaULA_5_mux0008247_SW0 (N82)
+     LUT4:I3->O            3   0.648   0.674  saida_cmp_eq000022 (saida_cmp_eq000022)
+     LUT4:I0->O            6   0.648   0.669  saida_4_mux000011 (N11)
+     FDRS:S                    0.869          saida_2
     ----------------------------------------
-    Total                     10.024ns (5.908ns logic, 4.116ns route)
-                                       (58.9% logic, 41.1% route)
+    Total                     11.446ns (6.352ns logic, 5.094ns route)
+                                       (55.5% logic, 44.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'entrada<1>'
-  Total number of paths / destination ports: 15 / 4
+  Total number of paths / destination ports: 22 / 4
 -------------------------------------------------------------------------
-Offset:              4.752ns (Levels of Logic = 4)
-  Source:            entrada<1> (PAD)
-  Destination:       ula1/penultimoBit (LATCH)
+Offset:              6.089ns (Levels of Logic = 6)
+  Source:            entrada<0> (PAD)
+  Destination:       Ula1/penultimoBit (LATCH)
   Destination Clock: entrada<1> rising
 
-  Data Path: entrada<1> to ula1/penultimoBit
+  Data Path: entrada<0> to Ula1/penultimoBit
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   0.849   1.405  entrada_1_IBUF (entrada_1_IBUF1)
-     LUT3:I0->O            3   0.648   0.674  ula1/overflow_and00001 (ula1/overflow_and0000)
-     LUT4:I0->O            1   0.648   0.000  ula1/carryOut_F (N53)
-     MUXF5:I0->O           2   0.276   0.000  ula1/carryOut (carryOut_OBUF)
-     LDE_1:D                   0.252          ula1/penultimoBit
+     IBUF:I->O            37   0.849   1.407  entrada_0_IBUF (entrada_0_IBUF)
+     LUT4:I0->O            1   0.648   0.000  Ula1/somador/somador3/carryOut1_SW0_F (N106)
+     MUXF5:I0->O           1   0.276   0.500  Ula1/somador/somador3/carryOut1_SW0 (N50)
+     LUT3:I1->O            2   0.643   0.590  Ula1/saidaULA_6_mux00081_SW0 (N25)
+     LUT4:I0->O            1   0.648   0.000  Ula1/carryOut12 (Ula1/carryOut11)
+     MUXF5:I0->O           2   0.276   0.000  Ula1/carryOut1_f5 (carryOut_OBUF)
+     LDE_1:D                   0.252          Ula1/penultimoBit
     ----------------------------------------
-    Total                      4.752ns (2.673ns logic, 2.079ns route)
-                                       (56.3% logic, 43.7% route)
+    Total                      6.089ns (3.592ns logic, 2.497ns route)
+                                       (59.0% logic, 41.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clock/saida1'
-  Total number of paths / destination ports: 24 / 9
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock/saida1'
+  Total number of paths / destination ports: 49 / 9
 -------------------------------------------------------------------------
-Offset:              9.833ns (Levels of Logic = 5)
-  Source:            numeroB_1 (FF)
+Offset:              10.432ns (Levels of Logic = 6)
+  Source:            numeroB_2 (FF)
   Destination:       carryOut (PAD)
-  Source Clock:      clock/saida1 rising
+  Source Clock:      Clock/saida1 rising
 
-  Data Path: numeroB_1 to carryOut
+  Data Path: numeroB_2 to carryOut
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             13   0.591   1.126  numeroB_1 (numeroB_1)
-     LUT4_D:I0->O          2   0.648   0.479  ula1/subtrator/somador2/carryOut1 (ula1/subtrator/carryOut1)
-     LUT3_D:I2->O          2   0.648   0.450  ula1/subtrator/somador3/carryOut1 (ula1/subtrator/carryOut2)
-     LUT4:I3->O            1   0.648   0.000  ula1/carryOut_G (N54)
-     MUXF5:I1->O           2   0.276   0.447  ula1/carryOut (carryOut_OBUF)
+     FDE:C->Q             28   0.591   1.341  numeroB_2 (numeroB_2)
+     LUT4:I1->O            1   0.643   0.000  Ula1/somador/somador3/carryOut1_SW1_G (N109)
+     MUXF5:I1->O           1   0.276   0.452  Ula1/somador/somador3/carryOut1_SW1 (N51)
+     LUT3:I2->O            2   0.648   0.590  Ula1/saidaULA_6_mux00081_SW0 (N25)
+     LUT4:I0->O            1   0.648   0.000  Ula1/carryOut12 (Ula1/carryOut11)
+     MUXF5:I0->O           2   0.276   0.447  Ula1/carryOut1_f5 (carryOut_OBUF)
      OBUF:I->O                 4.520          carryOut_OBUF (carryOut)
     ----------------------------------------
-    Total                      9.833ns (7.331ns logic, 2.502ns route)
-                                       (74.6% logic, 25.4% route)
+    Total                     10.432ns (7.602ns logic, 2.830ns route)
+                                       (72.9% logic, 27.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'entrada<1>'
   Total number of paths / destination ports: 2 / 1
 -------------------------------------------------------------------------
-Offset:              6.978ns (Levels of Logic = 2)
-  Source:            ula1/penultimoBit (LATCH)
+Offset:              6.906ns (Levels of Logic = 2)
+  Source:            Ula1/penultimoBit (LATCH)
   Destination:       overflow (PAD)
   Source Clock:      entrada<1> rising
 
-  Data Path: ula1/penultimoBit to overflow
+  Data Path: Ula1/penultimoBit to overflow
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE_1:G->Q            4   0.728   0.667  ula1/penultimoBit (ula1/penultimoBit)
-     LUT3:I1->O            1   0.643   0.420  ula1/overflow1 (overflow_OBUF)
+     LDE_1:G->Q            1   0.728   0.563  Ula1/penultimoBit (Ula1/penultimoBit)
+     LUT4:I0->O            2   0.648   0.447  Ula1/overflow1 (Ula1/saidaULA_7_mux000826)
      OBUF:I->O                 4.520          overflow_OBUF (overflow)
     ----------------------------------------
-    Total                      6.978ns (5.891ns logic, 1.087ns route)
-                                       (84.4% logic, 15.6% route)
+    Total                      6.906ns (5.896ns logic, 1.010ns route)
+                                       (85.4% logic, 14.6% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 10 / 2
+  Total number of paths / destination ports: 17 / 2
 -------------------------------------------------------------------------
-Delay:               9.467ns (Levels of Logic = 5)
-  Source:            entrada<1> (PAD)
+Delay:               10.804ns (Levels of Logic = 7)
+  Source:            entrada<0> (PAD)
   Destination:       carryOut (PAD)
 
-  Data Path: entrada<1> to carryOut
+  Data Path: entrada<0> to carryOut
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   0.849   1.405  entrada_1_IBUF (entrada_1_IBUF1)
-     LUT3:I0->O            3   0.648   0.674  ula1/overflow_and00001 (ula1/overflow_and0000)
-     LUT4:I0->O            1   0.648   0.000  ula1/carryOut_F (N53)
-     MUXF5:I0->O           2   0.276   0.447  ula1/carryOut (carryOut_OBUF)
+     IBUF:I->O            37   0.849   1.407  entrada_0_IBUF (entrada_0_IBUF)
+     LUT4:I0->O            1   0.648   0.000  Ula1/somador/somador3/carryOut1_SW0_F (N106)
+     MUXF5:I0->O           1   0.276   0.500  Ula1/somador/somador3/carryOut1_SW0 (N50)
+     LUT3:I1->O            2   0.643   0.590  Ula1/saidaULA_6_mux00081_SW0 (N25)
+     LUT4:I0->O            1   0.648   0.000  Ula1/carryOut12 (Ula1/carryOut11)
+     MUXF5:I0->O           2   0.276   0.447  Ula1/carryOut1_f5 (carryOut_OBUF)
      OBUF:I->O                 4.520          carryOut_OBUF (carryOut)
     ----------------------------------------
-    Total                      9.467ns (6.941ns logic, 2.526ns route)
-                                       (73.3% logic, 26.7% route)
+    Total                     10.804ns (7.860ns logic, 2.944ns route)
+                                       (72.8% logic, 27.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.82 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.22 secs
  
 --> 
 
 
-Total memory usage is 513840 kilobytes
+Total memory usage is 514368 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

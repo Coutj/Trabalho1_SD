@@ -34,7 +34,8 @@ entity portOr is
 	port (
 				entradaA : in std_logic_vector(3 downto 0);
 				entradaB : in std_logic_vector(3 downto 0);
-				saida		: out	std_logic_vector(3 downto 0));
+				saida		: out	std_logic_vector(3 downto 0)
+	);
 
 end portOr;
 

@@ -35,11 +35,12 @@ entity somador8Bits is
 				numB8Bits		:in		std_logic_vector (7 downto 0);
 				cIn				:in		std_logic;
 				cOut				:out		std_logic;
-				resultado8Bits	:out		std_logic_vector (7 downto 0));
+				resultado8Bits	:out		std_logic_vector (7 downto 0)
+	);
+	
 end somador8Bits;
 
 architecture somador8BitsArch of somador8Bits is
-
 
 	component somador4Bits is
 		
@@ -47,7 +48,8 @@ architecture somador8BitsArch of somador8Bits is
 					numB4Bits		:in		std_logic_vector (3 downto 0);
 					cIn				:in		std_logic;
 					cOut				:out		std_logic;
-					resultado4Bits	:out		std_logic_vector (3 downto 0));
+					resultado4Bits	:out		std_logic_vector (3 downto 0)
+		);
 					
 	end component;
 	
