@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: ULA.prj
@@ -111,14 +111,41 @@ Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrinc
 Architecture somador1bitarch of Entity somador1bit is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/Somador4Bits.vhd" in Library work.
 Architecture somador4bitsarch of Entity somador4bits is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd" in Library work.
+Architecture somador8bitsarch of Entity somador8bits is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd" in Library work.
+Architecture inversorarch of Entity inversor is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd" in Library work.
+Architecture multiplicadorarch of Entity multiplicador is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd" in Library work.
+Architecture behavioral of Entity portand is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.vhd" in Library work.
+Architecture portorarch of Entity portor is up to date.
+Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/portXor.vhd" in Library work.
+Architecture portxorarch of Entity portxor is up to date.
 Compiling vhdl file "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" in Library work.
-Entity <ula> compiled.
-Entity <ula> (Architecture <ulaarch>) compiled.
+Architecture ulaarch of Entity ula is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <ULA> in library <work> (architecture <ulaarch>).
+
+Analyzing hierarchy for entity <Somador4Bits> in library <work> (architecture <somador4bitsarch>).
+
+Analyzing hierarchy for entity <Inversor> in library <work> (architecture <inversorarch>).
+
+Analyzing hierarchy for entity <multiplicador> in library <work> (architecture <multiplicadorarch>).
+
+Analyzing hierarchy for entity <portAnd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <portOr> in library <work> (architecture <portorarch>).
+
+Analyzing hierarchy for entity <portXor> in library <work> (architecture <portxorarch>).
+
+Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <somador1bitarch>).
+
+Analyzing hierarchy for entity <somador8Bits> in library <work> (architecture <somador8bitsarch>).
 
 Analyzing hierarchy for entity <Somador4Bits> in library <work> (architecture <somador4bitsarch>).
 
@@ -129,8 +156,8 @@ Analyzing hierarchy for entity <Somador1Bit> in library <work> (architecture <so
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <ULA> in library <work> (Architecture <ulaarch>).
-WARNING:Xst:819 - "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" line 109: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <entradaA>, <entradaB>
+WARNING:Xst:819 - "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd" line 157: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <carryOutSomador>, <saidaSomador>, <carryOutSub>, <saidaSub>, <saidaMultiplicador>, <saidaAnd>, <saidaOr>, <saidaXor>, <entradaInvertida>, <entradaComplementada>, <entradaA>, <entradaB>
 Entity <ULA> analyzed. Unit <ULA> generated.
 
 Analyzing Entity <Somador4Bits> in library <work> (Architecture <somador4bitsarch>).
@@ -139,6 +166,24 @@ Entity <Somador4Bits> analyzed. Unit <Somador4Bits> generated.
 Analyzing Entity <Somador1Bit> in library <work> (Architecture <somador1bitarch>).
 Entity <Somador1Bit> analyzed. Unit <Somador1Bit> generated.
 
+Analyzing Entity <Inversor> in library <work> (Architecture <inversorarch>).
+Entity <Inversor> analyzed. Unit <Inversor> generated.
+
+Analyzing Entity <multiplicador> in library <work> (Architecture <multiplicadorarch>).
+Entity <multiplicador> analyzed. Unit <multiplicador> generated.
+
+Analyzing Entity <somador8Bits> in library <work> (Architecture <somador8bitsarch>).
+Entity <somador8Bits> analyzed. Unit <somador8Bits> generated.
+
+Analyzing Entity <portAnd> in library <work> (Architecture <behavioral>).
+Entity <portAnd> analyzed. Unit <portAnd> generated.
+
+Analyzing Entity <portOr> in library <work> (Architecture <portorarch>).
+Entity <portOr> analyzed. Unit <portOr> generated.
+
+Analyzing Entity <portXor> in library <work> (Architecture <portxorarch>).
+Entity <portXor> analyzed. Unit <portXor> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -146,10 +191,31 @@ Entity <Somador1Bit> analyzed. Unit <Somador1Bit> generated.
 
 Performing bidirectional port resolution...
 
+Synthesizing Unit <Inversor>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/Inversor.vhd".
+Unit <Inversor> synthesized.
+
+
+Synthesizing Unit <portAnd>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/portAnd.vhd".
+Unit <portAnd> synthesized.
+
+
+Synthesizing Unit <portOr>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/portOu.vhd".
+Unit <portOr> synthesized.
+
+
+Synthesizing Unit <portXor>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/portXor.vhd".
+    Found 4-bit xor2 for signal <saida>.
+Unit <portXor> synthesized.
+
+
 Synthesizing Unit <Somador1Bit>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/moduloPrincipal.vhd".
     Found 1-bit xor2 for signal <resultado>.
-    Found 1-bit xor2 for signal <carryOut$xor0000> created at line 45.
+    Found 1-bit xor2 for signal <carryOut$xor0000> created at line 48.
 Unit <Somador1Bit> synthesized.
 
 
@@ -158,13 +224,26 @@ Synthesizing Unit <Somador4Bits>.
 Unit <Somador4Bits> synthesized.
 
 
+Synthesizing Unit <somador8Bits>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/somador8Bits.vhd".
+WARNING:Xst:647 - Input <cIn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <somador8Bits> synthesized.
+
+
+Synthesizing Unit <multiplicador>.
+    Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/multiplicador.vhd".
+WARNING:Xst:646 - Signal <carryOut3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <multiplicador> synthesized.
+
+
 Synthesizing Unit <ULA>.
     Related source file is "/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd".
-WARNING:Xst:1306 - Output <saida<7:4>> is never assigned.
-WARNING:Xst:1306 - Output <overflow> is never assigned.
-WARNING:Xst:653 - Signal <carryInSomador> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:737 - Found 4-bit latch for signal <entradaSomadorA>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 4-bit latch for signal <entradaSomadorB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:646 - Signal <carryOutCpl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <ultimoBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <penultimoBit>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit xor2 for signal <overflow$xor0000> created at line 170.
 Unit <ULA> synthesized.
 
 
@@ -173,9 +252,10 @@ HDL Synthesis Report
 
 Macro Statistics
 # Latches                                              : 2
- 4-bit latch                                           : 2
-# Xors                                                 : 8
- 1-bit xor2                                            : 8
+ 1-bit latch                                           : 2
+# Xors                                                 : 74
+ 1-bit xor2                                            : 73
+ 4-bit xor2                                            : 1
 
 =========================================================================
 
@@ -183,15 +263,24 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <somador3> is unconnected in block <somador2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <somador4> is unconnected in block <somador2>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <somador1> is unconnected in block <somador1>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <somador2> is unconnected in block <somador1>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # Latches                                              : 2
- 4-bit latch                                           : 2
-# Xors                                                 : 8
- 1-bit xor2                                            : 8
+ 1-bit latch                                           : 2
+# Xors                                                 : 74
+ 1-bit xor2                                            : 73
+ 4-bit xor2                                            : 1
 
 =========================================================================
 
@@ -238,15 +327,19 @@ Design Statistics
 # IOs                              : 22
 
 Cell Usage :
-# BELS                             : 8
-#      LUT2                        : 1
-#      LUT3                        : 4
-#      LUT4                        : 3
-# FlipFlops/Latches                : 8
-#      LD_1                        : 8
-# IO Buffers                       : 17
+# BELS                             : 96
+#      LUT2                        : 11
+#      LUT3                        : 12
+#      LUT4                        : 59
+#      MUXF5                       : 13
+#      VCC                         : 1
+# FlipFlops/Latches                : 2
+#      LDE_1                       : 2
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 22
 #      IBUF                        : 12
-#      OBUF                        : 5
+#      OBUF                        : 10
 =========================================================================
 
 Device utilization summary:
@@ -254,11 +347,12 @@ Device utilization summary:
 
 Selected Device : 3s700anfgg484-4 
 
- Number of Slices:                        4  out of   5888     0%  
- Number of 4 input LUTs:                  8  out of  11776     0%  
+ Number of Slices:                       46  out of   5888     0%  
+ Number of Slice Flip Flops:              2  out of  11776     0%  
+ Number of 4 input LUTs:                 82  out of  11776     0%  
  Number of IOs:                          22
- Number of bonded IOBs:                  17  out of    372     4%  
-    IOB Flip Flops:                       8
+ Number of bonded IOBs:                  22  out of    372     5%  
+ Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -278,15 +372,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------+---------------------------+-------+
-Clock Signal                                       | Clock buffer(FF name)     | Load  |
----------------------------------------------------+---------------------------+-------+
-entradaSomadorA_not0001(entradaSomadorA_not00011:O)| NONE(*)(entradaSomadorB_0)| 8     |
----------------------------------------------------+---------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+controle<1>                        | IBUF+BUFG              | 2     |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -297,67 +387,99 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 1.521ns
-   Maximum output required time after clock: 9.262ns
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: 5.595ns
+   Maximum output required time after clock: 9.445ns
+   Maximum combinational path delay: 16.127ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'entradaSomadorA_not0001'
-  Total number of paths / destination ports: 8 / 8
+Timing constraint: Default OFFSET IN BEFORE for Clock 'controle<1>'
+  Total number of paths / destination ports: 47 / 4
 -------------------------------------------------------------------------
-Offset:              1.521ns (Levels of Logic = 1)
-  Source:            entradaB<0> (PAD)
-  Destination:       entradaSomadorB_0 (LATCH)
-  Destination Clock: entradaSomadorA_not0001 rising
+Offset:              5.595ns (Levels of Logic = 5)
+  Source:            entradaA<1> (PAD)
+  Destination:       penultimoBit (LATCH)
+  Destination Clock: controle<1> rising
 
-  Data Path: entradaB<0> to entradaSomadorB_0
+  Data Path: entradaA<1> to penultimoBit
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.849   0.420  entradaB_0_IBUF (entradaB_0_IBUF)
-     LD_1:D                    0.252          entradaSomadorB_0
+     IBUF:I->O            16   0.849   1.177  entradaA_1_IBUF (entradaA_1_IBUF)
+     LUT4:I0->O            3   0.648   0.674  subtrator/somador2/carryOut1 (subtrator/carryOut1)
+     LUT3:I0->O            1   0.648   0.423  saidaULA_6_mux00081_SW0 (N54)
+     LUT4:I3->O            1   0.648   0.000  carryOut1_G (N75)
+     MUXF5:I1->O           4   0.276   0.000  carryOut1 (carryOut_OBUF)
+     LDE_1:D                   0.252          penultimoBit
     ----------------------------------------
-    Total                      1.521ns (1.101ns logic, 0.420ns route)
-                                       (72.4% logic, 27.6% route)
+    Total                      5.595ns (3.321ns logic, 2.274ns route)
+                                       (59.4% logic, 40.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'entradaSomadorA_not0001'
-  Total number of paths / destination ports: 28 / 5
+Timing constraint: Default OFFSET OUT AFTER for Clock 'controle<1>'
+  Total number of paths / destination ports: 6 / 2
 -------------------------------------------------------------------------
-Offset:              9.262ns (Levels of Logic = 4)
-  Source:            entradaSomadorA_0 (LATCH)
-  Destination:       carryOut (PAD)
-  Source Clock:      entradaSomadorA_not0001 rising
+Offset:              9.445ns (Levels of Logic = 5)
+  Source:            penultimoBit (LATCH)
+  Destination:       saidaULA<7> (PAD)
+  Source Clock:      controle<1> rising
 
-  Data Path: entradaSomadorA_0 to carryOut
+  Data Path: penultimoBit to saidaULA<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD_1:G->Q             3   0.728   0.611  entradaSomadorA_0 (entradaSomadorA_0)
-     LUT4:I1->O            2   0.643   0.527  somador/somador2/carryOut1 (somador/carryOut1)
-     LUT3:I1->O            2   0.643   0.527  somador/somador3/carryOut1 (somador/carryOut2)
-     LUT3:I1->O            1   0.643   0.420  somador/somador4/carryOut1 (carryOut_OBUF)
-     OBUF:I->O                 4.520          carryOut_OBUF (carryOut)
+     LDE_1:G->Q            1   0.728   0.500  penultimoBit (penultimoBit)
+     LUT3:I1->O            3   0.643   0.534  overflow1 (overflow_OBUF)
+     LUT4:I3->O            1   0.648   0.000  saidaULA_7_mux000855_F (N72)
+     MUXF5:I0->O           1   0.276   0.420  saidaULA_7_mux000855 (saidaULA_7_mux000855)
+     MUXF5:S->O            1   0.756   0.420  saidaULA_7_mux0008179_f5 (saidaULA_7_OBUF)
+     OBUF:I->O                 4.520          saidaULA_7_OBUF (saidaULA<7>)
     ----------------------------------------
-    Total                      9.262ns (7.177ns logic, 2.085ns route)
-                                       (77.5% logic, 22.5% route)
+    Total                      9.445ns (7.571ns logic, 1.874ns route)
+                                       (80.2% logic, 19.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 733 / 10
+-------------------------------------------------------------------------
+Delay:               16.127ns (Levels of Logic = 11)
+  Source:            entradaA<1> (PAD)
+  Destination:       saidaULA<6> (PAD)
+
+  Data Path: entradaA<1> to saidaULA<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.849   1.177  entradaA_1_IBUF (entradaA_1_IBUF)
+     LUT2:I0->O            2   0.648   0.590  multi/resultParcial2<2>1 (multi/resultParcial2<2>)
+     LUT4:I0->O            3   0.648   0.534  multi/somador1/somador1/somador3/carryOut1 (multi/somador1/somador1/carryOut2)
+     LUT4:I3->O            2   0.648   0.590  multi/somador1/somador1/somador4/Mxor_resultado_Result1 (multi/somaParcial1<3>)
+     LUT4:I0->O            4   0.648   0.619  multi/somador3/somador1/somador4/carryOut1 (multi/somador3/carryOut1)
+     LUT4:I2->O            1   0.648   0.000  multi/somador3/somador2/somador2/carryOut11 (multi/somador3/somador2/somador2/carryOut1)
+     MUXF5:I1->O           2   0.276   0.527  multi/somador3/somador2/somador2/carryOut1_f5 (multi/somador3/somador2/carryOut1)
+     LUT3:I1->O            1   0.643   0.423  saidaULA_6_mux0008177_SW0 (N56)
+     LUT4:I3->O            1   0.648   0.423  saidaULA_6_mux0008177 (saidaULA_6_mux0008177)
+     LUT4:I3->O            1   0.648   0.420  saidaULA_6_mux0008223 (saidaULA_6_OBUF)
+     OBUF:I->O                 4.520          saidaULA_6_OBUF (saidaULA<6>)
+    ----------------------------------------
+    Total                     16.127ns (10.824ns logic, 5.303ns route)
+                                       (67.1% logic, 32.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.11 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.57 secs
  
 --> 
 
 
-Total memory usage is 503312 kilobytes
+Total memory usage is 508272 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

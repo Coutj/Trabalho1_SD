@@ -106,7 +106,7 @@ BEGIN
 		wait for 100 ms;
 		entrada	<=	"0000";
 		wait for 1 ms;
-		entrada <= "0001";
+		entrada <= "1000";
 		setB <= '0';
 --		wait for 110 ms;
 --		entrada <= "0001";

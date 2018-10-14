@@ -11,3 +11,6 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run all
+Stopped at time : 105100722950 ns : File "/home/juan/Documents/Sistemas_digitais/Projeto1/contador.vhd" Line 56
+# exit 0
