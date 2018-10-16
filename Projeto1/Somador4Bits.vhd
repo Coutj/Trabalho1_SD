@@ -35,6 +35,7 @@ entity Somador4Bits is
 				numB4Bits		:in		std_logic_vector (3 downto 0) := (others => '0');
 				cIn				:in		std_logic := '0';
 				cOut				:out		std_logic := '0';
+				overflow			:out		std_logic := '0';
 				resultado4Bits	:out		std_logic_vector (3 downto 0) := (others => '0')
 	);
 				
@@ -63,6 +64,7 @@ architecture Somador4BitsArch of Somador4Bits is
 		somador4:	Somador1Bit port map (numA4Bits(3), numB4Bits(3), carryOut2, carryOut3, resultado4Bits(3));
 		
 		cOut <= carryOut3;
+		overflow	<= carryOut3 xor carryOut2;
 
 end Somador4BitsArch;
 

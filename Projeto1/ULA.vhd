@@ -46,6 +46,7 @@ architecture ULaArch of ULA is
 					numB4Bits		:in		std_logic_vector (3 downto 0) ;
 					cIn				:in		std_logic;
 					cOut				:out		std_logic;
+					overflow			:out		std_logic;
 					resultado4Bits	:out		std_logic_vector (3 downto 0)
 		);				
 	end component;
@@ -97,10 +98,10 @@ architecture ULaArch of ULA is
 	
 	--Somador
 	signal saidaSomador : std_logic_vector(3 downto 0):= (others => '0');
-	signal carryOutSomador : std_logic := '0';
+	signal carryOutSomador, overflowSomador : std_logic := '0';
 	
 	--Subtrator
-	signal carryOutSub : std_logic := '0';
+	signal carryOutSub, overflowSub : std_logic := '0';
 	signal saidaSub : std_logic_vector(3 downto 0) := (others => '0');
 	signal saidaInversor : std_logic_vector (3 downto 0) := (others => '0');
 	
@@ -124,16 +125,16 @@ architecture ULaArch of ULA is
 	
 	--Complementador
 	signal entradaComplementada	: std_logic_vector (3 downto 0) := (others => '0');
-	signal carryOutCpl : std_logic := '0';
+	signal carryOutCpl, overflowCpl : std_logic := '0';
 
 begin
 	
 	
 	--Port Map somador
-	somador : Somador4Bits port map (entradaA, entradaB, '0', carryOutSomador, saidaSomador);	
+	somador : Somador4Bits port map (entradaA, entradaB, '0', carryOutSomador, overflowSomador, saidaSomador);	
 	
 	--Port Map Subtrator
-	subtrator	:	Somador4Bits port map (entradaA, saidaInversor, '1', carryOutSub, saidaSub);
+	subtrator	:	Somador4Bits port map (entradaA, saidaInversor, '1', carryOutSub, overflowSub, saidaSub);
 	Inversor4Bits : Inversor port map (entradaB, saidaInversor);
 	
 	--Port Map Multiplicador
@@ -152,7 +153,7 @@ begin
 	inversorEntrada	:	inversor	port map(entradaA, entradaInvertida);
 	
 	--Port Map Complementador
-	complementador	:	Somador4Bits port map (entradaInvertida, "0001",'0',carryOutCpl, entradaComplementada);
+	complementador	:	Somador4Bits port map (entradaInvertida, "0001",'0',carryOutCpl, overflowCpl, entradaComplementada);
 
 	UlaProcess : process (controle) is
 		
@@ -167,9 +168,9 @@ begin
 			saidaULA (5 downto 2) 	<= saidaSomador;
 			ultimoBit					<= saidaSomador (3);
 			penultimoBit				<= carryOutSomador;
-			overflow 						<= (penultimoBit xor ultimoBit);
+			overflow 						<= overflowSomador;
 			saidaUla(6)					<= carryOutSomador;
-			saidaUla(7)					<= (penultimoBit xor ultimoBit);
+			saidaUla(7)					<= overflowSomador;
 			
 		
 		elsif (controle = "0001") then 		-- Subtrator
@@ -177,9 +178,9 @@ begin
 			saidaULA (5 downto 2) 	<= saidaSub;
 			ultimoBit					<= saidaSub(3);
 			penultimoBit				<=	carryOutSub;
-			overflow 						<= (penultimoBit xor ultimoBit);
+			overflow 						<= overflowSub;
 			saidaUla(6)					<= carryOutSub;
-			saidaUla(7)					<= (penultimoBit xor ultimoBit);
+			saidaUla(7)					<= overflowSub;
 			
 						
 		elsif (controle = "0010") then		-- multiplicacao

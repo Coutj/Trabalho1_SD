@@ -3,7 +3,8 @@ Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
-3 -fastpaths -xml ULA_Test.twx ULA_Test.ncd -o ULA_Test.twr ULA_Test.pcf
+3 -fastpaths -xml ULA_Test.twx ULA_Test.ncd -o ULA_Test.twr ULA_Test.pcf -ucf
+constraints.ucf
 
 Design file:              ULA_Test.ncd
 Physical constraint file: ULA_Test.pcf
@@ -15,7 +16,6 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
-INFO:Timing:2698 - No timing constraints found, doing default enumeration.
 INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
@@ -33,68 +33,602 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
    SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
    Error.
 
+================================================================================
+Timing constraint: NET "CLKIN_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 828 paths analyzed, 79 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.989ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Clock/contagemInicial_16 (SLICE_X25Y84.SR), 23 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.011ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_3 (FF)
+  Destination:          Clock/contagemInicial_16 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.948ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.041ns (0.016 - 0.057)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_3 to Clock/contagemInicial_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y77.YQ      Tcko                  0.580   Clock/contagemInicial<2>
+                                                       Clock/contagemInicial_3
+    SLICE_X23Y79.F1      net (fanout=2)        1.072   Clock/contagemInicial<3>
+    SLICE_X23Y79.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.CLK     Tsrck                 0.867   Clock/contagemInicial<16>
+                                                       Clock/contagemInicial_16
+    -------------------------------------------------  ---------------------------
+    Total                                      5.948ns (3.458ns logic, 2.490ns route)
+                                                       (58.1% logic, 41.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.145ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_5 (FF)
+  Destination:          Clock/contagemInicial_16 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.818ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.037ns (0.016 - 0.053)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_5 to Clock/contagemInicial_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y78.YQ      Tcko                  0.580   Clock/contagemInicial<4>
+                                                       Clock/contagemInicial_5
+    SLICE_X23Y80.F1      net (fanout=2)        1.072   Clock/contagemInicial<5>
+    SLICE_X23Y80.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.CLK     Tsrck                 0.867   Clock/contagemInicial<16>
+                                                       Clock/contagemInicial_16
+    -------------------------------------------------  ---------------------------
+    Total                                      5.818ns (3.328ns logic, 2.490ns route)
+                                                       (57.2% logic, 42.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.281ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_1 (FF)
+  Destination:          Clock/contagemInicial_16 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.678ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.041ns (0.016 - 0.057)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_1 to Clock/contagemInicial_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y76.YQ      Tcko                  0.580   Clock/contagemInicial<0>
+                                                       Clock/contagemInicial_1
+    SLICE_X23Y79.F2      net (fanout=2)        0.802   Clock/contagemInicial<1>
+    SLICE_X23Y79.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.CLK     Tsrck                 0.867   Clock/contagemInicial<16>
+                                                       Clock/contagemInicial_16
+    -------------------------------------------------  ---------------------------
+    Total                                      5.678ns (3.458ns logic, 2.220ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Clock/contagemInicial_17 (SLICE_X25Y84.SR), 23 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.011ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_3 (FF)
+  Destination:          Clock/contagemInicial_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.948ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.041ns (0.016 - 0.057)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_3 to Clock/contagemInicial_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y77.YQ      Tcko                  0.580   Clock/contagemInicial<2>
+                                                       Clock/contagemInicial_3
+    SLICE_X23Y79.F1      net (fanout=2)        1.072   Clock/contagemInicial<3>
+    SLICE_X23Y79.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.CLK     Tsrck                 0.867   Clock/contagemInicial<16>
+                                                       Clock/contagemInicial_17
+    -------------------------------------------------  ---------------------------
+    Total                                      5.948ns (3.458ns logic, 2.490ns route)
+                                                       (58.1% logic, 41.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.145ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_5 (FF)
+  Destination:          Clock/contagemInicial_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.818ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.037ns (0.016 - 0.053)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_5 to Clock/contagemInicial_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y78.YQ      Tcko                  0.580   Clock/contagemInicial<4>
+                                                       Clock/contagemInicial_5
+    SLICE_X23Y80.F1      net (fanout=2)        1.072   Clock/contagemInicial<5>
+    SLICE_X23Y80.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.CLK     Tsrck                 0.867   Clock/contagemInicial<16>
+                                                       Clock/contagemInicial_17
+    -------------------------------------------------  ---------------------------
+    Total                                      5.818ns (3.328ns logic, 2.490ns route)
+                                                       (57.2% logic, 42.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.281ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_1 (FF)
+  Destination:          Clock/contagemInicial_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.678ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.041ns (0.016 - 0.057)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_1 to Clock/contagemInicial_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y76.YQ      Tcko                  0.580   Clock/contagemInicial<0>
+                                                       Clock/contagemInicial_1
+    SLICE_X23Y79.F2      net (fanout=2)        0.802   Clock/contagemInicial<1>
+    SLICE_X23Y79.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y84.CLK     Tsrck                 0.867   Clock/contagemInicial<16>
+                                                       Clock/contagemInicial_17
+    -------------------------------------------------  ---------------------------
+    Total                                      5.678ns (3.458ns logic, 2.220ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Clock/contagemInicial_18 (SLICE_X25Y85.SR), 23 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.011ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_3 (FF)
+  Destination:          Clock/contagemInicial_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.948ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.041ns (0.016 - 0.057)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_3 to Clock/contagemInicial_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y77.YQ      Tcko                  0.580   Clock/contagemInicial<2>
+                                                       Clock/contagemInicial_3
+    SLICE_X23Y79.F1      net (fanout=2)        1.072   Clock/contagemInicial<3>
+    SLICE_X23Y79.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y85.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y85.CLK     Tsrck                 0.867   Clock/contagemInicial<18>
+                                                       Clock/contagemInicial_18
+    -------------------------------------------------  ---------------------------
+    Total                                      5.948ns (3.458ns logic, 2.490ns route)
+                                                       (58.1% logic, 41.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.145ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_5 (FF)
+  Destination:          Clock/contagemInicial_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.818ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.037ns (0.016 - 0.053)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_5 to Clock/contagemInicial_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y78.YQ      Tcko                  0.580   Clock/contagemInicial<4>
+                                                       Clock/contagemInicial_5
+    SLICE_X23Y80.F1      net (fanout=2)        1.072   Clock/contagemInicial<5>
+    SLICE_X23Y80.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y85.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y85.CLK     Tsrck                 0.867   Clock/contagemInicial<18>
+                                                       Clock/contagemInicial_18
+    -------------------------------------------------  ---------------------------
+    Total                                      5.818ns (3.328ns logic, 2.490ns route)
+                                                       (57.2% logic, 42.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.281ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Clock/contagemInicial_1 (FF)
+  Destination:          Clock/contagemInicial_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.678ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.041ns (0.016 - 0.057)
+  Source Clock:         CLKIN_BUFGP rising at 0.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Clock/contagemInicial_1 to Clock/contagemInicial_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y76.YQ      Tcko                  0.580   Clock/contagemInicial<0>
+                                                       Clock/contagemInicial_1
+    SLICE_X23Y79.F2      net (fanout=2)        0.802   Clock/contagemInicial<1>
+    SLICE_X23Y79.COUT    Topcyf                1.195   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_lut<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<0>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<1>
+    SLICE_X23Y80.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<2>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<3>
+    SLICE_X23Y81.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<4>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<5>
+    SLICE_X23Y82.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<6>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<7>
+    SLICE_X23Y83.COUT    Tbyp                  0.130   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<8>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.CIN     net (fanout=1)        0.000   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<9>
+    SLICE_X23Y84.XB      Tcinxb                0.296   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+                                                       Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y85.SR      net (fanout=13)       1.418   Clock/Mcompar_contagemInicial_cmp_gt0000_cy<10>
+    SLICE_X25Y85.CLK     Tsrck                 0.867   Clock/contagemInicial<18>
+                                                       Clock/contagemInicial_18
+    -------------------------------------------------  ---------------------------
+    Total                                      5.678ns (3.458ns logic, 2.220ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "CLKIN_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point Clock/contagemInicial_8 (SLICE_X25Y80.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.626ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Clock/contagemInicial_8 (FF)
+  Destination:          Clock/contagemInicial_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.626ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLKIN_BUFGP rising at 20.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Clock/contagemInicial_8 to Clock/contagemInicial_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y80.XQ      Tcko                  0.473   Clock/contagemInicial<8>
+                                                       Clock/contagemInicial_8
+    SLICE_X25Y80.F4      net (fanout=2)        0.306   Clock/contagemInicial<8>
+    SLICE_X25Y80.CLK     Tckf        (-Th)    -0.847   Clock/contagemInicial<8>
+                                                       Clock/contagemInicial<8>_rt
+                                                       Clock/Mcount_contagemInicial_xor<8>
+                                                       Clock/contagemInicial_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.626ns (1.320ns logic, 0.306ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Clock/contagemInicial_14 (SLICE_X25Y83.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.626ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Clock/contagemInicial_14 (FF)
+  Destination:          Clock/contagemInicial_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.626ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLKIN_BUFGP rising at 20.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Clock/contagemInicial_14 to Clock/contagemInicial_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y83.XQ      Tcko                  0.473   Clock/contagemInicial<14>
+                                                       Clock/contagemInicial_14
+    SLICE_X25Y83.F4      net (fanout=2)        0.306   Clock/contagemInicial<14>
+    SLICE_X25Y83.CLK     Tckf        (-Th)    -0.847   Clock/contagemInicial<14>
+                                                       Clock/contagemInicial<14>_rt.1
+                                                       Clock/Mcount_contagemInicial_xor<14>
+                                                       Clock/contagemInicial_14
+    -------------------------------------------------  ---------------------------
+    Total                                      1.626ns (1.320ns logic, 0.306ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Clock/contagemInicial_22 (SLICE_X25Y87.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.626ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Clock/contagemInicial_22 (FF)
+  Destination:          Clock/contagemInicial_22 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.626ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLKIN_BUFGP rising at 20.000ns
+  Destination Clock:    CLKIN_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: Clock/contagemInicial_22 to Clock/contagemInicial_22
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y87.XQ      Tcko                  0.473   Clock/contagemInicial<22>
+                                                       Clock/contagemInicial_22
+    SLICE_X25Y87.F4      net (fanout=2)        0.306   Clock/contagemInicial<22>
+    SLICE_X25Y87.CLK     Tckf        (-Th)    -0.847   Clock/contagemInicial<22>
+                                                       Clock/contagemInicial<22>_rt.1
+                                                       Clock/Mcount_contagemInicial_xor<22>
+                                                       Clock/contagemInicial_22
+    -------------------------------------------------  ---------------------------
+    Total                                      1.626ns (1.320ns logic, 0.306ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "CLKIN_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.518ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.741ns (Tcl)
+  Physical resource: Clock/contagemInicial<0>/CLK
+  Logical resource: Clock/contagemInicial_0/CK
+  Location pin: SLICE_X25Y76.CLK
+  Clock network: CLKIN_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.518ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.741ns (Tch)
+  Physical resource: Clock/contagemInicial<0>/CLK
+  Logical resource: Clock/contagemInicial_0/CK
+  Location pin: SLICE_X25Y76.CLK
+  Clock network: CLKIN_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.518ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.482ns (674.764MHz) (Tcp)
+  Physical resource: Clock/contagemInicial<0>/CLK
+  Logical resource: Clock/contagemInicial_0/CK
+  Location pin: SLICE_X25Y76.CLK
+  Clock network: CLKIN_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
 
 
 Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock entrada<1>
-------------+------------+------------+------------------+--------+
-            |Max Setup to|Max Hold to |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-entrada<0>  |    5.430(R)|   -2.052(R)|entrada_1_IBUF    |   0.000|
-entrada<2>  |    3.412(R)|   -0.661(R)|entrada_1_IBUF    |   0.000|
-entrada<3>  |    3.861(R)|   -1.240(R)|entrada_1_IBUF    |   0.000|
-------------+------------+------------+------------------+--------+
-
-Clock entrada<1> to Pad
-------------+------------+------------------+--------+
-            | clk (edge) |                  | Clock  |
-Destination |   to PAD   |Internal Clock(s) | Phase  |
-------------+------------+------------------+--------+
-overflow    |    9.560(R)|entrada_1_IBUF    |   0.000|
-------------+------------+------------------+--------+
-
 Clock to Setup on destination clock CLKIN
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLKIN          |    5.349|         |         |         |
+CLKIN          |    5.989|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock entrada<1>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-entrada<1>     |    2.830|    2.830|         |         |
----------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-entrada<0>     |carryOut       |   12.380|
-entrada<1>     |carryOut       |    9.780|
-entrada<1>     |overflow       |    9.779|
-entrada<2>     |carryOut       |    9.252|
-entrada<2>     |overflow       |   10.227|
-entrada<3>     |carryOut       |    9.610|
-entrada<3>     |overflow       |   10.676|
----------------+---------------+---------+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 828 paths, 0 nets, and 89 connections
+
+Design statistics:
+   Minimum period:   5.989ns{1}   (Maximum frequency: 166.973MHz)
 
 
-Analysis completed Thu Oct 11 23:35:57 2018 
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Oct 16 22:06:20 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 370 MB
+Peak Memory Usage: 377 MB
 
 
 

@@ -40,6 +40,7 @@ entity Somador1Bit is
 	
 end Somador1Bit;
 
+
 architecture Somador1BitArch of Somador1Bit is
 
 begin

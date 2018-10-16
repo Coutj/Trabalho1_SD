@@ -13,7 +13,6 @@
          <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/Ula1 - ULA - ULaArch/multi - multiplicador - multiplicadorArch/somador1 - somador8Bits - somador8BitsArch</ClosedNode>
          <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/Ula1 - ULA - ULaArch/multi - multiplicador - multiplicadorArch/somador2 - somador8Bits - somador8BitsArch</ClosedNode>
          <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/Ula1 - ULA - ULaArch/multi - multiplicador - multiplicadorArch/somador3 - somador8Bits - somador8BitsArch</ClosedNode>
-         <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/Ula1 - ULA - ULaArch/somador - Somador4Bits - Somador4BitsArch</ClosedNode>
          <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/Ula1 - ULA - ULaArch/subtrator - Somador4Bits - Somador4BitsArch</ClosedNode>
          <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/ula1 - ULA - ULaArch</ClosedNode>
          <ClosedNode>/ULA_Test - ULA_TestArch |home|juan|Documents|Sistemas_digitais|Projeto1|ULA_Test.vhd/ula1 - ULA - ULaArch/somador - Somador4Bits - Somador4BitsArch</ClosedNode>
@@ -27,13 +26,13 @@
          <ClosedNode>/somador8Bits - somador8BitsArch |home|juan|Documents|Sistemas_digitais|Projeto1|somador8Bits.vhd/somador2 - Somador4Bits - Somador4BitsArch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Ula1 - ULA - ULaArch (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd)</SelectedItem>
+         <SelectedItem>ULA_Test - ULA_TestArch (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000268000000020000000000000000000000000200000064ffffffff000000810000000300000002000002680000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Ula1 - ULA - ULaArch (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA.vhd)</CurrentItem>
+      <CurrentItem>ULA_Test - ULA_TestArch (/home/juan/Documents/Sistemas_digitais/Projeto1/ULA_Test.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -90,7 +89,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000ef000000010000000100000000000000000000000064ffffffff000000810000000000000001000000ef0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000df000000010000000100000000000000000000000064ffffffff000000810000000000000001000000df0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
